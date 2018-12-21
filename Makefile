@@ -13,7 +13,7 @@
 NAME = nm_otool
 
 CC 			= gcc
-CFLAGS 			= -Wall -Wextra -Werror
+CFLAGS 			= -Wall -Wextra #-Werror
 LFLAGS 			= -lft
 INC 			= -I$(INCLUDE_PATH)
 
@@ -22,8 +22,7 @@ LIBFT_PATH 		= ./libft
 SRC_PATH 		= ./src/
 OBJ_PATH 		= ./obj/
 
-SRCS 			= main.c \
-					ft_nm.c \
+SRCS 			=	ft_nm.c \
 					ft_otool.c 
 OBJS 			= $(SRCS:.c=.o)
 
@@ -39,7 +38,7 @@ $(LIBFT):
 
 $(NAME): $(LIBFT) $(OBJ)
 	@ $(CC) $(CFLAGS) -o $@ $(OBJ) -L $(LIBFT_PATH) $(LFLAGS)
-	@ echo "Compiled"
+	@ echo "$(NAME) compiled"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@ echo "Compiling objects"
@@ -53,9 +52,8 @@ clean:
 	@ make clean -sC $(LIBFT_PATH)
 
 fclean: clean
-	@ echo "Cleaning $(NAME) and $(LINK)"
+	@ echo "Cleaning $(NAME)"
 	@ /bin/rm -f $(NAME)
-	@ /bin/rm -f $(LINK)
 	@ echo "Fcleaning libft"
 	@ make fclean -sC $(LIBFT_PATH)
 
