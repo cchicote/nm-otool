@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = nm-otool
+NAME = nm_otool
 
 CC 			= gcc
 CFLAGS 			= -Wall -Wextra -Werror
@@ -22,7 +22,9 @@ LIBFT_PATH 		= ./libft
 SRC_PATH 		= ./src/
 OBJ_PATH 		= ./obj/
 
-SRCS 			= main.c
+SRCS 			= main.c \
+					ft_nm.c \
+					ft_otool.c 
 OBJS 			= $(SRCS:.c=.o)
 
 SRC 			= $(addprefix $(SRC_PATH), $(SRCS))
