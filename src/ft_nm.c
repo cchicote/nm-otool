@@ -12,8 +12,35 @@
 
 #include "nm_otool.h"
 
-int				main(int argc, char **argv)
+void					ft_nm(char *filename)
 {
-	
-	return (0);
+	t_file				file;
+	uint32_t			magic;
+
+	file = check_file("ft_nm", filename);
+	if (!file.content)
+		return ;
+	magic = *(uint32_t*)file.content;
+	//ft_putendl(file.name);
+	if (magic == MH_MAGIC_64)
+	{
+		handle_64_header(file.content);
+	}
+}
+
+int						main(int argc, char **argv)
+{
+	int					i;
+
+	i = 0;
+	if (argc < 2)
+		ft_nm("a.out");
+	else
+	{
+		while (++i < argc)
+		{
+			ft_nm(argv[i]);
+		}
+	}
+	return (EXIT_SUCCESS);
 }
