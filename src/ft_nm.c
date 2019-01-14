@@ -21,10 +21,18 @@ void					ft_nm(char *filename)
 	if (!file.content)
 		return ;
 	magic = *(uint32_t*)file.content;
-	//ft_putendl(file.name);
+	ft_putendl(file.name);
 	if (magic == MH_MAGIC_64)
 	{
 		handle_64_header(file.content);
+	}
+	else if (magic == MH_MAGIC)
+	{
+		handle_32_header(file.content);
+	}
+	else
+	{
+		ft_putendl("Fichier non pris en compte");
 	}
 }
 

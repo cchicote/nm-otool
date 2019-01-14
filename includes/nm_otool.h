@@ -42,6 +42,9 @@ t_file					check_file(char *command, char *filename);
 /*
 **	HANDLE_HEADER.C
 */
+void					print_symtable_32(uint32_t nsyms, uint32_t symoff, uint32_t stroff, char *content);
+void					print_symtable_64(uint32_t nsyms, uint32_t symoff, uint32_t stroff, char *content);
+void					handle_32_header(char *content);
 void					handle_64_header(char *content);
 
 /*
