@@ -25,13 +25,9 @@
 # define ARCH_32 1
 # define ARCH_64 2
 # define FAT 3
+# define SWAP(x)		swap_endian((unsigned char*)&x, sizeof(x))
 
-typedef struct			s_file
-{
-	char				*name;
-	void				*content;
-	size_t				len;
-}						t_file;
+typedef struct fat_header t_fh;
 
 typedef struct			s_symbol
 {
@@ -40,6 +36,7 @@ typedef struct			s_symbol
 	uint8_t				section_index;
 	char				type_char;
 	char				*name;
+	int					is_external;
 	struct s_symbol		*next;
 }						t_symbol;
 
@@ -47,19 +44,30 @@ typedef struct			s_arch
 {
 	int					name_int;
 	char				*name_str;
+	uint32_t			offset;
 	t_symbol			*sym_head;
+	char				sect_char[256];
+	int					n_sect;
+	struct s_arch		*next;
 }						t_arch;
 
-typedef struct			s_fat
+typedef struct			s_file
 {
-	t_arch				*arch_head;
-}						t_fat;
+	char				*name;
+	void				*content;
+	size_t				len;
+	t_arch				*arch;
+	int					is_little_endian;
+	int					is_fat;
+}						t_file;
+
+unsigned char				*swap_endian(unsigned char *data, size_t n);
 
 /*
 **	FT_NM.C
 */
 void					ft_nm(char *filename, int multiple_files);
-uint32_t				dispatch_by_magic(void *content, t_symbol **sym_head);
+void					dispatch_by_magic(t_file *file);
 
 /*
 **	HANDLE_FILE.C
@@ -69,25 +77,24 @@ t_file					check_file(char *command, char *filename);
 /*
 **	HANDLE_HEADER.C
 */
-struct section				*handle_32_header(t_symbol **sym_head, void *content, uint32_t nsect, int need_swap);
+void						handle_new_arch(t_file *file, uint32_t offset);
+void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch);
 struct section_64			*handle_64_header(t_symbol **sym_head, void *content, uint32_t nsect, int need_swap);
-struct section				*handle_fat_header(t_symbol **sym_head, void *content, int need_swap);
-uint64_t					swap_endian(uint64_t x, int need_swap);
+void						handle_fat_header(t_file *file);
 
 /*
 **	HANDLE_SEGMENT.C
 */
-struct section				*parse_32_segments(struct segment_command *sc, uint32_t n_sect, int need_swap);
+void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch);
 struct section_64			*parse_64_segments(struct segment_command_64 *sc, uint32_t n_sect, int need_swap);
 
 /*
 **	HANDLE_32_SYMBOL.C
 */
-char						get_char_by_section_32(void *content, uint32_t n_sect, int need_swap);
-void						get_symbol_type_char_32(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap);
-void						get_symbol_name_32(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap);
-void						get_symbol_value_32(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap);
-void						parse_symtable_32(t_symbol **sym_head, void *content, struct symtab_command *sc, int need_swap);
+void						get_symbol_type_char_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol);
+void						get_symbol_name_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol);
+void						get_symbol_value_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol);
+void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arch);
 
 /*
 **	HANDLE_64_SYMBOL.C
@@ -110,10 +117,15 @@ void					perror_filename(char *filename);
 /*
 **	UTILS.C
 */
-void					sort_symbols_by_name(t_symbol **sym_head);
-int							check_stab_32(void *content, uint32_t i, struct symtab_command *sc, int need_swap);
-int							check_stab_64(void *content, uint32_t i, struct symtab_command *sc, int need_swap);
+void					sort_symbols_by_name(t_arch *arch);
+int							check_stab_32(t_file *file, uint32_t i, struct symtab_command *sc);
+int							check_stab_64(t_file *file, uint32_t i, struct symtab_command *sc);
 void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol);
 t_symbol					*new_symbol(void);
+void						add_arch_to_list(t_file *file, t_arch *arch);
+void					sort_arch_symbols(t_file *file);
+
+void						swap_nlist_32(t_file *file, uint32_t offset);
+void						swap_nlist_64(t_file *file, uint32_t offset);
 
 #endif

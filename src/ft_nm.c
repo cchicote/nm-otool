@@ -12,14 +12,18 @@
 
 #include "nm_otool.h"
 
-void					print_symbols(t_symbol **sym_head, int IS_64)
+void					print_symbols(t_arch *arch, int IS_64)
 {
 	t_symbol 			*tmp;
 
-	tmp = *sym_head;
+	tmp = arch->sym_head;
 	//printf("SYMBOLS: \n");
 	while (tmp)
 	{
+		if (tmp->type_char == '?')
+			tmp->type_char = arch->sect_char[tmp->section_index];
+		if (tmp->is_external)
+			tmp->type_char = ft_toupper(tmp->type_char);
 		if (tmp->value && IS_64)
 			printf("%016llx %c %s\n", tmp->value, tmp->type_char, tmp->name);
 		else if (tmp->value && !IS_64)
@@ -33,35 +37,50 @@ void					print_symbols(t_symbol **sym_head, int IS_64)
 	//printf("\n");
 }
 
-uint32_t				dispatch_by_magic(void *content, t_symbol **sym_head)
+void					print_arch_sym(t_file *file)
+{
+	t_arch				*tmp;
+
+	tmp = file->arch;
+	if (!file->is_fat)
+	{
+		print_symbols(tmp, tmp->name_int == ARCH_64);
+		return ;
+	}
+	while (tmp)
+	{
+		print_symbols(tmp, tmp->name_int == ARCH_64);
+		tmp = tmp->next;
+	}
+}
+
+void					dispatch_by_magic(t_file *file)
 {
 	static uint32_t		magic = 0;
 
-	magic = *(uint32_t*)content;
-	if (magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
-		handle_64_header(sym_head, content, 0, magic == MH_CIGAM_64);
-	else if (magic == MH_MAGIC || magic == MH_CIGAM)
-		handle_32_header(sym_head, content, 0, magic == MH_CIGAM);
-	else if (magic == FAT_MAGIC || magic == FAT_CIGAM)
-		handle_fat_header(sym_head, content, magic == FAT_CIGAM);
-	return (magic);
+	magic = *(uint32_t*)file->content;
+	file->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64 || magic == FAT_CIGAM);
+	if (magic == FAT_MAGIC || magic == FAT_CIGAM)
+	{
+		file->is_fat = TRUE;
+		handle_fat_header(file);
+	}
+	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
+		handle_new_arch(file, 0);
 }
 
 void					ft_nm(char *filename, int multiple_files)
 {
-	t_symbol			*sym_head;
 	t_file				file;
-	uint32_t			magic;
 
-	sym_head = NULL;
 	file = check_file("ft_nm", filename);
 	if (!file.content)
 		return ;
 	if (multiple_files)
 		printf("\n%s:\n", file.name);
-	magic = dispatch_by_magic(file.content, &sym_head);
-	sort_symbols_by_name(&sym_head);
-	print_symbols(&sym_head, magic == MH_MAGIC_64);
+	dispatch_by_magic(&file);
+	sort_arch_symbols(&file);
+	print_arch_sym(&file);
 	//munmap(file.content, file.len);
 }
 

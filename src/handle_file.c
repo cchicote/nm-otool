@@ -18,7 +18,7 @@ t_file					check_file(char *command, char *filename)
     int					fd;
 	struct stat			stat_ret;
 
-	ft_bzero(&file, sizeof(file));
+	ft_bzero(&file, sizeof(t_file));
 	if ((fd = open(filename, O_RDONLY)) < 0)
 	{
 		perror_nosuchfile(command, filename);

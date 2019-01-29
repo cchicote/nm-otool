@@ -30,6 +30,24 @@ void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol)
 	tmp->next = symbol;
 }
 
+void						add_arch_to_list(t_file *file, t_arch *arch)
+{
+	t_arch					*tmp;
+
+	tmp = file->arch;
+	arch->next = NULL;
+	if (!tmp)
+	{
+		file->arch = arch;
+		return ;
+	}
+	while (tmp->next)
+	{
+		tmp = tmp->next;
+	}
+	tmp->next = arch;
+}
+
 t_symbol					*new_symbol(void)
 {
 	t_symbol				*new;
@@ -39,33 +57,75 @@ t_symbol					*new_symbol(void)
 	return (new);
 }
 
-int							check_stab_32(void *content, uint32_t i, struct symtab_command *sc, int need_swap)
+void						swap_nlist_32(t_file *file, uint32_t offset)
+{
+	struct nlist			*nlist;
+
+	nlist = (struct nlist*)file->content + offset;
+	SWAP(nlist->n_un.n_strx);
+	SWAP(nlist->n_type);
+	SWAP(nlist->n_sect);
+	SWAP(nlist->n_desc);
+	SWAP(nlist->n_value);
+}
+
+void						swap_nlist_64(t_file *file, uint32_t offset)
+{
+	struct nlist_64			*nlist_64;
+
+	nlist_64 = (struct nlist_64*)file->content + offset;
+	SWAP(nlist_64->n_un.n_strx);
+	SWAP(nlist_64->n_type);
+	SWAP(nlist_64->n_sect);
+	SWAP(nlist_64->n_desc);
+	SWAP(nlist_64->n_value);
+}
+
+int							check_stab_32(t_file *file, uint32_t i, struct symtab_command *sc)
 {
 	struct nlist			*array;
 
-	array = (void*)content + swap_endian(sc->symoff, need_swap);
-	if (N_STAB & swap_endian(array[i].n_type, need_swap))
+	array = (void*)file->content + sc->symoff;
+	if (N_STAB & array[i].n_type)
 		return (TRUE);
 	return (FALSE);
 }
-int							check_stab_64(void *content, uint32_t i, struct symtab_command *sc, int need_swap)
+
+int							check_stab_64(t_file *file, uint32_t i, struct symtab_command *sc)
 {
 	struct nlist_64			*array;
 
-	array = (void*)content + swap_endian(sc->symoff, need_swap);
-	if (N_STAB & swap_endian(array[i].n_type, need_swap))
+	array = (void*)file->content + sc->symoff;
+	if (N_STAB & array[i].n_type)
 		return (TRUE);
 	return (FALSE);
 }
 
-void					sort_symbols_by_name(t_symbol **sym_head)
+void					sort_arch_symbols(t_file *file)
+{
+	t_arch				*tmp;
+
+	tmp = file->arch;
+	if (!file->is_fat)
+	{
+		sort_symbols_by_name(tmp);
+		return ;
+	}
+	while (tmp)
+	{
+		sort_symbols_by_name(tmp);
+		tmp = tmp->next;
+	}
+}
+
+void					sort_symbols_by_name(t_arch *arch)
 {
 	t_symbol			*iterator;
 	t_symbol			*tmp_previous;
 	t_symbol			*tmp;
 	t_symbol			*tmp_next;
 	
-	iterator = *sym_head;
+	iterator = arch->sym_head;
 	tmp_previous = NULL;
 	while (iterator)
 	{
@@ -76,10 +136,10 @@ void					sort_symbols_by_name(t_symbol **sym_head)
 			if (tmp_previous)
 				tmp_previous->next = tmp_next;
 			else
-				*sym_head = tmp_next;
+				arch->sym_head = tmp_next;
 			tmp->next = tmp_next->next;
 			tmp_next->next = tmp;
-			iterator = *sym_head;
+			iterator = arch->sym_head;
 			tmp_previous = NULL;
 		}
 		else

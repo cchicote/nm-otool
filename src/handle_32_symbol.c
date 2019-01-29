@@ -12,41 +12,21 @@
 
 #include "nm_otool.h"
 
-char						get_char_by_section_32(void *content, uint32_t n_sect, int need_swap)
-{
-	struct section			*sect;
-	char					type_char;
-	
-	type_char = 's';
-	if (n_sect == 0 || (sect = handle_32_header(NULL, content, n_sect, need_swap)) == NULL)
-		return (type_char);
-	if (ft_strncmp(sect->segname, SEG_TEXT, 16) == 0
-		&& ft_strncmp(sect->sectname, SECT_TEXT, 16) == 0)
-		type_char = 't';
-	else if (ft_strncmp(sect->segname, SEG_DATA, 16) == 0
-		&& ft_strncmp(sect->sectname, SECT_DATA, 16) == 0)
-		type_char = 'd';
-	else if (ft_strncmp(sect->segname, SEG_DATA, 16) == 0
-		&& ft_strncmp(sect->sectname, SECT_BSS, 16) == 0)
-		type_char = 'b';
-	return (type_char);
-}
-
-void						get_symbol_type_char_32(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap)
+void						get_symbol_type_char_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol)
 {
 	struct nlist			*array;
 	uint8_t					n_type_value;
 
-	array = (void*)content + swap_endian(sc->symoff, need_swap);
-	symbol->type_char = get_char_by_section_32(content, swap_endian(array[i].n_sect, need_swap), need_swap);
-	n_type_value = (swap_endian(array[i].n_type, need_swap) & N_TYPE);
+	array = file->content + sc->symoff;
+	symbol->section_index = array[i].n_sect;
+	n_type_value = (array[i].n_type & N_TYPE);
 	if (n_type_value == N_ABS)
 		symbol->type_char = 'a';
-	else if (n_type_value == N_UNDF && swap_endian(array[i].n_value, need_swap))
+	else if (n_type_value == N_UNDF && array[i].n_value)
 		symbol->type_char = 'c';
 	else if (n_type_value == N_INDR)
 		symbol->type_char = 'i';
-	else if ((n_type_value == N_UNDF && !swap_endian(array[i].n_value, need_swap)) ||
+	else if ((n_type_value == N_UNDF && !array[i].n_value) ||
 		n_type_value == N_PBUD)
 		symbol->type_char = 'u';
 	else if (array[i].n_desc & N_WEAK_REF)
@@ -54,43 +34,45 @@ void						get_symbol_type_char_32(void *content, uint32_t i, struct symtab_comma
 	else if (n_type_value == N_SECT && !symbol->type_char)
 		symbol->type_char = '?';
 	if (N_EXT & array[i].n_type)
-		symbol->type_char  = ft_toupper(symbol->type_char);
+		symbol->is_external = TRUE;
 }
 
-void						get_symbol_name_32(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap)
+void						get_symbol_name_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol)
 {
 	char					*stringtable;
 	struct nlist			*array;
 
-	array = (void*)content + swap_endian(sc->symoff, need_swap);
-	stringtable = content + swap_endian(sc->stroff, need_swap);
-	symbol->name = stringtable + swap_endian(array[i].n_un.n_strx, need_swap);
+	array = file->content + sc->symoff;
+	stringtable = file->content + sc->stroff;
+	symbol->name = stringtable + array[i].n_un.n_strx;
 }
 
-void						get_symbol_value_32(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap)
+void						get_symbol_value_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol)
 {
 	struct nlist			*array;
 	uint8_t					n_type_value;
 
-	array = (void*)content + swap_endian(sc->symoff, need_swap);
-	if ((n_type_value = (swap_endian(array[i].n_type, need_swap) & N_TYPE)))
-		symbol->value = swap_endian(array[i].n_value, need_swap);
+	array = file->content + sc->symoff;
+	if ((n_type_value = array[i].n_type & N_TYPE))
+		symbol->value = array[i].n_value;
 }
 
-void						parse_symtable_32(t_symbol **sym_head, void *content, struct symtab_command *sc, int need_swap)
+void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arch)
 {
 	uint32_t				i;
 	t_symbol				*symbol;
 
 	i = -1;
-	while (++i < swap_endian(sc->nsyms, need_swap))
+	if (file->is_little_endian)
+		swap_nlist_32(file, sc->symoff);
+	while (++i < sc->nsyms)
 	{
-		if (check_stab_32(content, i, sc, need_swap))
+		if (check_stab_32(file, i, sc))
 			continue;
 		symbol = new_symbol();	
-		get_symbol_name_32(content, i, sc, symbol, need_swap);
-		get_symbol_value_32(content, i, sc, symbol, need_swap);
-		get_symbol_type_char_32(content, i, sc, symbol, need_swap);
-		add_symbol_to_list(sym_head, symbol);
+		get_symbol_name_32(file, i, sc, symbol);
+		get_symbol_value_32(file, i, sc, symbol);
+		get_symbol_type_char_32(file, i, sc, symbol);
+		add_symbol_to_list(&arch->sym_head, symbol);
 	}
 }
