@@ -23,9 +23,13 @@ SRC_PATH 		= ./src/
 OBJ_PATH 		= ./obj/
 
 UTILS_SRCS		= handle_file.c \
-					handle_error.c
+					handle_error.c \
+					utils.c
 NM_SRCS			= ft_nm.c \
 					handle_header.c \
+					handle_segment.c \
+					handle_64_symbol.c \
+					handle_32_symbol.c \
 					$(UTILS_SRCS)
 OTOOL_SRCS		= ft_otool.c $(UTILS_SRCS)
 LIBFT 			= $(LIBFT_PATH)/libft.a
