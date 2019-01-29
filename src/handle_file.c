@@ -29,7 +29,7 @@ t_file					check_file(char *command, char *filename)
 		//perror_fileerror(command, filename);
 		return (file);
 	}
-	file.content = mmap(0, stat_ret.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
+	file.content = mmap(0, stat_ret.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
 	close(fd);
 	if (!file.content)
 	{

@@ -29,6 +29,7 @@ NM_SRCS			= ft_nm.c \
 					handle_header.c \
 					handle_segment.c \
 					handle_32_symbol.c \
+					handle_64_symbol.c \
 					$(UTILS_SRCS)
 OTOOL_SRCS		= ft_otool.c $(UTILS_SRCS)
 LIBFT 			= $(LIBFT_PATH)/libft.a

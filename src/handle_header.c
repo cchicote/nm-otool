@@ -12,12 +12,6 @@
 
 #include "nm_otool.h"
 
-/*uint64_t		swap_endian(uint64_t x)
-{
-	return (((((x) & 0xff000000) >> 24) | (((x) & 0xff0000) >> 8)\
-		| (((x) & 0xff00) << 8) | (((x) & 0xff) << 24)));
-}*/
-
 unsigned char				*swap_endian(unsigned char *data, size_t n)
 {
 	size_t					i;
@@ -36,24 +30,11 @@ unsigned char				*swap_endian(unsigned char *data, size_t n)
 	return (data);
 }
 
-void						swap_fat_arch(t_file *file, uint32_t offset)
-{
-	struct fat_arch			*fat_arch;
-
-	fat_arch = (struct fat_arch*)file->content + offset;
-	SWAP(fat_arch->cputype);
-	SWAP(fat_arch->cpusubtype);
-	SWAP(fat_arch->offset);
-	SWAP(fat_arch->size);
-	SWAP(fat_arch->align);
-}
-
 void						swap_32_header(t_file *file, uint32_t offset)
 {
-	struct mach_header			*mach_header;
+	struct mach_header		*mach_header;
 
-	mach_header = (struct mach_header*)file->content + offset;
-	SWAP(mach_header->magic);
+	mach_header = file->content + offset;
 	SWAP(mach_header->cputype);
 	SWAP(mach_header->cpusubtype);
 	SWAP(mach_header->filetype);
@@ -64,10 +45,9 @@ void						swap_32_header(t_file *file, uint32_t offset)
 
 void						swap_64_header(t_file *file, uint32_t offset)
 {
-	struct mach_header_64			*mach_header_64;
+	struct mach_header_64	*mach_header_64;
 	
-	mach_header_64 = (struct mach_header_64*)file->content + offset;
-	SWAP(mach_header_64->magic);
+	mach_header_64 = file->content + offset;
 	SWAP(mach_header_64->cputype);
 	SWAP(mach_header_64->cpusubtype);
 	SWAP(mach_header_64->filetype);
@@ -81,7 +61,7 @@ void						swap_load_command(t_file *file, uint32_t offset)
 {
 	struct load_command		*load_command;
 
-	load_command = (struct load_command*)file->content + offset;
+	load_command = file->content + offset;
 	SWAP(load_command->cmd);
 	SWAP(load_command->cmdsize);
 }
@@ -90,7 +70,7 @@ void						swap_32_segment_command(t_file *file, uint32_t offset)
 {
 	struct segment_command	*segment_command;
 
-	segment_command = (struct segment_command*)file->content + offset;
+	segment_command = file->content + offset;
 	SWAP(segment_command->cmd);
 	SWAP(segment_command->cmdsize);
 	SWAP(segment_command->segname);
@@ -104,11 +84,11 @@ void						swap_32_segment_command(t_file *file, uint32_t offset)
 	SWAP(segment_command->flags);
 }
 
-void							swap_64_segment_command(t_file *file, uint32_t offset)
+void							swap_64_segment_command(t_file *file, struct segment_command_64 *sc)
 {
 	struct segment_command_64	*segment_command_64;
 
-	segment_command_64 = (struct segment_command_64*)file->content + offset;
+	segment_command_64 = file->content + sc->fileoff;
 	SWAP(segment_command_64->cmd);
 	SWAP(segment_command_64->cmdsize);
 	SWAP(segment_command_64->segname);
@@ -126,7 +106,7 @@ void						swap_symtab_command(t_file *file, uint32_t offset)
 {
 	struct symtab_command	*symtab_command;
 
-	symtab_command = (struct symtab_command*)file->content + offset;
+	symtab_command = file->content + offset;
 	SWAP(symtab_command->cmd);
 	SWAP(symtab_command->cmdsize);
 	SWAP(symtab_command->symoff);
@@ -137,11 +117,22 @@ void						swap_symtab_command(t_file *file, uint32_t offset)
 
 void						swap_fat_header(t_file *file, uint32_t offset)
 {
-	t_fh		*fat_header;
+	struct fat_header		*fat_header;
 
-	fat_header = (t_fh*)file->content + offset;
-	SWAP(fat_header->magic);
+	fat_header = file->content + offset;
     SWAP(fat_header->nfat_arch);
+}
+
+void						swap_fat_arch(t_file *file, uint32_t offset, uint32_t i)
+{
+	struct fat_arch			*fat_arch;
+
+	fat_arch = file->content + offset;
+	SWAP(fat_arch[i].cputype);
+	SWAP(fat_arch[i].cpusubtype);
+	SWAP(fat_arch[i].offset);
+	SWAP(fat_arch[i].size);
+	SWAP(fat_arch[i].align);
 }
 
 void						handle_fat_header(t_file *file)
@@ -153,19 +144,16 @@ void						handle_fat_header(t_file *file)
 
 	i = -1;
 	if (file->is_little_endian)
-	{
 		swap_fat_header(file, 0);
-		printf("A\n");
-		swap_fat_arch(file, sizeof(struct fat_header));
-	}
 	fat_header = (struct fat_header*)file->content;
+	fat_arch = file->content + sizeof(struct fat_header);
 	narch = fat_header->nfat_arch;
-	fat_arch = (void*)file->content + sizeof(struct fat_header);
 	while (++i < narch)
 	{
+		if (file->is_little_endian)
+			swap_fat_arch(file, sizeof(struct fat_header), i);
 		if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_X86_64)
-			printf("It works\n");
-			//handle_new_arch(file, file->content + fat_arch[i].offset));
+			handle_new_arch(file, fat_arch[i].offset);
 	}
 }
 
@@ -178,20 +166,20 @@ void						handle_new_arch(t_file *file, uint32_t offset)
 	new_arch = (t_arch*)ft_memalloc(sizeof(t_arch));
 	ft_bzero(new_arch, sizeof(t_arch));
 	new_arch->offset = offset;
+	new_arch->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64);
 	if (magic == MH_MAGIC || magic == MH_CIGAM)
 	{
-		if (file->is_little_endian)
+		if (magic == MH_CIGAM)
 			swap_32_header(file, offset);
 		new_arch->name_int = ARCH_32;
 		handle_32_header(file, offset, new_arch);
 	}
 	else if (magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
 	{
-		;
-		/*if (file->is_little_endian)
+		if (magic == MH_CIGAM_64)
 			swap_64_header(file, offset);
 		new_arch->name_int = ARCH_64;
-		handle_64_header(file, offset, new_arch);*/
+		handle_64_header(file, offset, new_arch);
 	}
 	add_arch_to_list(file, new_arch);
 }
@@ -204,7 +192,7 @@ void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch)
 	uint32_t				i;
 
 	i = -1;
-	ncmds = ((struct mach_header*)file->content)->ncmds;
+	ncmds = ((struct mach_header*)file->content + offset)->ncmds;
 	lc = file->content + offset + sizeof(struct mach_header);
 	if (file->is_little_endian)
 		swap_load_command(file, sizeof(struct mach_header));
@@ -226,3 +214,35 @@ void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch)
 		lc = (void*)lc + lc->cmdsize;
 	}
 }
+
+void						handle_64_header(t_file *file, uint32_t offset, t_arch *arch)
+{
+	struct load_command		*lc;
+	struct mach_header_64	*header;
+	uint32_t				ncmds;
+	uint32_t				i;
+
+	i = -1;
+	header = file->content + offset;
+	ncmds = header->ncmds;
+	lc = file->content + offset + sizeof(struct mach_header_64);
+	if (arch->is_little_endian)
+		swap_load_command(file, offset + sizeof(struct mach_header_64));
+	while (++i < ncmds)
+	{
+		if (lc->cmd == LC_SEGMENT_64)
+		{
+			if (arch->is_little_endian)
+				swap_64_segment_command(file, (struct segment_command_64*)lc);
+			parse_64_segments(file, (struct segment_command_64*)lc, arch, offset);
+		}
+		else if (lc->cmd == LC_SYMTAB)
+		{
+			if (arch->is_little_endian)
+				swap_symtab_command(file, (uint32_t)((void*)lc - file->content + offset));
+			parse_symtable_64(file, (struct symtab_command*)lc, arch);
+		}
+		lc = (void*)lc + lc->cmdsize;
+	}
+}
+

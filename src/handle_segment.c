@@ -16,7 +16,7 @@ void						swap_section_32(t_file *file, uint32_t offset)
 {
 	struct section			*section;
 
-	section = (struct section*)file->content + offset;
+	section = file->content + offset;
 	SWAP(section->sectname);
 	SWAP(section->segname);
 	SWAP(section->addr);
@@ -34,7 +34,7 @@ void						swap_section_64(t_file *file, uint32_t offset)
 {
 	struct section_64		*section_64;
 
-	section_64 = (struct section_64*)file->content + offset;
+	section_64 = file->content + offset;
 	SWAP(section_64->sectname);
 	SWAP(section_64->segname);
 	SWAP(section_64->addr);
@@ -56,8 +56,34 @@ void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 
 	i = -1;
 	sect = (void*)sc + sizeof(struct segment_command);
-	if (file->is_little_endian)
+	if (arch->is_little_endian)
 		swap_section_32(file, (uint32_t)((void*)sect - file->content));
+	while (++i < sc->nsects)
+	{
+		arch->n_sect++;
+		if (ft_strncmp(sect[i].segname, SEG_TEXT, 16) == 0
+			&& ft_strncmp(sect[i].sectname, SECT_TEXT, 16) == 0)
+			arch->sect_char[arch->n_sect] = 't';
+		else if (ft_strncmp(sect[i].segname, SEG_DATA, 16) == 0
+			&& ft_strncmp(sect[i].sectname, SECT_DATA, 16) == 0)
+			arch->sect_char[arch->n_sect] = 'd';
+		else if (ft_strncmp(sect[i].segname, SEG_DATA, 16) == 0
+			&& ft_strncmp(sect[i].sectname, SECT_BSS, 16) == 0)
+			arch->sect_char[arch->n_sect] = 'b';
+		else
+			arch->sect_char[arch->n_sect] = 's';
+	}
+}
+
+void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t offset)
+{	
+	uint32_t				i;
+	struct section_64		*sect;
+
+	i = -1;
+	sect = (void*)sc + sizeof(struct segment_command_64);
+	if (arch->is_little_endian)
+		swap_section_64(file, (uint32_t)((void*)sect - file->content + offset));
 	while (++i < sc->nsects)
 	{
 		arch->n_sect++;

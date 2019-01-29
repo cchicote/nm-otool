@@ -27,8 +27,6 @@
 # define FAT 3
 # define SWAP(x)		swap_endian((unsigned char*)&x, sizeof(x))
 
-typedef struct fat_header t_fh;
-
 typedef struct			s_symbol
 {
 	uint64_t			value;
@@ -48,6 +46,7 @@ typedef struct			s_arch
 	t_symbol			*sym_head;
 	char				sect_char[256];
 	int					n_sect;
+	int					is_little_endian;
 	struct s_arch		*next;
 }						t_arch;
 
@@ -79,14 +78,14 @@ t_file					check_file(char *command, char *filename);
 */
 void						handle_new_arch(t_file *file, uint32_t offset);
 void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch);
-struct section_64			*handle_64_header(t_symbol **sym_head, void *content, uint32_t nsect, int need_swap);
+void						handle_64_header(t_file *file, uint32_t offset, t_arch *arch);
 void						handle_fat_header(t_file *file);
 
 /*
 **	HANDLE_SEGMENT.C
 */
 void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch);
-struct section_64			*parse_64_segments(struct segment_command_64 *sc, uint32_t n_sect, int need_swap);
+void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t offset);
 
 /*
 **	HANDLE_32_SYMBOL.C
@@ -99,11 +98,10 @@ void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arc
 /*
 **	HANDLE_64_SYMBOL.C
 */
-char						get_char_by_section_64(void *content, uint32_t n_sect, int need_swap);
-void						get_symbol_type_char_64(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap);
-void						get_symbol_name_64(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap);
-void						get_symbol_value_64(void *content, uint32_t i, struct symtab_command *sc, t_symbol *symbol, int need_swap);
-void						parse_symtable_64(t_symbol **sym_head, void *content, struct symtab_command *sc, int need_swap);
+void						get_symbol_type_char_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol);
+void						get_symbol_name_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol);
+void						get_symbol_value_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol);
+void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch);
 
 /*
 **	HANDLE_ERROR.C
