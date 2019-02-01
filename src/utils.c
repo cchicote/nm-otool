@@ -81,26 +81,6 @@ void						swap_nlist_64(t_file *file, uint32_t offset)
 	SWAP(nlist_64->n_value);
 }
 
-int							check_stab_32(t_file *file, uint32_t i, struct symtab_command *sc)
-{
-	struct nlist			*array;
-
-	array = (void*)file->content + sc->symoff;
-	if (N_STAB & array[i].n_type)
-		return (TRUE);
-	return (FALSE);
-}
-
-int							check_stab_64(t_file *file, uint32_t i, struct symtab_command *sc)
-{
-	struct nlist_64			*array;
-
-	array = (void*)file->content + sc->symoff;
-	if (N_STAB & array[i].n_type)
-		return (TRUE);
-	return (FALSE);
-}
-
 void					sort_arch_symbols(t_file *file)
 {
 	t_arch				*tmp;

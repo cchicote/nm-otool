@@ -172,19 +172,19 @@ void						handle_new_arch(t_file *file, uint32_t offset)
 		if (magic == MH_CIGAM)
 			swap_32_header(file, offset);
 		new_arch->name_int = ARCH_32;
-		handle_32_header(file, offset, new_arch);
+		handle_32_header(file, new_arch);
 	}
 	else if (magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
 	{
 		if (magic == MH_CIGAM_64)
 			swap_64_header(file, offset);
 		new_arch->name_int = ARCH_64;
-		handle_64_header(file, offset, new_arch);
+		handle_64_header(file, new_arch);
 	}
 	add_arch_to_list(file, new_arch);
 }
 
-void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch)
+void						handle_32_header(t_file *file, t_arch *arch)
 {
 	struct load_command		*lc;
 	struct section			*sect;
@@ -192,8 +192,8 @@ void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch)
 	uint32_t				i;
 
 	i = -1;
-	ncmds = ((struct mach_header*)file->content + offset)->ncmds;
-	lc = file->content + offset + sizeof(struct mach_header);
+	ncmds = ((struct mach_header*)file->content + arch->offset)->ncmds;
+	lc = file->content + arch->offset + sizeof(struct mach_header);
 	if (file->is_little_endian)
 		swap_load_command(file, sizeof(struct mach_header));
 	sect = NULL;
@@ -215,7 +215,7 @@ void						handle_32_header(t_file *file, uint32_t offset, t_arch *arch)
 	}
 }
 
-void						handle_64_header(t_file *file, uint32_t offset, t_arch *arch)
+void						handle_64_header(t_file *file, t_arch *arch)
 {
 	struct load_command		*lc;
 	struct mach_header_64	*header;
@@ -223,23 +223,23 @@ void						handle_64_header(t_file *file, uint32_t offset, t_arch *arch)
 	uint32_t				i;
 
 	i = -1;
-	header = file->content + offset;
+	header = file->content + arch->offset;
 	ncmds = header->ncmds;
-	lc = file->content + offset + sizeof(struct mach_header_64);
+	lc = file->content + arch->offset + sizeof(struct mach_header_64);
 	if (arch->is_little_endian)
-		swap_load_command(file, offset + sizeof(struct mach_header_64));
+		swap_load_command(file, arch->offset + sizeof(struct mach_header_64));
 	while (++i < ncmds)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
 		{
 			if (arch->is_little_endian)
 				swap_64_segment_command(file, (struct segment_command_64*)lc);
-			parse_64_segments(file, (struct segment_command_64*)lc, arch, offset);
+			parse_64_segments(file, (struct segment_command_64*)lc, arch);
 		}
 		else if (lc->cmd == LC_SYMTAB)
 		{
 			if (arch->is_little_endian)
-				swap_symtab_command(file, (uint32_t)((void*)lc - file->content + offset));
+				swap_symtab_command(file, (uint32_t)((void*)lc - file->content + arch->offset));
 			parse_symtable_64(file, (struct symtab_command*)lc, arch);
 		}
 		lc = (void*)lc + lc->cmdsize;

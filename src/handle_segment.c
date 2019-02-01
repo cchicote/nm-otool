@@ -57,7 +57,7 @@ void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 	i = -1;
 	sect = (void*)sc + sizeof(struct segment_command);
 	if (arch->is_little_endian)
-		swap_section_32(file, (uint32_t)((void*)sect - file->content));
+		swap_section_32(file, (uint32_t)((void*)sect - file->content + arch->offset));
 	while (++i < sc->nsects)
 	{
 		arch->n_sect++;
@@ -75,7 +75,7 @@ void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 	}
 }
 
-void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t offset)
+void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch)
 {	
 	uint32_t				i;
 	struct section_64		*sect;
@@ -83,7 +83,7 @@ void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch 
 	i = -1;
 	sect = (void*)sc + sizeof(struct segment_command_64);
 	if (arch->is_little_endian)
-		swap_section_64(file, (uint32_t)((void*)sect - file->content + offset));
+		swap_section_64(file, (uint32_t)((void*)sect - file->content + arch->offset));
 	while (++i < sc->nsects)
 	{
 		arch->n_sect++;

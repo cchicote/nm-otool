@@ -12,12 +12,22 @@
 
 #include "nm_otool.h"
 
-void						get_symbol_type_char_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol)
+int							check_stab_32(t_file *file, uint32_t i, struct symtab_command *sc, t_arch *arch)
+{
+	struct nlist			*array;
+
+	array = file->content + arch->offset + sc->symoff;
+	if (N_STAB & array[i].n_type)
+		return (TRUE);
+	return (FALSE);
+}
+
+void						get_symbol_type_char_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)
 {
 	struct nlist			*array;
 	uint8_t					n_type_value;
 
-	array = file->content + sc->symoff;
+	array = file->content + arch->offset + sc->symoff;
 	symbol->section_index = array[i].n_sect;
 	n_type_value = (array[i].n_type & N_TYPE);
 	if (n_type_value == N_ABS)
@@ -37,22 +47,22 @@ void						get_symbol_type_char_32(t_file *file, uint32_t i, struct symtab_comman
 		symbol->is_external = TRUE;
 }
 
-void						get_symbol_name_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol)
+void						get_symbol_name_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)
 {
 	char					*stringtable;
 	struct nlist			*array;
 
-	array = file->content + sc->symoff;
-	stringtable = file->content + sc->stroff;
+	array = file->content + arch->offset + sc->symoff;
+	stringtable = file->content + arch->offset + sc->stroff;
 	symbol->name = stringtable + array[i].n_un.n_strx;
 }
 
-void						get_symbol_value_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol)
+void						get_symbol_value_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)
 {
 	struct nlist			*array;
 	uint8_t					n_type_value;
 
-	array = file->content + sc->symoff;
+	array = file->content + arch->offset + sc->symoff;
 	if ((n_type_value = array[i].n_type & N_TYPE))
 		symbol->value = array[i].n_value;
 }
@@ -67,12 +77,12 @@ void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arc
 		swap_nlist_32(file, sc->symoff);
 	while (++i < sc->nsyms)
 	{
-		if (check_stab_32(file, i, sc))
+		if (check_stab_32(file, i, sc, arch))
 			continue;
 		symbol = new_symbol();	
-		get_symbol_name_32(file, i, sc, symbol);
-		get_symbol_value_32(file, i, sc, symbol);
-		get_symbol_type_char_32(file, i, sc, symbol);
+		get_symbol_name_32(file, i, sc, symbol, arch);
+		get_symbol_value_32(file, i, sc, symbol, arch);
+		get_symbol_type_char_32(file, i, sc, symbol, arch);
 		add_symbol_to_list(&arch->sym_head, symbol);
 	}
 }
