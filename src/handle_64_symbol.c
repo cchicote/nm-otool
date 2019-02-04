@@ -73,10 +73,11 @@ void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arc
 	t_symbol				*symbol;
 
 	i = -1;
-	if (arch->is_little_endian)
-		swap_nlist_64(file, sc->symoff);
+
 	while (++i < sc->nsyms)
 	{
+		if (arch->is_little_endian)
+			swap_nlist_64(file, arch, sc->symoff, i);
 		if (check_stab_64(file, i, sc, arch))
 			continue;
 		symbol = new_symbol();

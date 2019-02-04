@@ -12,24 +12,6 @@
 
 #include "nm_otool.h"
 
-void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol)
-{
-	t_symbol				*tmp;
-
-	tmp = *sym_head;
-	symbol->next = NULL;
-	if (!tmp)
-	{
-		*sym_head = symbol;
-		return ;
-	}
-	while (tmp->next)
-	{
-		tmp = tmp->next;
-	}
-	tmp->next = symbol;
-}
-
 void						add_arch_to_list(t_file *file, t_arch *arch)
 {
 	t_arch					*tmp;
@@ -57,28 +39,67 @@ t_symbol					*new_symbol(void)
 	return (new);
 }
 
-void						swap_nlist_32(t_file *file, uint32_t offset)
-{
-	struct nlist			*nlist;
+t_symbol*			sorted_merge(t_symbol *a, t_symbol *b) 
+{ 
+	t_symbol		*result;
+	int				ret;
 
-	nlist = (struct nlist*)file->content + offset;
-	SWAP(nlist->n_un.n_strx);
-	SWAP(nlist->n_type);
-	SWAP(nlist->n_sect);
-	SWAP(nlist->n_desc);
-	SWAP(nlist->n_value);
-}
+	result = NULL;
+	if (a == NULL)
+		return(b);
+	else if (b==NULL)
+		return(a);
+	ret = ft_strcmp(b->name, a->name);
+	if (ret > 0 || (ret == 0 && b->value > a->value))
+	{
+		result = a;
+		result->next = sorted_merge(a->next, b);
+	}
+	else
+	{
+		result = b;
+		result->next = sorted_merge(a, b->next);
+	}
+	return(result);
+} 
 
-void						swap_nlist_64(t_file *file, uint32_t offset)
-{
-	struct nlist_64			*nlist_64;
+void					front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **backRef) 
+{ 
+	t_symbol		*fast;
+	t_symbol		*slow;
 
-	nlist_64 = (struct nlist_64*)file->content + offset;
-	SWAP(nlist_64->n_un.n_strx);
-	SWAP(nlist_64->n_type);
-	SWAP(nlist_64->n_sect);
-	SWAP(nlist_64->n_desc);
-	SWAP(nlist_64->n_value);
+	slow = source; 
+	fast = source->next; 
+	while (fast != NULL) 
+	{ 
+		fast = fast->next; 
+		if (fast != NULL) 
+		{ 
+			slow = slow->next; 
+			fast = fast->next; 
+		} 
+	}
+
+	*frontRef = source; 
+	*backRef = slow->next; 
+	slow->next = NULL; 
+} 
+
+void					merge_sort(t_symbol **headRef) 
+{ 
+	t_symbol		*head;
+	t_symbol		*a; 
+	t_symbol		*b; 
+  
+	head = *headRef;
+	if (!head || !head->next) 
+		return ;
+	front_back_split(head, &a, &b);  
+
+	merge_sort(&a); 
+	merge_sort(&b); 
+
+	*headRef = sorted_merge(a, b); 
 }
 
 void					sort_arch_symbols(t_file *file)
@@ -86,14 +107,9 @@ void					sort_arch_symbols(t_file *file)
 	t_arch				*tmp;
 
 	tmp = file->arch;
-	if (!file->is_fat)
-	{
-		sort_symbols_by_name(tmp);
-		return ;
-	}
 	while (tmp)
 	{
-		sort_symbols_by_name(tmp);
+		merge_sort(&tmp->sym_head);
 		tmp = tmp->next;
 	}
 }
@@ -128,4 +144,22 @@ void					sort_symbols_by_name(t_arch *arch)
 			iterator = iterator->next;
 		}
 	}
+}
+
+void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol)
+{
+	t_symbol				*tmp;
+
+	tmp = *sym_head;
+	symbol->next = NULL;
+	if (!tmp)
+	{
+		*sym_head = symbol;
+		return ;
+	}
+	while (tmp->next)
+	{
+		tmp = tmp->next;
+	}
+	tmp->next = symbol;
 }

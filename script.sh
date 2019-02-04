@@ -1,3 +1,4 @@
+#!/bin/bash
 printf "\e[93mBuilding ft_nm\n"
 make ft_nm
 printf "\e[94mExecuting tests on \e[96m$1\n\e[m"

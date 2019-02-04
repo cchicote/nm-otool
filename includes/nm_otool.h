@@ -48,6 +48,7 @@ typedef struct			s_arch
 	char				sect_char[256];
 	int					n_sect;
 	int					is_little_endian;
+	cpu_type_t			cputype;
 	struct s_arch		*next;
 }						t_arch;
 
@@ -59,9 +60,9 @@ typedef struct			s_file
 	t_arch				*arch;
 	int					is_little_endian;
 	int					is_fat;
+	int					display_multiple_cpu;
 }						t_file;
 
-unsigned char				*swap_endian(unsigned char *data, size_t n);
 
 /*
 **	FT_NM.C
@@ -124,7 +125,20 @@ t_symbol					*new_symbol(void);
 void						add_arch_to_list(t_file *file, t_arch *arch);
 void					sort_arch_symbols(t_file *file);
 
-void						swap_nlist_32(t_file *file, uint32_t offset);
-void						swap_nlist_64(t_file *file, uint32_t offset);
+unsigned char				*swap_endian(unsigned char *data, size_t n);
+
+void						swap_32_header(t_file *file, uint32_t offset);
+void						swap_64_header(t_file *file, uint32_t offset);
+void						swap_fat_header(t_file *file, uint32_t offset);
+void						swap_fat_arch(t_file *file, uint32_t offset, uint32_t i);
+
+void						swap_load_command(struct load_command *lc);
+void						swap_nlist_32(t_file *file, t_arch *arch, uint32_t offset, uint32_t i);
+void						swap_nlist_64(t_file *file, t_arch *arch, uint32_t offset, uint32_t i);
+void						swap_32_segment_command(struct segment_command *sc);
+void						swap_64_segment_command(struct segment_command_64 *sc);
+void						swap_symtab_command(struct symtab_command *sc);
+void						swap_section_32(struct section *sect);
+void						swap_section_64(struct section_64 *sect_64);
 
 #endif

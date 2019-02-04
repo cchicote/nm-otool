@@ -12,12 +12,43 @@
 
 #include "nm_otool.h"
 
+void					print_filename_and_cpu(t_arch *arch, char *filename)
+{
+	printf("\n%s (for architecture ", filename);
+	if (arch->cputype == CPU_TYPE_X86_64)
+		printf("x86_64");
+	else if (arch->cputype == CPU_TYPE_I386)
+		printf("i386");
+	else if (arch->cputype == CPU_TYPE_POWERPC)
+		printf("ppc");
+	else if (arch->cputype == CPU_TYPE_POWERPC64)
+		printf("ppc64");
+	else if (arch->cputype == CPU_TYPE_ARM)
+		printf("arm");
+	else if (arch->cputype == CPU_TYPE_ARM64)
+		printf("arm64");
+	else if (arch->cputype == CPU_TYPE_SPARC)
+		printf("sparc");
+	else if (arch->cputype == CPU_TYPE_I860)
+		printf("i860");
+	else if (arch->cputype == CPU_TYPE_HPPA)
+		printf("hppa");
+	else if (arch->cputype == CPU_TYPE_MC680x0)
+		printf("mc680x0");
+	else if (arch->cputype == CPU_TYPE_MC98000)
+		printf("mc98000");
+	else if (arch->cputype == CPU_TYPE_MC88000)
+		printf("mc88000");
+	else
+		printf("unknown");
+	printf("):\n");
+}
+
 void					print_symbols(t_arch *arch, int IS_64)
 {
 	t_symbol 			*tmp;
 
 	tmp = arch->sym_head;
-	//printf("SYMBOLS: \n");
 	while (tmp)
 	{
 		if (tmp->type_char == '?')
@@ -34,21 +65,26 @@ void					print_symbols(t_arch *arch, int IS_64)
 			printf("%8s %c %s\n", " ", tmp->type_char, tmp->name);
 		tmp = tmp->next;
 	}
-	//printf("\n");
 }
 
-void					print_arch_sym(t_file *file)
+void					print_arch_sym(t_file *file, int multiple_files)
 {
 	t_arch				*tmp;
 
 	tmp = file->arch;
 	if (!file->is_fat)
 	{
+		if (multiple_files)
+			printf("\n%s:\n", file->name);
 		print_symbols(tmp, tmp->name_int == ARCH_64);
 		return ;
 	}
 	while (tmp)
 	{
+		if (file->display_multiple_cpu)
+			print_filename_and_cpu(tmp, file->name);
+		else if (multiple_files)
+			printf("\n%s:\n", file->name);
 		print_symbols(tmp, tmp->name_int == ARCH_64);
 		tmp = tmp->next;
 	}
@@ -60,11 +96,9 @@ void					dispatch_by_magic(t_file *file)
 
 	magic = *(uint32_t*)file->content;
 	file->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64 || magic == FAT_CIGAM);
-	if (magic == FAT_MAGIC || magic == FAT_CIGAM)
-	{
-		file->is_fat = TRUE;
+	file->is_fat = (magic == FAT_MAGIC || magic == FAT_CIGAM);
+	if (magic == FAT_MAGIC || magic == FAT_CIGAM)	
 		handle_fat_header(file);
-	}
 	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
 		handle_new_arch(file, 0);
 }
@@ -76,11 +110,9 @@ void					ft_nm(char *filename, int multiple_files)
 	file = check_file("ft_nm", filename);
 	if (!file.content)
 		return ;
-	if (multiple_files)
-		printf("\n%s:\n", file.name);
 	dispatch_by_magic(&file);
 	sort_arch_symbols(&file);
-	print_arch_sym(&file);
+	print_arch_sym(&file, multiple_files);
 	//munmap(file.content, file.len);
 }
 
