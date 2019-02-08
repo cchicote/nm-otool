@@ -55,9 +55,9 @@ void					print_symbols(t_arch *arch, int IS_64)
 			tmp->type_char = arch->sect_char[tmp->section_index];
 		if (tmp->is_external)
 			tmp->type_char = ft_toupper(tmp->type_char);
-		if (tmp->value && IS_64)
+		if (ft_toupper(tmp->type_char) != 'U' && IS_64)
 			printf("%016llx %c %s\n", tmp->value, tmp->type_char, tmp->name);
-		else if (tmp->value && !IS_64)
+		else if (ft_toupper(tmp->type_char) != 'U' && !IS_64)
 			printf("%08llx %c %s\n", tmp->value, tmp->type_char, tmp->name);
 		else if (IS_64)
 			printf("%16s %c %s\n", " ", tmp->type_char, tmp->name);
@@ -67,14 +67,16 @@ void					print_symbols(t_arch *arch, int IS_64)
 	}
 }
 
-void					print_arch_sym(t_file *file, int multiple_files)
+void					print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 {
 	t_arch				*tmp;
 
 	tmp = file->arch;
 	if (!file->is_fat)
 	{
-		if (multiple_files)
+		if (ar_name)
+			printf("\n%s(%s):\n", ar_name, file->name);
+		else if (multiple_files)
 			printf("\n%s:\n", file->name);
 		print_symbols(tmp, tmp->name_int == ARCH_64);
 		return ;
@@ -83,6 +85,8 @@ void					print_arch_sym(t_file *file, int multiple_files)
 	{
 		if (file->display_multiple_cpu)
 			print_filename_and_cpu(tmp, file->name);
+		else if (ar_name)
+			printf("\n%s(%s):\n", ar_name, file->name);
 		else if (multiple_files)
 			printf("\n%s:\n", file->name);
 		print_symbols(tmp, tmp->name_int == ARCH_64);
@@ -90,7 +94,7 @@ void					print_arch_sym(t_file *file, int multiple_files)
 	}
 }
 
-void					dispatch_by_magic(t_file *file)
+int						dispatch_by_magic(t_file *file)
 {
 	static uint32_t		magic = 0;
 
@@ -101,18 +105,28 @@ void					dispatch_by_magic(t_file *file)
 		handle_fat_header(file);
 	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
 		handle_new_arch(file, 0);
+	else
+	{
+		perror_fileerror("ft_nm", file->name);
+		return (EXIT_FAILURE);
+	}
+	return (EXIT_SUCCESS);
 }
 
-void					ft_nm(char *filename, int multiple_files)
+int						ft_nm(char *filename, int multiple_files)
 {
 	t_file				file;
 
 	file = check_file("ft_nm", filename);
 	if (!file.content)
-		return ;
-	dispatch_by_magic(&file);
+		return (EXIT_FAILURE);
+	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
+		return (handle_archive(&file));
+	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
 	sort_arch_symbols(&file);
-	print_arch_sym(&file, multiple_files);
+	print_arch_sym(&file, multiple_files, NULL);
+	return (EXIT_SUCCESS);
 	//munmap(file.content, file.len);
 }
 

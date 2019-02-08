@@ -21,6 +21,8 @@
 # include <mach-o/fat.h>
 # include <mach-o/nlist.h>
 # include <mach/machine.h>
+# include <mach-o/ranlib.h>
+# include <ar.h>
 # include <stdio.h>
 
 # define ARCH_32 1
@@ -63,12 +65,23 @@ typedef struct			s_file
 	int					display_multiple_cpu;
 }						t_file;
 
+typedef struct			s_ar_header
+{
+	struct ar_hdr		*ar_header;
+	char				long_name[20];
+}						t_ar_header;
+
+typedef struct			s_ar_symtab
+{
+	uint32_t			sym_offset;
+	uint32_t			obj_offset;
+}						t_ar_symtab;
 
 /*
 **	FT_NM.C
 */
-void					ft_nm(char *filename, int multiple_files);
-void					dispatch_by_magic(t_file *file);
+int						ft_nm(char *filename, int multiple_files);
+int					dispatch_by_magic(t_file *file);
 
 /*
 **	HANDLE_FILE.C
@@ -115,6 +128,7 @@ void					perror_fileerror(char *command, char *filename);
 void					perror_maperror(char *command, char *filename);
 void					perror_command(char *command);
 void					perror_filename(char *filename);
+void					perror_directory(char *command, char *filename);
 
 /*
 **	UTILS.C
@@ -140,5 +154,11 @@ void						swap_64_segment_command(struct segment_command_64 *sc);
 void						swap_symtab_command(struct symtab_command *sc);
 void						swap_section_32(struct section *sect);
 void						swap_section_64(struct section_64 *sect_64);
+
+int						handle_archive(t_file *file);
+t_file					generate_file_from_archive(char *command, char *ar_name, void *hdr_ptr);
+void					print_arch_sym(t_file *file, int multiple_files, char *ar_name);
+uint32_t				get_name_size_from_ar_hdr(void *hdr_ptr);
+uint32_t				get_file_size_from_ar_hdr(void *hdr_ptr);
 
 #endif

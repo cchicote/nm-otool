@@ -33,7 +33,10 @@ void						get_symbol_type_char_64(t_file *file, uint32_t i, struct symtab_comman
 	if (n_type_value == N_ABS)
 		symbol->type_char = 'a';
 	else if (n_type_value == N_UNDF && array[i].n_value)
+	{
+		symbol->value = array[i].n_value;
 		symbol->type_char = 'c';
+	}
 	else if (n_type_value == N_INDR)
 		symbol->type_char = 'i';
 	else if ((n_type_value == N_UNDF && !array[i].n_value) ||

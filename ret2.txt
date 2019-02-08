@@ -24,7 +24,7 @@ files_test/unsafe/opcache.a(ZendAccelerator.o):
 0000000000001042 t _accel_find_interned_string
 0000000000005570 s _accel_find_sapi.supported_sapis
 0000000000003c27 t _accel_gen_system_id
-0000000000000000 C _accel_globals
+0000000000002230 C _accel_globals
 0000000000003c1a t _accel_globals_internal_func_dtor
 0000000000004618 t _accel_include_path_on_modify
 0000000000003db6 t _accel_interned_strings_restore_for_php
@@ -187,7 +187,7 @@ files_test/unsafe/opcache.a(zend_accelerator_blacklist.o):
                  U ___bzero
                  U ___stack_chk_fail
                  U ___stack_chk_guard
-0000000000000000 C _accel_blacklist
+0000000000000018 C _accel_blacklist
                  U _calloc
                  U _expand_filepath
                  U _expand_filepath_ex
@@ -495,14 +495,14 @@ files_test/unsafe/opcache.a(zend_shared_alloc.o):
 000000000000a220 b _g_shared_alloc_handler
 000000000000a228 b _g_shared_model
 0000000000000c60 s _handler_table
-0000000000000000 C _lock_file
+0000000000000004 C _lock_file
 0000000000009e20 b _lockfile_name
 0000000000000c90 d _mem_write_lock
 0000000000000ca8 d _mem_write_unlock
                  U _memcpy
                  U _mkstemp
                  U _mprotect
-0000000000000000 C _smm_shared_globals
+0000000000000008 C _smm_shared_globals
                  U _strcmp
                  U _strerror
                  U _strncmp
