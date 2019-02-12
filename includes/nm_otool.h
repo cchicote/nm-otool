@@ -91,10 +91,10 @@ t_file					check_file(char *command, char *filename);
 /*
 **	HANDLE_HEADER.C
 */
-void						handle_new_arch(t_file *file, uint32_t offset);
-void						handle_32_header(t_file *file, t_arch *arch);
-void						handle_64_header(t_file *file, t_arch *arch);
-void						handle_fat_header(t_file *file);
+int							handle_new_arch(t_file *file, uint32_t offset);
+int							handle_32_header(t_file *file, t_arch *arch);
+int							handle_64_header(t_file *file, t_arch *arch);
+int							handle_fat_header(t_file *file);
 
 /*
 **	HANDLE_SEGMENT.C
@@ -129,6 +129,9 @@ void					perror_maperror(char *command, char *filename);
 void					perror_command(char *command);
 void					perror_filename(char *filename);
 void					perror_directory(char *command, char *filename);
+void					perror_truncated_malformed_lc(char *command, char *filename, uint32_t failing_lc);
+void					perror_truncated_malformed_file(char *command, char *filename, uint32_t failing_lc);
+void					perror_truncated_malformed_multiple(char *command, char *filename, uint32_t failing_lc);
 
 /*
 **	UTILS.C
@@ -160,5 +163,7 @@ t_file					generate_file_from_archive(char *command, char *ar_name, void *hdr_pt
 void					print_arch_sym(t_file *file, int multiple_files, char *ar_name);
 uint32_t				get_name_size_from_ar_hdr(void *hdr_ptr);
 uint32_t				get_file_size_from_ar_hdr(void *hdr_ptr);
+int						check_ptr(t_file *file, void *lc);
+int						check_lc(t_file *file, void *lc, void *lc_end, uint32_t i);
 
 #endif

@@ -6,4 +6,4 @@ printf "\e[94mExecuting tests on \e[96m$1\n\e[m"
 nm $1 > ret2
 printf "\e[91mDiff: ["
 diff ret1 ret2
-printf "]\n"
+printf "]\n\n"

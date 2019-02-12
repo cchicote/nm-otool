@@ -102,9 +102,9 @@ int						dispatch_by_magic(t_file *file)
 	file->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64 || magic == FAT_CIGAM);
 	file->is_fat = (magic == FAT_MAGIC || magic == FAT_CIGAM);
 	if (magic == FAT_MAGIC || magic == FAT_CIGAM)	
-		handle_fat_header(file);
+		return (handle_fat_header(file));
 	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
-		handle_new_arch(file, 0);
+		return (handle_new_arch(file, 0));
 	else
 	{
 		perror_fileerror("ft_nm", file->name);

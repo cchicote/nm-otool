@@ -1,5 +1,0 @@
-00001000 T __mh_execute_header
-00001f40 T _main
-         U _printf
-0000200c D _une_globale
-         U dyld_stub_binder

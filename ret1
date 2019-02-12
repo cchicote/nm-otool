@@ -1,5 +1,1 @@
-00001000 T __mh_execute_header
-00001f40 T _main
-         U _printf
-0000200c D _une_globale
-         U dyld_stub_binder
+ft_nm: files_test/unsafe/sect_offset/invalid_section_offset_x86-64: truncated or malformed object (load command 2 cmdsize not a multiple of 4)

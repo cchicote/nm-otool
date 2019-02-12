@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-void						handle_fat_header(t_file *file)
+int							handle_fat_header(t_file *file)
 {
 	struct fat_header		*fat_header;
 	struct fat_arch			*fat_arch;
@@ -32,22 +32,22 @@ void						handle_fat_header(t_file *file)
 		if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_X86_64)
 		{
 			file->display_multiple_cpu = FALSE;
-			handle_new_arch(file, fat_arch[i].offset);
-			return ;
+			return (handle_new_arch(file, fat_arch[i].offset));
 		}
 	}
 	file->display_multiple_cpu = TRUE;
 	i = -1;
 	while (++i < narch)
 	{
-		if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_I386)
-			handle_new_arch(file, fat_arch[i].offset);
-		else if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_POWERPC)
-			handle_new_arch(file, fat_arch[i].offset);
+		if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_I386 && handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
+		else if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_POWERPC && handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 	}
+	return (EXIT_SUCCESS);
 }
 
-void						handle_new_arch(t_file *file, uint32_t offset)
+int							handle_new_arch(t_file *file, uint32_t offset)
 {
 	uint32_t				magic;
 	t_arch					*new_arch;
@@ -62,19 +62,22 @@ void						handle_new_arch(t_file *file, uint32_t offset)
 		if (magic == MH_CIGAM)
 			swap_32_header(file, offset);
 		new_arch->name_int = ARCH_32;
-		handle_32_header(file, new_arch);
+		if (handle_32_header(file, new_arch) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 	}
 	else if (magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
 	{
 		if (magic == MH_CIGAM_64)
 			swap_64_header(file, offset);
 		new_arch->name_int = ARCH_64;
-		handle_64_header(file, new_arch);
+		if (handle_64_header(file, new_arch) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 	}
 	add_arch_to_list(file, new_arch);
+	return (EXIT_SUCCESS);
 }
 
-void						handle_32_header(t_file *file, t_arch *arch)
+int							handle_32_header(t_file *file, t_arch *arch)
 {
 	struct load_command		*lc;
 	struct mach_header		*header;
@@ -88,6 +91,8 @@ void						handle_32_header(t_file *file, t_arch *arch)
 	lc = file->content + arch->offset + sizeof(struct mach_header);
 	while (++i < ncmds)
 	{
+		if (check_lc(file, (void*)lc, (void*)header + header->sizeofcmds, i) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 		if (arch->is_little_endian)
 			swap_load_command(lc);
 		if (lc->cmd == LC_SEGMENT)
@@ -104,9 +109,10 @@ void						handle_32_header(t_file *file, t_arch *arch)
 		}
 		lc = (void*)lc + lc->cmdsize;
 	}
+	return (EXIT_SUCCESS);
 }
 
-void						handle_64_header(t_file *file, t_arch *arch)
+int							handle_64_header(t_file *file, t_arch *arch)
 {
 	struct load_command		*lc;
 	struct mach_header_64	*header;
@@ -120,6 +126,12 @@ void						handle_64_header(t_file *file, t_arch *arch)
 	lc = file->content + arch->offset + sizeof(struct mach_header_64);
 	while (++i < ncmds)
 	{
+		//printf("Values:\n");
+		//printf("\tfile len: [%zu]\n\tfile max addr: [%p]\n\tcurr addr: [%p]\n", file->len, file->content + file->len, lc);
+		//printf("\tcurr addr > file len ?: [%d]\n", (void*)lc > (file->content + file->len));
+		//printf("\ti: [%u]\tncmds: [%u]\n", i, ncmds);
+		if (check_lc(file, (void*)lc, (void*)header + header->sizeofcmds, i) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 		if (arch->is_little_endian)
 			swap_load_command(lc);
 		if (lc->cmd == LC_SEGMENT_64)
@@ -134,7 +146,10 @@ void						handle_64_header(t_file *file, t_arch *arch)
 				swap_symtab_command((struct symtab_command*)lc);
 			parse_symtable_64(file, (struct symtab_command*)lc, arch);
 		}
+		//printf("\tincrement\n");
 		lc = (void*)lc + lc->cmdsize;
+		//printf("\tincrement done\n\n");
 	}
+	return (EXIT_SUCCESS);
 }
 

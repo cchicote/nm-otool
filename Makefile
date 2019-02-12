@@ -24,6 +24,7 @@ OBJ_PATH 		= ./obj/
 
 UTILS_SRCS		= handle_file.c \
 					handle_error.c \
+					handle_safe_ptr.c \
 					utils.c
 NM_SRCS			= ft_nm.c \
 					handle_header.c \
