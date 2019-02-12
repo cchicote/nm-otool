@@ -83,7 +83,7 @@ void					print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 	}
 	while (tmp)
 	{
-		if (file->display_multiple_cpu)
+		if (file->display_multiple_cpu > 1)
 			print_filename_and_cpu(tmp, file->name);
 		else if (ar_name)
 			printf("\n%s(%s):\n", ar_name, file->name);

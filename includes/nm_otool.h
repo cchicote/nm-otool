@@ -63,6 +63,8 @@ typedef struct			s_file
 	int					is_little_endian;
 	int					is_fat;
 	int					display_multiple_cpu;
+	void				*curr_arch;
+	void				*curr_header_end;
 }						t_file;
 
 typedef struct			s_ar_header
@@ -99,8 +101,8 @@ int							handle_fat_header(t_file *file);
 /*
 **	HANDLE_SEGMENT.C
 */
-void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch);
-void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch);
+int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset);
+int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset);
 
 /*
 **	HANDLE_32_SYMBOL.C
@@ -132,6 +134,9 @@ void					perror_directory(char *command, char *filename);
 void					perror_truncated_malformed_lc(char *command, char *filename, uint32_t failing_lc);
 void					perror_truncated_malformed_file(char *command, char *filename, uint32_t failing_lc);
 void					perror_truncated_malformed_multiple(char *command, char *filename, uint32_t failing_lc);
+void					perror_truncated_malformed_sect_file(char *command, char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+void					perror_truncated_malformed_sect_header(char *command, char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+void					perror_truncated_malformed_seg_nsect(char *command, char *filename, char *segname, uint32_t failing_seg);
 
 /*
 **	UTILS.C
@@ -165,5 +170,9 @@ uint32_t				get_name_size_from_ar_hdr(void *hdr_ptr);
 uint32_t				get_file_size_from_ar_hdr(void *hdr_ptr);
 int						check_ptr(t_file *file, void *lc);
 int						check_lc(t_file *file, void *lc, void *lc_end, uint32_t i);
+int						check_section_32(t_file *file, struct section sect, uint32_t sect_index, uint32_t seg_index);
+int						check_section_64(t_file *file, struct section_64 sect, uint32_t sect_index, uint32_t seg_index);
+int						check_segment_32(t_file *file, uint32_t cmdsize, struct segment_command *seg, uint32_t seg_index);
+int						check_segment_64(t_file *file, uint32_t cmdsize, struct segment_command_64 *seg, uint32_t seg_index);
 
 #endif

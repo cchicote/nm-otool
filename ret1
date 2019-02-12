@@ -1,1 +1,1 @@
-ft_nm: files_test/unsafe/sect_offset/invalid_section_offset_x86-64: truncated or malformed object (load command 2 cmdsize not a multiple of 4)
+ft_nm: files_test/unsafe/sect_offset/invalid_section_offset_x86-64: truncated or malformed object (offset field of section 0 in LC_SEGMENT_64 command 1 not past the headers of the file)

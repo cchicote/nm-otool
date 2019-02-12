@@ -119,8 +119,8 @@ void						swap_fat_arch(t_file *file, uint32_t offset, uint32_t i)
 
 void						swap_section_32(struct section *sect)
 {
-	SWAP(sect->sectname);
-	SWAP(sect->segname);
+	//SWAP(sect->sectname);
+	//SWAP(sect->segname);
 	SWAP(sect->addr);
 	SWAP(sect->size);
 	SWAP(sect->offset);
@@ -134,8 +134,8 @@ void						swap_section_32(struct section *sect)
 
 void						swap_section_64(struct section_64 *sect_64)
 {
-	SWAP(sect_64->sectname);
-	SWAP(sect_64->segname);
+	//SWAP(sect_64->sectname);
+	//SWAP(sect_64->segname);
 	SWAP(sect_64->addr);
 	SWAP(sect_64->size);
 	SWAP(sect_64->offset);

@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch)
+int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset)
 {	
 	uint32_t				i;
 	struct section			*sect;
@@ -21,10 +21,11 @@ void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 	sect = (void*)sc + sizeof(struct segment_command);
 	while (++i < sc->nsects)
 	{
+		if (arch->is_little_endian)
+			swap_section_32(&sect[i]);
+		if (check_section_32(file, sect[i], i, seg_offset) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 		arch->n_sect++;
-		//printf("[%d] SEGNAME: [%s]\tSECTNAME: [%s]\n", arch->is_little_endian, sect[i].segname, sect[i].sectname);
-		//if (arch->is_little_endian)
-		//	swap_section_32(&sect[i]);
 		if (ft_strncmp(sect[i].segname, SEG_TEXT, 16) == 0
 			&& ft_strncmp(sect[i].sectname, SECT_TEXT, 16) == 0)
 			arch->sect_char[arch->n_sect] = 't';
@@ -37,9 +38,10 @@ void						parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 		else
 			arch->sect_char[arch->n_sect] = 's';
 	}
+	return (EXIT_SUCCESS);
 }
 
-void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch)
+int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset)
 {	
 	uint32_t				i;
 	struct section_64		*sect;
@@ -48,9 +50,11 @@ void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch 
 	sect = (void*)sc + sizeof(struct segment_command_64);
 	while (++i < sc->nsects)
 	{
+		if (arch->is_little_endian)
+			swap_section_64(&sect[i]);
+		if (check_section_64(file, sect[i], i, seg_offset) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
 		arch->n_sect++;
-		//if (arch->is_little_endian)
-		//	swap_section_64(&sect[i]);
 		if (ft_strncmp(sect[i].segname, SEG_TEXT, 16) == 0
 			&& ft_strncmp(sect[i].sectname, SECT_TEXT, 16) == 0)
 			arch->sect_char[arch->n_sect] = 't';
@@ -63,4 +67,5 @@ void						parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch 
 		else
 			arch->sect_char[arch->n_sect] = 's';
 	}
+	return (EXIT_SUCCESS);
 }
