@@ -39,6 +39,15 @@ t_symbol					*new_symbol(void)
 	return (new);
 }
 
+int					cmp_null_values(char *a, char *b)
+{
+	if (!a && !b)
+		return (0);
+	else if (!a)
+		return (-1);
+	return (1);
+}
+
 t_symbol*			sorted_merge(t_symbol *a, t_symbol *b) 
 { 
 	t_symbol		*result;
@@ -47,9 +56,12 @@ t_symbol*			sorted_merge(t_symbol *a, t_symbol *b)
 	result = NULL;
 	if (a == NULL)
 		return(b);
-	else if (b==NULL)
+	else if (b == NULL)
 		return(a);
-	ret = ft_strcmp(b->name, a->name);
+	if (!a->name || !b->name)
+		ret = cmp_null_values(a->name, b->name);
+	else
+		ret = ft_strcmp(b->name, a->name);
 	if (ret > 0 || (ret == 0 && b->value > a->value))
 	{
 		result = a;

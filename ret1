@@ -1,1 +1,1 @@
-ft_nm: files_test/unsafe/sect_offset/invalid_section_offset_x86-64: truncated or malformed object (offset field of section 0 in LC_SEGMENT_64 command 1 not past the headers of the file)
+ft_nm: files_test/safe/invalid/lc_extends_EOF_x86-64: truncated or malformed object (load command 1 extends past the end all load commands in the file)

@@ -67,7 +67,8 @@ void						get_symbol_name_64(t_file *file, uint32_t i, struct symtab_command *sc
 
 	array = file->content + arch->offset + sc->symoff;
 	stringtable = file->content + arch->offset + sc->stroff;
-	symbol->name = stringtable + array[i].n_un.n_strx;
+	symbol->name = (void*)(stringtable + array[i].n_un.n_strx) > (file->content + file->len) 
+		? NULL : stringtable + array[i].n_un.n_strx;
 }
 
 void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch)

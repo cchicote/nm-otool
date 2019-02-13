@@ -55,6 +55,8 @@ void						get_symbol_name_32(t_file *file, uint32_t i, struct symtab_command *sc
 	array = file->content + arch->offset + sc->symoff;
 	stringtable = file->content + arch->offset + sc->stroff;
 	symbol->name = stringtable + array[i].n_un.n_strx;
+	symbol->name = (void*)(stringtable + array[i].n_un.n_strx) > (file->content + file->len) 
+		? NULL : stringtable + array[i].n_un.n_strx;
 }
 
 void						get_symbol_value_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)

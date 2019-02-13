@@ -55,6 +55,11 @@ t_file					generate_file_from_archive(char *command, char *ar_name, void *hdr_pt
 	return (file);
 }
 
+void					unmap_file(t_file *file)
+{
+	munmap(file->content, file->len);
+}
+
 t_file					check_file(char *command, char *filename)
 {
     t_file				file;

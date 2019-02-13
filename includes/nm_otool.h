@@ -174,5 +174,6 @@ int						check_section_32(t_file *file, struct section sect, uint32_t sect_index
 int						check_section_64(t_file *file, struct section_64 sect, uint32_t sect_index, uint32_t seg_index);
 int						check_segment_32(t_file *file, uint32_t cmdsize, struct segment_command *seg, uint32_t seg_index);
 int						check_segment_64(t_file *file, uint32_t cmdsize, struct segment_command_64 *seg, uint32_t seg_index);
+void					unmap_file(t_file *file);
 
 #endif
