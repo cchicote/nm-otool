@@ -49,15 +49,15 @@ int					cmp_null_values(char *a, char *b)
 }
 
 t_symbol*			sorted_merge(t_symbol *a, t_symbol *b) 
-{ 
+{
 	t_symbol		*result;
 	int				ret;
 
 	result = NULL;
-	if (a == NULL)
-		return(b);
-	else if (b == NULL)
-		return(a);
+	if (!a)
+		return (b);
+	else if (!b)
+		return (a);
 	if (!a->name || !b->name)
 		ret = cmp_null_values(a->name, b->name);
 	else
@@ -76,42 +76,39 @@ t_symbol*			sorted_merge(t_symbol *a, t_symbol *b)
 } 
 
 void					front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **backRef) 
-{ 
+{
 	t_symbol		*fast;
 	t_symbol		*slow;
 
-	slow = source; 
-	fast = source->next; 
-	while (fast != NULL) 
-	{ 
-		fast = fast->next; 
-		if (fast != NULL) 
-		{ 
-			slow = slow->next; 
-			fast = fast->next; 
-		} 
+	slow = source;
+	fast = source->next;
+	while (fast != NULL)
+	{
+		fast = fast->next;
+		if (fast != NULL)
+		{
+			slow = slow->next;
+			fast = fast->next;
+		}
 	}
-
-	*frontRef = source; 
-	*backRef = slow->next; 
-	slow->next = NULL; 
-} 
+	*frontRef = source;
+	*backRef = slow->next;
+	slow->next = NULL;
+}
 
 void					merge_sort(t_symbol **headRef) 
-{ 
+{
 	t_symbol		*head;
-	t_symbol		*a; 
-	t_symbol		*b; 
-  
+	t_symbol		*a;
+	t_symbol		*b;
+
 	head = *headRef;
-	if (!head || !head->next) 
+	if (!head || !head->next)
 		return ;
-	front_back_split(head, &a, &b);  
-
-	merge_sort(&a); 
-	merge_sort(&b); 
-
-	*headRef = sorted_merge(a, b); 
+	front_back_split(head, &a, &b);
+	merge_sort(&a);
+	merge_sort(&b);
+	*headRef = sorted_merge(a, b);
 }
 
 void					sort_arch_symbols(t_file *file)
@@ -123,38 +120,6 @@ void					sort_arch_symbols(t_file *file)
 	{
 		merge_sort(&tmp->sym_head);
 		tmp = tmp->next;
-	}
-}
-
-void					sort_symbols_by_name(t_arch *arch)
-{
-	t_symbol			*iterator;
-	t_symbol			*tmp_previous;
-	t_symbol			*tmp;
-	t_symbol			*tmp_next;
-	
-	iterator = arch->sym_head;
-	tmp_previous = NULL;
-	while (iterator)
-	{
-		if (iterator->next && ft_strcmp(iterator->name, iterator->next->name) > 0)
-		{
-			tmp = iterator;
-			tmp_next = iterator->next;
-			if (tmp_previous)
-				tmp_previous->next = tmp_next;
-			else
-				arch->sym_head = tmp_next;
-			tmp->next = tmp_next->next;
-			tmp_next->next = tmp;
-			iterator = arch->sym_head;
-			tmp_previous = NULL;
-		}
-		else
-		{
-			tmp_previous = iterator;
-			iterator = iterator->next;
-		}
 	}
 }
 

@@ -76,7 +76,8 @@ void					print_symbols(t_arch *arch, int IS_64)
 	}
 }
 
-void					print_arch_sym(t_file *file, int multiple_files, char *ar_name)
+void					print_arch_sym(t_file *file, int multiple_files,
+							char *ar_name)
 {
 	t_arch				*tmp;
 	t_arch				*arch_to_free;
@@ -113,11 +114,13 @@ int						dispatch_by_magic(t_file *file)
 	static uint32_t		magic = 0;
 
 	magic = *(uint32_t*)file->content;
-	file->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64 || magic == FAT_CIGAM);
+	file->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64
+		|| magic == FAT_CIGAM);
 	file->is_fat = (magic == FAT_MAGIC || magic == FAT_CIGAM);
 	if (magic == FAT_MAGIC || magic == FAT_CIGAM)
 		return (handle_fat_header(file));
-	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
+	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64
+		|| magic == MH_CIGAM_64)
 		return (handle_new_arch(file, 0));
 	else
 	{

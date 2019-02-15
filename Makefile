@@ -13,7 +13,7 @@
 NM_NAME 		= ft_nm
 OTOOL_NAME 		= ft_otool
 CC 				= gcc
-CFLAGS 			= -Wall -Wextra #-Werror
+CFLAGS 			= -Wall -Wextra -O1 -g -fsanitize=address #-Werror
 LFLAGS 			= -lft
 INC 			= -I$(INCLUDE_PATH)
 

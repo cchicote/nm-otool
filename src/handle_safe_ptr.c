@@ -69,12 +69,14 @@ int						check_section_32(t_file *file, struct section sect, uint32_t sect_index
 		return (EXIT_SUCCESS);
 	if (!check_sect_offset_file(file, sect.offset))
 	{
-		perror_truncated_malformed_sect_file("ft_nm", file->name, sect_index, seg_index, "LC_SEGMENT");
+		perror_truncated_malformed_sect_file("ft_nm",
+			file->name, sect_index, seg_index, "LC_SEGMENT");
 		return (EXIT_FAILURE);
 	}
 	if (!check_sect_offset_header(file, sect.offset))
 	{
-  		perror_truncated_malformed_sect_header("ft_nm", file->name, sect_index, seg_index, "LC_SEGMENT");
+  		perror_truncated_malformed_sect_header("ft_nm",
+		  	file->name, sect_index, seg_index, "LC_SEGMENT");
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
@@ -86,12 +88,14 @@ int						check_section_64(t_file *file, struct section_64 sect, uint32_t sect_in
 		return (EXIT_SUCCESS);
 	if (!check_sect_offset_file(file, sect.offset))
 	{
-		perror_truncated_malformed_sect_file("ft_nm", file->name, sect_index, seg_index, "LC_SEGMENT_64");
+		perror_truncated_malformed_sect_file("ft_nm",
+			file->name, sect_index, seg_index, "LC_SEGMENT_64");
 		return (EXIT_FAILURE);
 	}
 	if (!check_sect_offset_header(file, sect.offset))
 	{
-		perror_truncated_malformed_sect_header("ft_nm", file->name, sect_index, seg_index, "LC_SEGMENT_64");
+		perror_truncated_malformed_sect_header("ft_nm",
+			file->name, sect_index, seg_index, "LC_SEGMENT_64");
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
@@ -107,7 +111,8 @@ int						check_segment_32(t_file *file, uint32_t cmdsize, struct segment_command
 {
 	if (!check_seg_nsect(sizeof(struct section), cmdsize, seg->nsects))
 	{
-		perror_truncated_malformed_seg_nsect("ft_nm", file->name, "LC_SEGMENT", seg_index);
+		perror_truncated_malformed_seg_nsect("ft_nm", file->name,
+			"LC_SEGMENT", seg_index);
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
@@ -117,7 +122,8 @@ int						check_segment_64(t_file *file, uint32_t cmdsize, struct segment_command
 {
 	if (!check_seg_nsect(sizeof(struct section_64), cmdsize, seg->nsects))
 	{
-		perror_truncated_malformed_seg_nsect("ft_nm", file->name, "LC_SEGMENT_64", seg_index);
+		perror_truncated_malformed_seg_nsect("ft_nm", file->name,
+			"LC_SEGMENT_64", seg_index);
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);

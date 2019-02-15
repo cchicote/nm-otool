@@ -43,21 +43,27 @@ t_file					generate_file_from_archive(char *command, char *ar_name, void *hdr_pt
 		perror_maperror(command, filename);
 		return (file);
 	}
-	file.content = hdr_ptr+ sizeof(struct ar_hdr) + get_name_size_from_ar_hdr(hdr_ptr);
+	file.content = hdr_ptr+ sizeof(struct ar_hdr)
+		+ get_name_size_from_ar_hdr(hdr_ptr);
 	file.name = filename;
 	file.len = size;
 
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		printf("ERROR\n");
+		return (file);
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, TRUE, ar_name);
-
 	return (file);
 }
 
 void					unmap_file(t_file *file)
 {
 	munmap(file->content, file->len);
+}
+
+t_file					perror_return(t_file file, char *command, char *filename, void (*perror_func)(char *cmd, char *fnm))
+{
+	perror_func(command, filename);
+	return (file);
 }
 
 t_file					check_file(char *command, char *filename)
@@ -68,10 +74,7 @@ t_file					check_file(char *command, char *filename)
 
 	ft_bzero(&file, sizeof(t_file));
 	if ((fd = open(filename, O_RDONLY)) < 0)
-	{
-		perror_nosuchfile(command, filename);
-		return (file);
-	}
+		return (perror_return(file, command, filename, &perror_nosuchfile));
 	if (fstat(fd, &stat_ret) < 0 || !(stat_ret.st_mode & S_IFREG))
 	{
 		if (stat_ret.st_mode & S_IFDIR)
@@ -80,13 +83,11 @@ t_file					check_file(char *command, char *filename)
 			perror_fileerror(command, filename);
 		return (file);
 	}
-	file.content = mmap(0, stat_ret.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
+	file.content = mmap(0, stat_ret.st_size,
+		PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
 	close(fd);
 	if (!file.content)
-	{
-		perror_maperror(command, filename);
-		return (file);
-	}
+		return (perror_return(file, command, filename, &perror_maperror));
 	file.name = filename;
 	file.len = stat_ret.st_size;
 	return (file);

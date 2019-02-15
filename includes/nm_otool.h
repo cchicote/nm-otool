@@ -107,19 +107,19 @@ int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch 
 /*
 **	HANDLE_32_SYMBOL.C
 */
-int							check_stab_32(t_file *file, uint32_t i, struct symtab_command *sc, t_arch *arch);
-void						get_symbol_type_char_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch);
-void						get_symbol_name_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch);
-void						get_symbol_value_32(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch);
+int							check_stab_32(struct nlist array);
+void						get_symbol_type_char_32(t_symbol *symbol, struct nlist array);
+void						get_symbol_name_32(t_file *file, t_symbol *symbol, struct nlist array, char *stringtable);
+void						get_symbol_value_32(t_symbol *symbol, struct nlist array);
 void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arch);
 
 /*
 **	HANDLE_64_SYMBOL.C
 */
-int							check_stab_64(t_file *file, uint32_t i, struct symtab_command *sc, t_arch *arch);
-void						get_symbol_type_char_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch);
-void						get_symbol_name_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch);
-void						get_symbol_value_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch);
+int							check_stab_64(struct nlist_64 array);
+void						get_symbol_type_char_64(t_symbol *symbol, struct nlist_64 array);
+void						get_symbol_name_64(t_file *file, t_symbol *symbol, struct nlist_64 array, char *stringtable);
+void						get_symbol_value_64(t_symbol *symbol, struct nlist_64 array);
 void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch);
 
 /*

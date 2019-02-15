@@ -12,63 +12,49 @@
 
 #include "nm_otool.h"
 
-int							check_stab_64(t_file *file, uint32_t i, struct symtab_command *sc, t_arch *arch)
+int							check_stab_64(struct nlist_64 array)
 {
-	struct nlist_64			*array;
-
- 	array = file->content + arch->offset + sc->symoff;
-	if (N_STAB & array[i].n_type)
+	if (N_STAB & array.n_type)
 		return (TRUE);
 	return (FALSE);
 }
 
-void						get_symbol_type_char_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)
+void						get_symbol_type_char_64(t_symbol *symbol, struct nlist_64 array)
 {
-	struct nlist_64			*array;
 	uint8_t					n_type_value;
 
-	array = file->content + arch->offset + sc->symoff;
-	symbol->section_index = array[i].n_sect;
-	n_type_value = (array[i].n_type & N_TYPE);
+	symbol->section_index = array.n_sect;
+	n_type_value = (array.n_type & N_TYPE);
 	if (n_type_value == N_ABS)
 		symbol->type_char = 'a';
-	else if (n_type_value == N_UNDF && array[i].n_value)
+	else if (n_type_value == N_UNDF && array.n_value)
 	{
-		symbol->value = array[i].n_value;
+		symbol->value = array.n_value;
 		symbol->type_char = 'c';
 	}
 	else if (n_type_value == N_INDR)
 		symbol->type_char = 'i';
-	else if ((n_type_value == N_UNDF && !array[i].n_value) ||
+	else if ((n_type_value == N_UNDF && !array.n_value) ||
 		n_type_value == N_PBUD)
 		symbol->type_char = 'u';
-	else if (array[i].n_desc & N_WEAK_REF)
+	else if (array.n_desc & N_WEAK_REF)
 		symbol->type_char = 'W';
 	else if (n_type_value == N_SECT && !symbol->type_char)
 		symbol->type_char = '?';
-	if (N_EXT & array[i].n_type)
+	if (N_EXT & array.n_type)
 		symbol->is_external = TRUE;
 }
 
-void						get_symbol_value_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)
+void						get_symbol_value_64(t_symbol *symbol, struct nlist_64 array)
 {
-	struct nlist_64			*array;
-	uint8_t					n_type_value;
-
-	array = file->content + arch->offset + sc->symoff;
-	if ((n_type_value = array[i].n_type & N_TYPE))
-		symbol->value = array[i].n_value;
+	if (array.n_type & N_TYPE)
+		symbol->value = array.n_value;
 }
 
-void						get_symbol_name_64(t_file *file, uint32_t i, struct symtab_command *sc, t_symbol *symbol, t_arch *arch)
+void						get_symbol_name_64(t_file *file, t_symbol *symbol, struct nlist_64 array, char *stringtable)
 {
-	char					*stringtable;
-	struct nlist_64			*array;
-
-	array = file->content + arch->offset + sc->symoff;
-	stringtable = file->content + arch->offset + sc->stroff;
-	symbol->name = (void*)(stringtable + array[i].n_un.n_strx) > (file->content + file->len) 
-		? NULL : stringtable + array[i].n_un.n_strx;
+	symbol->name = (void*)(stringtable + array.n_un.n_strx) > (file->content + file->len) 
+		? NULL : stringtable + array.n_un.n_strx;
 }
 
 void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch)
@@ -82,12 +68,12 @@ void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arc
 	{
 		if (arch->is_little_endian)
 			swap_nlist_64(file, arch, sc->symoff, i);
-		if (check_stab_64(file, i, sc, arch))
+		if (check_stab_64(((struct nlist_64*)(file->content + arch->offset + sc->symoff))[i]))
 			continue;
 		symbol = new_symbol();
-		get_symbol_name_64(file, i, sc, symbol, arch);
-		get_symbol_value_64(file, i, sc, symbol, arch);
-		get_symbol_type_char_64(file, i, sc, symbol, arch);
+		get_symbol_name_64(file, symbol, ((struct nlist_64*)(file->content + arch->offset + sc->symoff))[i], (char*)(file->content + arch->offset + sc->stroff));
+		get_symbol_value_64(symbol, ((struct nlist_64*)(file->content + arch->offset + sc->symoff))[i]);
+		get_symbol_type_char_64(symbol, ((struct nlist_64*)(file->content + arch->offset + sc->symoff))[i]);
 		add_symbol_to_list(&arch->sym_head, symbol);
 	}
 }

@@ -13,7 +13,7 @@
 #include "nm_otool.h"
 
 int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset)
-{	
+{
 	uint32_t				i;
 	struct section			*sect;
 
@@ -42,7 +42,7 @@ int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 }
 
 int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset)
-{	
+{
 	uint32_t				i;
 	struct section_64		*sect;
 
