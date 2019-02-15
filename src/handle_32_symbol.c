@@ -44,8 +44,8 @@ void						get_symbol_type_char_32(t_symbol *symbol, struct nlist array)
 
 void						get_symbol_name_32(t_file *file, t_symbol *symbol, struct nlist array, char *stringtable)
 {
-	symbol->name = (void*)(stringtable + array.n_un.n_strx) > (file->content + file->len) 
-		? NULL : stringtable + array.n_un.n_strx;
+	symbol->name = (void*)(stringtable + array.n_un.n_strx)
+		> (file->content + file->len) ? NULL : stringtable + array.n_un.n_strx;
 }
 
 void						get_symbol_value_32(t_symbol *symbol, struct nlist array)
@@ -65,12 +65,17 @@ void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arc
 	{
 		if (arch->is_little_endian)
 			swap_nlist_32(file, arch, sc->symoff, i);
-		if (check_stab_32(((struct nlist*)(file->content + arch->offset + sc->symoff))[i]))
+		if (check_stab_32(((struct nlist*)(file->content + arch->offset
+			+ sc->symoff))[i]))
 			continue;
 		symbol = new_symbol();	
-		get_symbol_name_32(file, symbol, ((struct nlist*)(file->content + arch->offset + sc->symoff))[i], (char*)(file->content + arch->offset + sc->stroff));
-		get_symbol_value_32(symbol, ((struct nlist*)(file->content + arch->offset + sc->symoff))[i]);
-		get_symbol_type_char_32(symbol, ((struct nlist*)(file->content + arch->offset + sc->symoff))[i]);
+		get_symbol_name_32(file, symbol, ((struct nlist*)(file->content
+			+ arch->offset + sc->symoff))[i], (char*)(file->content
+			+ arch->offset + sc->stroff));
+		get_symbol_value_32(symbol, ((struct nlist*)(file->content
+		+ arch->offset + sc->symoff))[i]);
+		get_symbol_type_char_32(symbol, ((struct nlist*)(file->content
+			+ arch->offset + sc->symoff))[i]);
 		add_symbol_to_list(&arch->sym_head, symbol);
 	}
 }

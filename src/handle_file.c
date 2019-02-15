@@ -12,27 +12,27 @@
 
 #include "nm_otool.h"
 
-uint32_t				get_name_size_from_ar_hdr(void *hdr_ptr)
+uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr)
 {
-	uint32_t			name_size;
+	uint32_t				name_size;
 
 	name_size = (uint32_t)ft_atoi(hdr_ptr + 3);
 	return (name_size);
 }
 
-uint32_t				get_file_size_from_ar_hdr(void *hdr_ptr)
+uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr)
 {
-	uint32_t			size;
+	uint32_t				size;
 
 	size = (uint32_t)ft_atoi(hdr_ptr + 48);
 	return (size);
 }
 
-t_file					generate_file_from_archive(char *command, char *ar_name, void *hdr_ptr)
+t_file						generate_file_from_archive(char *command, char *ar_name, void *hdr_ptr)
 {
-	t_file				file;
-	uint32_t			size;
-	char				*filename;
+	t_file					file;
+	uint32_t				size;
+	char					*filename;
 
 	size = get_file_size_from_ar_hdr(hdr_ptr);
 	filename = hdr_ptr + sizeof(struct ar_hdr);
@@ -55,22 +55,16 @@ t_file					generate_file_from_archive(char *command, char *ar_name, void *hdr_pt
 	return (file);
 }
 
-void					unmap_file(t_file *file)
+void						unmap_file(t_file *file)
 {
 	munmap(file->content, file->len);
 }
 
-t_file					perror_return(t_file file, char *command, char *filename, void (*perror_func)(char *cmd, char *fnm))
+t_file						check_file(char *command, char *filename)
 {
-	perror_func(command, filename);
-	return (file);
-}
-
-t_file					check_file(char *command, char *filename)
-{
-    t_file				file;
-    int					fd;
-	struct stat			stat_ret;
+    t_file					file;
+    int						fd;
+	struct stat				stat_ret;
 
 	ft_bzero(&file, sizeof(t_file));
 	if ((fd = open(filename, O_RDONLY)) < 0)

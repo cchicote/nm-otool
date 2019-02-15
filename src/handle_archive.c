@@ -12,12 +12,12 @@
 
 #include <nm_otool.h>
 
-uint32_t				parse_ar_symtab_max_offset(void *content)
+uint32_t					parse_ar_symtab_max_offset(void *content)
 {
-	uint32_t			offset;
-	uint32_t			size;
-	uint32_t			symtab_size;
-	uint32_t			offset_max;
+	uint32_t				offset;
+	uint32_t				size;
+	uint32_t				symtab_size;
+	uint32_t				offset_max;
 
 	offset = SARMAG + sizeof(struct ar_hdr) + 20 + sizeof(uint32_t) * 2;
 	size = 0;

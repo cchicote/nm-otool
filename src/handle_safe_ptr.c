@@ -59,7 +59,6 @@ int						check_sect_offset_file(t_file *file, uint32_t offset)
 
 int						check_sect_offset_header(t_file *file, uint32_t offset)
 {
-	//printf("[%p] + [%u] [%p]\n", file->curr_arch + offset, offset, file->curr_header_end);
 	return (file->curr_arch + offset >= file->curr_header_end);
 }
 
@@ -103,7 +102,6 @@ int						check_section_64(t_file *file, struct section_64 sect, uint32_t sect_in
 
 int						check_seg_nsect(uint32_t sect_size, uint32_t cmdsize, uint32_t nsects)
 {
-	//printf("[%u] * [%u] = [%u] <= [%u]\n", sect_size, nsects, sect_size * nsects, cmdsize);
 	return (sect_size * nsects <= cmdsize);
 }
 
