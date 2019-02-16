@@ -1,5 +1,1134 @@
-00001000 T __mh_execute_header
-00001f40 T _main
-         U _printf
-0000200c D _une_globale
-         U dyld_stub_binder
+010f000000160000 c _floorl
+0000025000000001 c _strnew
+0000031600000001 c _strnew
+0000034100000001 c _strnew
+000003aa00000001 c _strnew
+0000043200000001 c _strnew
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0000000100000100 c oi
+0004920000049100 c oi
+002000000fe40000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0024000000010000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+0064000005000000 c oi
+00640000057e0000 c oi
+0064000005de0000 c oi
+00640000063e0000 c oi
+00640000069e0000 c oi
+0064000006fe0000 c oi
+00640000075e0000 c oi
+0064000007be0000 c oi
+00640000081e0000 c oi
+0064000008760000 c oi
+0064000008da0000 c oi
+00640000093e0000 c oi
+0064000009a60000 c oi
+006400000a060000 c oi
+006400000a660000 c oi
+006400000aca0000 c oi
+006400000b330000 c oi
+006400000b970000 c oi
+006400000c070000 c oi
+006400000c670000 c oi
+006400000ccb0000 c oi
+006400000d2b0000 c oi
+006400000d970000 c oi
+006400000df30000 c oi
+006400000e5f0000 c oi
+006400000ebf0000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f230000 c oi
+006400000f4b0000 c oi
+006400000fee0000 c oi
+0064000010b20000 c oi
+00640000110c0000 c oi
+0064000011a40000 c oi
+0064000012350000 c oi
+0064000012ae0000 c oi
+0064000013270000 c oi
+0064000013a00000 c oi
+0064000014250000 c oi
+0064000014a90000 c oi
+0064000015160000 c oi
+00640000158f0000 c oi
+00640000160c0000 c oi
+00640000166e0000 c oi
+0064000016d80000 c oi
+0064000017750000 c oi
+0064000018020000 c oi
+0064000018a60000 c oi
+0064000019080000 c oi
+0064000019820000 c oi
+006400001a290000 c oi
+006400001acb0000 c oi
+006400001b780000 c oi
+006400001bf10000 c oi
+006400001c610000 c oi
+006400001cd30000 c oi
+006400001d540000 c oi
+006400001dd50000 c oi
+006400001e580000 c oi
+006400001ed50000 c oi
+006400001f530000 c oi
+006400001fe20000 c oi
+00640000205f0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000213c0000 c oi
+00640000215b0000 c oi
+00640000219f0000 c oi
+00640000221b0000 c oi
+0064000022780000 c oi
+0064000022ec0000 c oi
+00640000237c0000 c oi
+00640000240c0000 c oi
+0064000024860000 c oi
+010e000025080000 c oi
+0164000000010000 c oi
+03660000058a0000 c oi
+0366000005ea0000 c oi
+03660000064a0000 c oi
+0366000006aa0000 c oi
+03660000070a0000 c oi
+03660000076a0000 c oi
+0366000007ca0000 c oi
+0366000008280000 c oi
+0366000008830000 c oi
+0366000008e70000 c oi
+03660000094c0000 c oi
+0366000009b20000 c oi
+036600000a120000 c oi
+036600000a730000 c oi
+036600000ad40000 c oi
+036600000b400000 c oi
+036600000ba70000 c oi
+036600000c130000 c oi
+036600000c740000 c oi
+036600000cd70000 c oi
+036600000d3a0000 c oi
+036600000da20000 c oi
+036600000e020000 c oi
+036600000e6b0000 c oi
+036600000ecc0000 c oi
+036600000f570000 c oi
+036600000ffa0000 c oi
+0366000010bb0000 c oi
+0366000011170000 c oi
+0366000011b00000 c oi
+0366000012400000 c oi
+0366000012b90000 c oi
+0366000013320000 c oi
+0366000013ab0000 c oi
+0366000014300000 c oi
+0366000014b40000 c oi
+0366000015210000 c oi
+03660000159a0000 c oi
+0366000016170000 c oi
+0366000016790000 c oi
+0366000016e30000 c oi
+0366000017800000 c oi
+0366000018130000 c oi
+0366000018b10000 c oi
+0366000019190000 c oi
+03660000198c0000 c oi
+036600001a330000 c oi
+036600001ad50000 c oi
+036600001b820000 c oi
+036600001bfd0000 c oi
+036600001c700000 c oi
+036600001ce00000 c oi
+036600001d610000 c oi
+036600001de20000 c oi
+036600001e640000 c oi
+036600001ee10000 c oi
+036600001f600000 c oi
+036600001fee0000 c oi
+03660000206d0000 c oi
+0366000021620000 c oi
+0366000021aa0000 c oi
+0366000022230000 c oi
+0366000022880000 c oi
+0366000022f90000 c oi
+0366000023890000 c oi
+03660000241a0000 c oi
+0366000024980000 c oi
+00048f0000049040 c bad string index
+0004940000049300 c bad string index
+0004960000049500 c bad string index
+0004980000049700 c bad string index
+00049a0000049900 c bad string index
+002000000fdb0000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0024000000010000 c bad string index
+0084000005ce0000 c bad string index
+00840000062e0000 c bad string index
+00840000068e0000 c bad string index
+0084000006ee0000 c bad string index
+00840000074e0000 c bad string index
+0084000007ae0000 c bad string index
+00840000080e0000 c bad string index
+0084000008680000 c bad string index
+0084000008c90000 c bad string index
+00840000092d0000 c bad string index
+0084000009940000 c bad string index
+0084000009f60000 c bad string index
+008400000a560000 c bad string index
+008400000ab90000 c bad string index
+008400000b140000 c bad string index
+008400000b860000 c bad string index
+008400000bf30000 c bad string index
+008400000c570000 c bad string index
+008400000cba0000 c bad string index
+008400000d1b0000 c bad string index
+008400000d840000 c bad string index
+008400000de40000 c bad string index
+008400000e4c0000 c bad string index
+008400000eaf0000 c bad string index
+008400000f120000 c bad string index
+008400000f9b0000 c bad string index
+00840000103e0000 c bad string index
+0084000010f90000 c bad string index
+0084000011590000 c bad string index
+0084000011f60000 c bad string index
+0084000012820000 c bad string index
+0084000012fb0000 c bad string index
+0084000013740000 c bad string index
+0084000013ed0000 c bad string index
+0084000014720000 c bad string index
+0084000014f60000 c bad string index
+0084000015630000 c bad string index
+0084000015dc0000 c bad string index
+0084000016590000 c bad string index
+0084000016bb0000 c bad string index
+0084000017250000 c bad string index
+0084000017c20000 c bad string index
+0084000018610000 c bad string index
+0084000018f30000 c bad string index
+0084000019670000 c bad string index
+0084000019d40000 c bad string index
+008400001a760000 c bad string index
+008400001b230000 c bad string index
+008400001bcc0000 c bad string index
+008400001c410000 c bad string index
+008400001cba0000 c bad string index
+008400001d260000 c bad string index
+008400001da70000 c bad string index
+008400001e280000 c bad string index
+008400001ea80000 c bad string index
+008400001f250000 c bad string index
+008400001fa60000 c bad string index
+0084000020320000 c bad string index
+0084000020af0000 c bad string index
+00840000218e0000 c bad string index
+0084000021df0000 c bad string index
+00840000225c0000 c bad string index
+0084000022c30000 c bad string index
+00840000232f0000 c bad string index
+0084000023bf0000 c bad string index
+0084000024520000 c bad string index
+0084000024d50000 c bad string index
+010e000025100000 c bad string index
+010e000025190000 c bad string index
+010e000025260000 c bad string index
+010e0000252d0000 c bad string index
+010e000025380000 c bad string index
+010e000025430000 c bad string index
+010e0000254f0000 c bad string index
+010e000025590000 c bad string index
+010e000025620000 c bad string index
+010e0000256f0000 c bad string index
+010e0000257e0000 c bad string index
+010e000025860000 c bad string index
+010e000025960000 c bad string index
+010e000025a50000 c bad string index
+010e000025af0000 c bad string index
+010e000025b80000 c bad string index
+010e000025c30000 c bad string index
+010e000025cd0000 c bad string index
+010e000025da0000 c bad string index
+010e000025e20000 c bad string index
+010e000025ec0000 c bad string index
+010e000025f90000 c bad string index
+010e000026010000 c bad string index
+010e0000260d0000 c bad string index
+010e000026180000 c bad string index
+010e000026250000 c bad string index
+010e0000262f0000 c bad string index
+010e0000263a0000 c bad string index
+010e000026440000 c bad string index
+010e000026510000 c bad string index
+010e0000265d0000 c bad string index
+010e000026650000 c bad string index
+010e000026740000 c bad string index
+010e0000267e0000 c bad string index
+010e000026870000 c bad string index
+010e000026920000 c bad string index
+010e000026990000 c bad string index
+010e000026a60000 c bad string index
+010e000026b20000 c bad string index
+010e000026c00000 c bad string index
+010e000026cf0000 c bad string index
+010e000026dc0000 c bad string index
+010e000026e60000 c bad string index
+010e000026f00000 c bad string index
+010e000026fd0000 c bad string index
+010e000027070000 c bad string index
+010e000027140000 c bad string index
+010e0000271c0000 c bad string index
+010e000027260000 c bad string index
+010e000027330000 c bad string index
+010e0000273b0000 c bad string index
+010e000027430000 c bad string index
+010e0000274f0000 c bad string index
+010e000027590000 c bad string index
+010e000027660000 c bad string index
+010e000027700000 c bad string index
+010e000027850000 c bad string index
+010e000027960000 c bad string index
+010e000027ab0000 c bad string index
+010e000027ba0000 c bad string index
+010e000027cb0000 c bad string index
+010e000027dc0000 c bad string index
+010e000027e70000 c bad string index
+010e000027f60000 c bad string index
+010e000028070000 c bad string index
+010e000028180000 c bad string index
+010e000028230000 c bad string index
+010e0000282f0000 c bad string index
+010e000028390000 c bad string index
+010e000028450000 c bad string index
+010e000028510000 c bad string index
+010f000000020000 c bad string index
+010f000000270000 c bad string index
+010f000000320000 c bad string index
+010f0000004a0000 c bad string index
+010f000000570000 c bad string index
+010f0000005e0000 c bad string index
+010f0000006b0000 c bad string index
+010f000000790000 c bad string index
+010f000000890000 c bad string index
+010f000000950000 c bad string index
+010f0000009e0000 c bad string index
+010f000000a80000 c bad string index
+010f000000b30000 c bad string index
+010f000000c00000 c bad string index
+010f000000cc0000 c bad string index
+010f000000d50000 c bad string index
+010f000000e30000 c bad string index
+010f000000ee0000 c bad string index
+010f000000fb0000 c bad string index
+010f000001060000 c bad string index
+010f0000010d0000 c bad string index
+010f000001170000 c bad string index
+010f000001220000 c bad string index
+010f0000012e0000 c bad string index
+010f0000013d0000 c bad string index
+010f000001490000 c bad string index
+010f000001540000 c bad string index
+010f000001640000 c bad string index
+010f0000016f0000 c bad string index
+010f0000017a0000 c bad string index
+010f000001850000 c bad string index
+010f000001900000 c bad string index
+010f0000019c0000 c bad string index
+010f000001a70000 c bad string index
+010f000001b20000 c bad string index
+010f000001bd0000 c bad string index
+010f000001c80000 c bad string index
+010f000001d60000 c bad string index
+010f000001e50000 c bad string index
+010f000001f10000 c bad string index
+0124000005c30000 c bad string index
+0124000006230000 c bad string index
+0124000006830000 c bad string index
+0124000006e30000 c bad string index
+0124000007430000 c bad string index
+0124000007a30000 c bad string index
+0124000008030000 c bad string index
+01240000085f0000 c bad string index
+0124000008bd0000 c bad string index
+0124000009210000 c bad string index
+0124000009870000 c bad string index
+0124000009eb0000 c bad string index
+012400000a4b0000 c bad string index
+012400000aad0000 c bad string index
+012400000b0b0000 c bad string index
+012400000b220000 c bad string index
+012400000b2a0000 c bad string index
+012400000b7a0000 c bad string index
+012400000be40000 c bad string index
+012400000c4c0000 c bad string index
+012400000cae0000 c bad string index
+012400000d100000 c bad string index
+012400000d760000 c bad string index
+012400000dda0000 c bad string index
+012400000e3e0000 c bad string index
+012400000ea40000 c bad string index
+012400000f060000 c bad string index
+012400000f900000 c bad string index
+012400000fb10000 c bad string index
+012400000fbe0000 c bad string index
+012400000fc50000 c bad string index
+012400000fd00000 c bad string index
+0124000010330000 c bad string index
+0124000010540000 c bad string index
+0124000010600000 c bad string index
+01240000106a0000 c bad string index
+0124000010730000 c bad string index
+0124000010f10000 c bad string index
+01240000114f0000 c bad string index
+01240000116e0000 c bad string index
+01240000117d0000 c bad string index
+0124000011850000 c bad string index
+0124000011950000 c bad string index
+0124000011e90000 c bad string index
+01240000120c0000 c bad string index
+0124000012170000 c bad string index
+0124000012210000 c bad string index
+01240000122a0000 c bad string index
+0124000012780000 c bad string index
+0124000012970000 c bad string index
+0124000012a10000 c bad string index
+0124000012f10000 c bad string index
+0124000013100000 c bad string index
+01240000136a0000 c bad string index
+0124000013890000 c bad string index
+0124000013930000 c bad string index
+0124000013e30000 c bad string index
+0124000014020000 c bad string index
+01240000140a0000 c bad string index
+0124000014680000 c bad string index
+0124000014870000 c bad string index
+0124000014920000 c bad string index
+01240000149f0000 c bad string index
+0124000014ec0000 c bad string index
+01240000150b0000 c bad string index
+0124000015590000 c bad string index
+0124000015780000 c bad string index
+0124000015820000 c bad string index
+0124000015d20000 c bad string index
+0124000015f10000 c bad string index
+01240000164f0000 c bad string index
+0124000016b10000 c bad string index
+0124000016d00000 c bad string index
+01240000171b0000 c bad string index
+01240000173a0000 c bad string index
+0124000017490000 c bad string index
+0124000017530000 c bad string index
+0124000017b80000 c bad string index
+0124000017d70000 c bad string index
+0124000017e20000 c bad string index
+0124000017e90000 c bad string index
+0124000017f60000 c bad string index
+0124000018510000 c bad string index
+01240000187c0000 c bad string index
+01240000188a0000 c bad string index
+0124000018990000 c bad string index
+0124000018e90000 c bad string index
+0124000019570000 c bad string index
+0124000019c30000 c bad string index
+0124000019e80000 c bad string index
+0124000019fb0000 c bad string index
+012400001a070000 c bad string index
+012400001a180000 c bad string index
+012400001a6a0000 c bad string index
+012400001a8a0000 c bad string index
+012400001a9c0000 c bad string index
+012400001ab00000 c bad string index
+012400001abd0000 c bad string index
+012400001b0c0000 c bad string index
+012400001b370000 c bad string index
+012400001b470000 c bad string index
+012400001b540000 c bad string index
+012400001b660000 c bad string index
+012400001bb90000 c bad string index
+012400001be00000 c bad string index
+012400001c360000 c bad string index
+012400001c570000 c bad string index
+012400001cac0000 c bad string index
+012400001d1a0000 c bad string index
+012400001d3d0000 c bad string index
+012400001d470000 c bad string index
+012400001d9b0000 c bad string index
+012400001dbe0000 c bad string index
+012400001dc80000 c bad string index
+012400001e1c0000 c bad string index
+012400001e3f0000 c bad string index
+012400001e9d0000 c bad string index
+012400001ebe0000 c bad string index
+012400001ec80000 c bad string index
+012400001f1a0000 c bad string index
+012400001f3b0000 c bad string index
+012400001f9a0000 c bad string index
+012400001fbd0000 c bad string index
+012400001fc50000 c bad string index
+0124000020270000 c bad string index
+0124000020480000 c bad string index
+0124000020520000 c bad string index
+0124000020a80000 c bad string index
+0124000020c70000 c bad string index
+0124000020d40000 c bad string index
+0124000020ec0000 c bad string index
+0124000020f60000 c bad string index
+0124000021870000 c bad string index
+0124000021990000 c bad string index
+0124000021d30000 c bad string index
+0124000021ee0000 c bad string index
+0124000021fb0000 c bad string index
+01240000220a0000 c bad string index
+0124000022490000 c bad string index
+0124000022680000 c bad string index
+0124000022b60000 c bad string index
+0124000022d70000 c bad string index
+0124000023240000 c bad string index
+0124000023400000 c bad string index
+01240000234f0000 c bad string index
+0124000023600000 c bad string index
+0124000023710000 c bad string index
+0124000023b40000 c bad string index
+0124000023d00000 c bad string index
+0124000023df0000 c bad string index
+0124000023f00000 c bad string index
+0124000024010000 c bad string index
+0124000024460000 c bad string index
+0124000024640000 c bad string index
+0124000024700000 c bad string index
+01240000247a0000 c bad string index
+0124000024c80000 c bad string index
+0124000024eb0000 c bad string index
+0124000024f70000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+012e000000010000 c bad string index
+012e000000010000 c bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+                 U bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+014e000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+0164000000010000 c bad string index
+050e000028620000 c bad string index
+050e0000287d0000 c bad string index
+050e000028940000 c bad string index
+050e000028a30000 c bad string index
+050e000028b20000 c bad string index
+050e000028c10000 c bad string index
+050e000028da0000 c bad string index
+050e000028eb0000 c bad string index
+050e000028fb0000 c bad string index
+050e0000290c0000 c bad string index
+050e0000291f0000 c bad string index
+0526000010800000 c bad string index
+05260000109b0000 c bad string index
+0526000013180000 c bad string index
+0526000014160000 c bad string index
+0526000015fd0000 c bad string index
+05260000175c0000 c bad string index
+052600001e470000 c bad string index
+052600001f430000 c bad string index
+052600001fd10000 c bad string index
+05260000210b0000 c bad string index
+05260000211e0000 c bad string index
+0a0f000001fd0000 c bad string index
+0a0f000002060000 c bad string index
+5f686d5f5f002000 c bad string index

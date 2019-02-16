@@ -12,18 +12,6 @@
 
 #include "nm_otool.h"
 
-void					perror_command(char *command)
-{
-	ft_putstr(command);
-	ft_putstr(": ");
-}
-
-void					perror_filename(char *filename)
-{
-	ft_putstr(filename);
-	ft_putstr(": ");
-}
-
 void					perror_directory(char *command, char *filename)
 {
 	perror_command(command);

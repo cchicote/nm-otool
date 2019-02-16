@@ -30,97 +30,8 @@ unsigned char				*swap_endian(unsigned char *data, size_t n)
 	return (data);
 }
 
-void						swap_32_header(t_file *file, uint32_t offset)
-{
-	struct mach_header		*mach_header;
-
-	mach_header = file->content + offset;
-	SWAP(mach_header->cputype);
-	SWAP(mach_header->cpusubtype);
-	SWAP(mach_header->filetype);
-	SWAP(mach_header->ncmds);
-	SWAP(mach_header->sizeofcmds);
-	SWAP(mach_header->flags);
-}
-
-void						swap_64_header(t_file *file, uint32_t offset)
-{
-	struct mach_header_64	*mach_header_64;
-	
-	mach_header_64 = file->content + offset;
-	SWAP(mach_header_64->cputype);
-	SWAP(mach_header_64->cpusubtype);
-	SWAP(mach_header_64->filetype);
-	SWAP(mach_header_64->ncmds);
-	SWAP(mach_header_64->sizeofcmds);
-	SWAP(mach_header_64->flags);
-	SWAP(mach_header_64->reserved);
-}
-
-void						swap_load_command(struct load_command *lc)
-{
-	SWAP(lc->cmd);
-	SWAP(lc->cmdsize);
-}
-
-void						swap_32_segment_command(struct segment_command *sc)
-{
-	SWAP(sc->segname);
-	SWAP(sc->vmaddr);
-	SWAP(sc->vmsize);
-	SWAP(sc->fileoff);
-	SWAP(sc->filesize);
-	SWAP(sc->maxprot);
-	SWAP(sc->initprot);
-	SWAP(sc->nsects);
-	SWAP(sc->flags);
-}
-
-void							swap_64_segment_command(struct segment_command_64 *sc)
-{
-	SWAP(sc->segname);
-	SWAP(sc->vmaddr);
-	SWAP(sc->vmsize);
-	SWAP(sc->fileoff);
-	SWAP(sc->filesize);
-	SWAP(sc->maxprot);
-	SWAP(sc->initprot);
-	SWAP(sc->nsects);
-	SWAP(sc->flags);
-}
-
-void						swap_symtab_command(struct symtab_command *sc)
-{
-	SWAP(sc->symoff);
-	SWAP(sc->nsyms);
-	SWAP(sc->stroff);
-	SWAP(sc->strsize);
-}
-
-void						swap_fat_header(t_file *file, uint32_t offset)
-{
-	struct fat_header		*fat_header;
-
-	fat_header = file->content + offset;
-    SWAP(fat_header->nfat_arch);
-}
-
-void						swap_fat_arch(t_file *file, uint32_t offset, uint32_t i)
-{
-	struct fat_arch			*fat_arch;
-
-	fat_arch = file->content + offset;
-	SWAP(fat_arch[i].cputype);
-	SWAP(fat_arch[i].cpusubtype);
-	SWAP(fat_arch[i].offset);
-	SWAP(fat_arch[i].size);
-	SWAP(fat_arch[i].align);
-}
-
 void						swap_section_32(struct section *sect)
 {
-	//SWAP(sect->sectname);
-	//SWAP(sect->segname);
 	SWAP(sect->addr);
 	SWAP(sect->size);
 	SWAP(sect->offset);
@@ -134,8 +45,6 @@ void						swap_section_32(struct section *sect)
 
 void						swap_section_64(struct section_64 *sect_64)
 {
-	//SWAP(sect_64->sectname);
-	//SWAP(sect_64->segname);
 	SWAP(sect_64->addr);
 	SWAP(sect_64->size);
 	SWAP(sect_64->offset);
