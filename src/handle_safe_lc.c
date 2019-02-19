@@ -26,17 +26,17 @@ int							check_lc(t_file *file, void *lc, void *lc_end, uint32_t i)
 {
 	if (!check_lc_end(lc_end, lc))
 	{
-		perror_truncated_malformed_lc("ft_nm", file->name, i);
+		perror_truncated_malformed_lc(file->command, file->name, i);
 		return (EXIT_FAILURE);
 	}
 	if (!check_ptr(file, lc))
 	{
-		perror_truncated_malformed_file("ft_nm", file->name, i);
+		perror_truncated_malformed_file(file->command, file->name, i);
 		return (EXIT_FAILURE);
 	}
 	if (!check_lc_multiple((struct load_command*)lc))
 	{
-		perror_truncated_malformed_multiple("ft_nm", file->name, i);
+		perror_truncated_malformed_multiple(file->command, file->name, i);
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);

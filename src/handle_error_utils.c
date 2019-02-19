@@ -12,14 +12,21 @@
 
 #include "nm_otool.h"
 
-void					perror_command(char *command)
+void						perror_command(char *command)
 {
 	ft_putstr(command);
 	ft_putstr(": ");
 }
 
-void					perror_filename(char *filename)
+void						perror_filename(char *filename)
 {
 	ft_putstr(filename);
 	ft_putstr(": ");
+}
+
+void						perror_missing_file(char *command)
+{
+	ft_putstr("error: ");
+	perror_command(command);
+	ft_putendl("at least one file must be specified");
 }

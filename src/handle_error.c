@@ -12,28 +12,28 @@
 
 #include "nm_otool.h"
 
-void					perror_directory(char *command, char *filename)
+void						perror_directory(char *command, char *filename)
 {
 	perror_command(command);
 	perror_filename(filename);
 	ft_putendl("Is a directory.");
 }
 
-void					perror_nosuchfile(char *command, char *filename)
+void						perror_nosuchfile(char *command, char *filename)
 {
     perror_command(command);
     perror_filename(filename);
     ft_putendl("No such file or directory.");
 }
 
-void					perror_fileerror(char *command, char *filename)
+void						perror_fileerror(char *command, char *filename)
 {
     perror_command(command);
     perror_filename(filename);
 	ft_putendl("The file was not recognized as a valid object file");
 }
 
-void					perror_maperror(char *command, char *filename)
+void						perror_maperror(char *command, char *filename)
 {
 	perror_command(command);
     perror_filename(filename);

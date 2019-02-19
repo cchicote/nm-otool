@@ -12,27 +12,6 @@
 
 #include "nm_otool.h"
 
-int							dispatch_by_magic(t_file *file)
-{
-	static uint32_t			magic = 0;
-
-	magic = *(uint32_t*)file->content;
-	file->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64
-		|| magic == FAT_CIGAM);
-	file->is_fat = (magic == FAT_MAGIC || magic == FAT_CIGAM);
-	if (magic == FAT_MAGIC || magic == FAT_CIGAM)
-		return (handle_fat_header(file));
-	else if (magic == MH_MAGIC || magic == MH_CIGAM || magic == MH_MAGIC_64
-		|| magic == MH_CIGAM_64)
-		return (handle_new_arch(file, 0));
-	else
-	{
-		perror_fileerror("ft_nm", file->name);
-		return (EXIT_FAILURE);
-	}
-	return (EXIT_SUCCESS);
-}
-
 int							ft_nm(char *filename, int multiple_files)
 {
 	t_file					file;

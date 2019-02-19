@@ -31,7 +31,7 @@ int							check_segment_32(t_file *file, uint32_t cmdsize, struct segment_comman
 {
 	if (!check_seg_nsect(sizeof(struct section), cmdsize, seg->nsects))
 	{
-		perror_truncated_malformed_seg_nsect("ft_nm", file->name,
+		perror_truncated_malformed_seg_nsect(file->command, file->name,
 			"LC_SEGMENT", seg_index);
 		return (EXIT_FAILURE);
 	}
@@ -42,7 +42,7 @@ int							check_segment_64(t_file *file, uint32_t cmdsize, struct segment_comman
 {
 	if (!check_seg_nsect(sizeof(struct section_64), cmdsize, seg->nsects))
 	{
-		perror_truncated_malformed_seg_nsect("ft_nm", file->name,
+		perror_truncated_malformed_seg_nsect(file->command, file->name,
 			"LC_SEGMENT_64", seg_index);
 		return (EXIT_FAILURE);
 	}

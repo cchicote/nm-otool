@@ -12,8 +12,40 @@
 
 #include "nm_otool.h"
 
-int			main(void)
+/*
+** file->curr_arch + sect[i].offset
+*/
+
+int							ft_otool(char *filename)
 {
-	ft_putendl("OTOOL");
-	return (0);
+	t_file					file;
+
+	file = check_file("ft_otool", filename);
+	if (!file.content)
+		return (EXIT_FAILURE);
+	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
+		return (handle_archive(&file));
+	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	print_t_sect(&file, NULL);
+	unmap_file(&file);
+	return (EXIT_SUCCESS);
+}
+
+int						main(int argc, char **argv)
+{
+	int					i;
+
+	i = 0;
+
+	if (argc < 2)
+		perror_missing_file("ft_otool");
+	else
+	{
+		while (++i < argc)
+		{
+			ft_otool(argv[i]);
+		}
+	}
+	return (EXIT_SUCCESS);
 }

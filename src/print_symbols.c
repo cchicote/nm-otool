@@ -12,9 +12,12 @@
 
 #include "nm_otool.h"
 
-void						print_filename_and_cpu(t_arch *arch, char *filename)
+void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename)
 {
-	printf("\n%s (for architecture ", filename);
+	if (ft_strcmp(file->command, "ft_otool") == 0)
+		printf("%s (architecture ", filename);
+	else
+		printf("\n%s (for architecture ", filename);
 	if (arch->cputype == CPU_TYPE_X86_64)
 		printf("x86_64");
 	else if (arch->cputype == CPU_TYPE_I386)
@@ -96,7 +99,7 @@ void						print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 	while (tmp)
 	{
 		if (file->display_multiple_cpu > 1)
-			print_filename_and_cpu(tmp, file->name);
+			print_filename_and_cpu(file, tmp, file->name);
 		else if (ar_name)
 			printf("\n%s(%s):\n", ar_name, file->name);
 		else if (multiple_files)

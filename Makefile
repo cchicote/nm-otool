@@ -23,29 +23,34 @@ SRC_PATH 		= ./src/
 OBJ_PATH 		= ./obj/
 
 UTILS_SRCS		= handle_file.c \
+					handle_archive.c \
+					handle_arch.c \
 					handle_error.c \
 					handle_error_utils.c \
 					handle_error_truncated.c \
 					handle_safe_ptr.c \
 					handle_safe_lc.c \
 					handle_safe_sect.c \
+					handle_nm_error_truncated.c \
+					handle_otool_error_truncated.c \
 					handle_little_endian.c \
 					swap_header.c \
 					swap_command.c \
-					utils.c
-NM_SRCS			= ft_nm.c \
-					handle_header.c \
+					handle_dispatch.c \
+					handle_32_header.c \
+					handle_64_header.c \
+					handle_fat_header.c \
 					handle_segment.c \
 					handle_32_symbol.c \
 					handle_64_symbol.c \
-					handle_32_header.c \
-					handle_64_header.c \
-					handle_archive.c \
 					print_symbols.c \
-					handle_nm_error_truncated.c \
+					print_t_sect.c \
 					handle_sorting.c \
+					utils.c
+NM_SRCS			= ft_nm.c \
 					$(UTILS_SRCS)
-OTOOL_SRCS		= ft_otool.c $(UTILS_SRCS)
+OTOOL_SRCS		= ft_otool.c \
+					$(UTILS_SRCS)
 LIBFT 			= $(LIBFT_PATH)/libft.a
 
 NM_OBJ 			= $(addprefix $(OBJ_PATH), $(NM_SRCS:.c=.o))

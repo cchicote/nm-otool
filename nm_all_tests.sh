@@ -4,5 +4,5 @@ make fclean
 make ft_nm
 printf "\e[0m"
 for filename in files_test/$1/*; do
-	./script.sh "$filename" 1
+	./nm_script.sh "$filename" 1
 done

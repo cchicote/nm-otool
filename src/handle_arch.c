@@ -1,45 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_header.c                                    :+:      :+:    :+:   */
+/*   handle_arch.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchicote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/11 17:01:49 by cchicote          #+#    #+#             */
-/*   Updated: 2019/01/11 17:02:01 by cchicote         ###   ########.fr       */
+/*   Created: 2019/02/18 18:26:29 by cchicote          #+#    #+#             */
+/*   Updated: 2019/02/18 18:26:34 by cchicote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm_otool.h"
-
-int							handle_fat_header(t_file *file)
-{
-	struct fat_header		*fat_header;
-	struct fat_arch			*fat_arch;
-	uint32_t				i;
-	uint32_t				narch;
-
-	i = -1;
-	file->is_little_endian ? swap_fat_header(file, 0) : 0;
-	fat_header = (struct fat_header*)file->content;
-	fat_arch = file->content + sizeof(struct fat_header);
-	narch = fat_header->nfat_arch;
-	while (++i < narch)
-	{
-		if (file->is_little_endian)
-			swap_fat_arch(file, sizeof(struct fat_header), i);
-		if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_X86_64)
-			return (handle_new_arch(file, fat_arch[i].offset));
-	}
-	i = -1;
-	while (++i < narch)
-		if (((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_I386
-			&& handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE)
-			|| ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_POWERPC
-			&& handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE))
-			return (EXIT_FAILURE);
-	return (EXIT_SUCCESS);
-}
 
 int							handle_new_arch(t_file *file, uint32_t offset)
 {
@@ -61,5 +32,37 @@ int							handle_new_arch(t_file *file, uint32_t offset)
 		if (handle_64_arch(file, new_arch, magic, offset) == EXIT_FAILURE)
 			return (EXIT_FAILURE);
 	}
+	return (EXIT_SUCCESS);
+}
+
+int							handle_32_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset)
+{
+	file->display_multiple_cpu++;
+	if (magic == MH_CIGAM)
+		swap_32_header(file, offset);
+	arch->name_int = ARCH_32;
+	if (ft_strcmp(file->command, "ft_nm") == 0
+		&& handle_nm_32_header(file, arch) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	else if (ft_strcmp(file->command, "ft_otool") == 0
+		&& handle_otool_32_header(file, arch) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	add_arch_to_list(file, arch);
+	return (EXIT_SUCCESS);
+}
+
+int							handle_64_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset)
+{
+	file->display_multiple_cpu++;
+	if (magic == MH_CIGAM_64)
+		swap_64_header(file, offset);
+	arch->name_int = ARCH_64;
+	if (ft_strcmp(file->command, "ft_nm") == 0
+		&& handle_nm_64_header(file, arch) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	else if (ft_strcmp(file->command, "ft_otool") == 0
+		&& handle_otool_64_header(file, arch) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	add_arch_to_list(file, arch);
 	return (EXIT_SUCCESS);
 }

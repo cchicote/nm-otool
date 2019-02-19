@@ -28,14 +28,20 @@ int							check_section_32(t_file *file, struct section sect, uint32_t sect_inde
 		return (EXIT_SUCCESS);
 	if (!check_sect_offset_file(file, sect.offset))
 	{
-		perror_truncated_malformed_sect_file(file->name, sect_index, seg_index,
-			"LC_SEGMENT");
+		ft_strcmp(file->command, "ft_nm") == 0
+			? perror_nm_truncated_malformed_sect_file(file->name, sect_index,
+			seg_index, "LC_SEGMENT")
+			: perror_otool_truncated_malformed_sect_file(file->name,
+			sect_index, seg_index, "LC_SEGMENT");
 		return (EXIT_FAILURE);
 	}
 	if (!check_sect_offset_header(file, sect.offset))
 	{
-  		perror_truncated_malformed_sect_header(file->name, sect_index,
-			seg_index, "LC_SEGMENT");
+  		ft_strcmp(file->command, "ft_nm") == 0
+			? perror_nm_truncated_malformed_sect_header(file->name, sect_index,
+			seg_index, "LC_SEGMENT")
+			: perror_otool_truncated_malformed_sect_header(file->name,
+			sect_index, seg_index, "LC_SEGMENT");
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
@@ -47,14 +53,20 @@ int							check_section_64(t_file *file, struct section_64 sect, uint32_t sect_i
 		return (EXIT_SUCCESS);
 	if (!check_sect_offset_file(file, sect.offset))
 	{
-		perror_truncated_malformed_sect_file(file->name, sect_index, seg_index,
-			"LC_SEGMENT_64");
+		ft_strcmp(file->command, "ft_nm") == 0
+			? perror_nm_truncated_malformed_sect_file(file->name, sect_index,
+			seg_index, "LC_SEGMENT_64")
+			: perror_otool_truncated_malformed_sect_file(file->name,
+			sect_index, seg_index, "LC_SEGMENT_64");
 		return (EXIT_FAILURE);
 	}
 	if (!check_sect_offset_header(file, sect.offset))
 	{
-		perror_truncated_malformed_sect_header(file->name, sect_index,
-			seg_index, "LC_SEGMENT_64");
+		ft_strcmp(file->command, "ft_nm") == 0
+			? perror_nm_truncated_malformed_sect_header(file->name, sect_index,
+			seg_index, "LC_SEGMENT_64")
+			: perror_otool_truncated_malformed_sect_header(file->name,
+			sect_index, seg_index, "LC_SEGMENT_64");
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
