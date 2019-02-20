@@ -16,9 +16,15 @@ int							handle_new_arch(t_file *file, uint32_t offset)
 {
 	uint32_t				magic;
 	t_arch					*new_arch;
-
+	
+	if (offset >= file->len)
+	{
+		perror_invalid_file(file->command, file->name);
+		return (EXIT_FAILURE);
+	}
 	magic = *(uint32_t*)(file->content + offset);
-	new_arch = (t_arch*)ft_memalloc(sizeof(t_arch));
+	if ((new_arch = (t_arch*)ft_memalloc(sizeof(t_arch))) == NULL)
+		return (EXIT_FAILURE);
 	ft_bzero(new_arch, sizeof(t_arch));
 	new_arch->offset = offset;
 	new_arch->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64);

@@ -24,6 +24,13 @@ void						perror_filename(char *filename)
 	ft_putstr(": ");
 }
 
+void						perror_invalid_file(char *command, char *filename)
+{
+	perror_command(command);
+	perror_filename(filename);
+	ft_putendl("invalid file");
+}
+
 void						perror_missing_file(char *command)
 {
 	ft_putstr("error: ");

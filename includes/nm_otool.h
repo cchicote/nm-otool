@@ -188,6 +188,7 @@ t_file						perror_return(t_file file, char *command, char *filename, void (*per
 void						perror_command(char *command);
 void						perror_filename(char *filename);
 void						perror_missing_file(char *command);
+void						perror_invalid_file(char *command, char *filename);
 
 /*
 **							HANDLE_ERROR_TRUNCATED.c
