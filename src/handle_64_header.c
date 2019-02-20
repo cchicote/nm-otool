@@ -40,6 +40,7 @@ void						update_64_header_values(t_file *file, t_arch *arch, struct mach_header
 {
 	arch->cputype = header->cputype;
 	arch->addr = (void*)header;
+	file->curr_filetype = header->filetype;
 	file->curr_arch = (void*)header;
 	file->curr_header_end = (void*)header + sizeof(struct mach_header_64)
 		+ header->sizeofcmds;

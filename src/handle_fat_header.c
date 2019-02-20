@@ -12,6 +12,21 @@
 
 #include "nm_otool.h"
 
+cpu_type_t					get_current_cpu_type(void)
+{
+	if (sizeof(void*) == 4)
+		return (CPU_TYPE_I386);
+	return (CPU_TYPE_X86_64);
+}
+
+int							check_valid_cpu_type(cpu_type_t cputype)
+{
+	if (cputype != get_current_cpu_type() && (cputype == CPU_TYPE_I386
+		|| cputype == CPU_TYPE_X86_64 || cputype == CPU_TYPE_POWERPC))
+		return (TRUE);
+	return (FALSE);
+}
+
 int							handle_fat_header(t_file *file)
 {
 	struct fat_header		*fat_header;
@@ -28,15 +43,13 @@ int							handle_fat_header(t_file *file)
 	{
 		if (file->is_little_endian)
 			swap_fat_arch(file, sizeof(struct fat_header), i);
-		if ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_X86_64)
+		if ((cpu_type_t)fat_arch[i].cputype == get_current_cpu_type())
 			return (handle_new_arch(file, fat_arch[i].offset));
 	}
 	i = -1;
 	while (++i < narch)
-		if (((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_I386
+		if (check_valid_cpu_type((cpu_type_t)fat_arch[i].cputype)
 			&& handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE)
-			|| ((cpu_type_t)fat_arch[i].cputype == CPU_TYPE_POWERPC
-			&& handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE))
 			return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

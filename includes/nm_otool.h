@@ -64,6 +64,7 @@ typedef struct				s_file
 	char					*command;
 	size_t					len;
 	t_arch					*arch;
+	uint32_t				curr_filetype;
 	int						is_little_endian;
 	int						is_fat;
 	int						display_multiple_cpu;
@@ -117,6 +118,9 @@ void						unmap_file(t_file *file);
 **							HANDLE_FAT_HEADER.C
 */
 int							handle_fat_header(t_file *file);
+cpu_type_t					get_current_cpu_type(void);
+int							check_valid_cpu_type(cpu_type_t cputype);
+
 
 /*
 **							HANDLE_ARCH.C
@@ -270,6 +274,7 @@ int							check_sect_offset_file(t_file *file, uint32_t offset);
 int							check_sect_offset_header(t_file *file, uint32_t offset);
 int							check_section_32(t_file *file, struct section sect, uint32_t sect_index, uint32_t seg_index);
 int							check_section_64(t_file *file, struct section_64 sect, uint32_t sect_index, uint32_t seg_index);
+int							is_filetype_dylib(uint32_t filetype);
 
 /*
 **							PRINT_SYMBOLS.C

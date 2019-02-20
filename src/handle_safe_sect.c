@@ -22,6 +22,11 @@ int							check_sect_offset_header(t_file *file, uint32_t offset)
 	return (file->curr_arch + offset >= file->curr_header_end);
 }
 
+int							is_filetype_dylib(uint32_t filetype)
+{
+	return (filetype == MH_DYLIB || filetype == MH_DYLIB_STUB);
+}
+
 int							check_section_32(t_file *file, struct section sect, uint32_t sect_index, uint32_t seg_index)
 {
 	if (sect.flags & S_ZEROFILL)
@@ -35,7 +40,8 @@ int							check_section_32(t_file *file, struct section sect, uint32_t sect_inde
 			sect_index, seg_index, "LC_SEGMENT");
 		return (EXIT_FAILURE);
 	}
-	if (!check_sect_offset_header(file, sect.offset))
+	if (!check_sect_offset_header(file, sect.offset)
+		&& !is_filetype_dylib(file->curr_filetype))
 	{
   		ft_strcmp(file->command, "ft_nm") == 0
 			? perror_nm_truncated_malformed_sect_header(file->name, sect_index,
@@ -60,7 +66,8 @@ int							check_section_64(t_file *file, struct section_64 sect, uint32_t sect_i
 			sect_index, seg_index, "LC_SEGMENT_64");
 		return (EXIT_FAILURE);
 	}
-	if (!check_sect_offset_header(file, sect.offset))
+	if (!check_sect_offset_header(file, sect.offset)
+		&& !is_filetype_dylib(file->curr_filetype))
 	{
 		ft_strcmp(file->command, "ft_nm") == 0
 			? perror_nm_truncated_malformed_sect_header(file->name, sect_index,
