@@ -27,8 +27,19 @@ int							check_seg_nsect(uint32_t sect_size, uint32_t cmdsize, uint32_t nsects)
 	return (sect_size * nsects <= cmdsize);
 }
 
+int							check_eof(t_file *file, uint64_t fileoff, uint64_t filesize)
+{
+	return (fileoff + filesize <= file->len);
+}
+
 int							check_segment_32(t_file *file, uint32_t cmdsize, struct segment_command *seg, uint32_t seg_index)
 {
+	if (!check_eof(file, seg->fileoff, seg->filesize))
+	{
+		perror_truncated_malformed_seg_eof(file->command, file->name,
+			"LC_SEGMENT", seg_index);
+		return (EXIT_FAILURE);
+	}
 	if (!check_seg_nsect(sizeof(struct section), cmdsize, seg->nsects))
 	{
 		perror_truncated_malformed_seg_nsect(file->command, file->name,
@@ -40,6 +51,12 @@ int							check_segment_32(t_file *file, uint32_t cmdsize, struct segment_comman
 
 int							check_segment_64(t_file *file, uint32_t cmdsize, struct segment_command_64 *seg, uint32_t seg_index)
 {
+	if (!check_eof(file, seg->fileoff, seg->filesize))
+	{
+		perror_truncated_malformed_seg_eof(file->command, file->name,
+			"LC_SEGMENT_64", seg_index);
+		return (EXIT_FAILURE);
+	}
 	if (!check_seg_nsect(sizeof(struct section_64), cmdsize, seg->nsects))
 	{
 		perror_truncated_malformed_seg_nsect(file->command, file->name,

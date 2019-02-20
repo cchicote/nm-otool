@@ -39,6 +39,17 @@ void						perror_truncated_malformed_lc(char *command, char *filename, uint32_t 
 	ft_putendl(" extends past the end all load commands in the file)");
 }
 
+void						perror_truncated_malformed_seg_eof(char *command, char *filename, char *segname, uint32_t failing_seg)
+{
+	perror_command(command);
+	perror_filename(filename);
+	ft_putstr("truncated or malformed object (load command ");
+	ft_putnbr(failing_seg);
+	ft_putstr(" fileoff field plus filesize field in ");
+	ft_putstr(segname);
+	ft_putendl(" extends past the end of the file)");
+}
+
 void						perror_truncated_malformed_seg_nsect(char *command, char *filename, char *segname, uint32_t failing_seg)
 {
 	perror_command(command);

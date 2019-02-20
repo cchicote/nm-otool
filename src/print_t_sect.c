@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-void						print_hexdump_ppc(t_file *file, t_arch *arch)
+void						print_hexdump_ppc(t_arch *arch)
 {
 	uint32_t				i;
 	struct section			*sect;
@@ -41,7 +41,7 @@ void						print_hexdump_ppc(t_file *file, t_arch *arch)
 		printf("\n");
 }
 
-void						print_hexdump_32(t_file *file, t_arch *arch)
+void						print_hexdump_32(t_arch *arch)
 {
 	uint32_t				i;
 	struct section			*sect;
@@ -67,7 +67,7 @@ void						print_hexdump_32(t_file *file, t_arch *arch)
 		printf("\n");
 }
 
-void						print_hexdump_64(t_file *file, t_arch *arch)
+void						print_hexdump_64(t_arch *arch)
 {
 	uint64_t				i;
 	struct section_64		*sect;
@@ -112,11 +112,11 @@ void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name)
 			printf("%s:\n", file->name);
 	}
 	if (arch->name_int == ARCH_64)
-		print_hexdump_64(file, arch);
+		print_hexdump_64(arch);
 	else if (arch->name_int == ARCH_32 && arch->cputype == CPU_TYPE_POWERPC)
-		print_hexdump_ppc(file, arch);
+		print_hexdump_ppc(arch);
 	else if (arch->name_int == ARCH_32)
-		print_hexdump_32(file, arch);
+		print_hexdump_32(arch);
 }
 
 void						print_t_sect(t_file *file, char *ar_name)

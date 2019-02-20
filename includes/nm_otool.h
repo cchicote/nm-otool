@@ -192,6 +192,7 @@ void						perror_truncated_malformed_lc(char *command, char *filename, uint32_t 
 void						perror_truncated_malformed_file(char *command, char *filename, uint32_t failing_lc);
 void						perror_truncated_malformed_multiple(char *command, char *filename, uint32_t failing_lc);
 void						perror_truncated_malformed_seg_nsect(char *command, char *filename, char *segname, uint32_t failing_seg);
+void						perror_truncated_malformed_seg_eof(char *command, char *filename, char *segname, uint32_t failing_seg);
 
 /*
 **							HANDLE_NM_ERROR_TRUNCATED.C
@@ -253,6 +254,7 @@ int							check_ptr(t_file *file, void *lc);
 int							check_seg_nsect(uint32_t sect_size, uint32_t cmdsize, uint32_t nsects);
 int							check_segment_32(t_file *file, uint32_t cmdsize, struct segment_command *seg, uint32_t seg_index);
 int							check_segment_64(t_file *file, uint32_t cmdsize, struct segment_command_64 *seg, uint32_t seg_index);
+int							check_eof(t_file *file, uint64_t fileoff, uint64_t filesize);
 
 /*
 **							HANDLE_SAFE_LC.C
@@ -281,6 +283,10 @@ void						print_arch_sym(t_file *file, int multiple_files, char *ar_name);
 */
 void						print_t_sect(t_file *file, char *ar_name);
 void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name);
+void						print_hexdump_32(t_arch *arch);
+void						print_hexdump_64(t_arch *arch);
+void						print_hexdump_ppc(t_arch *arch);
+
 
 
 #endif
