@@ -12,42 +12,7 @@
 
 #include "nm_otool.h"
 
-void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename)
-{
-	if (ft_strcmp(file->command, "ft_otool") == 0)
-		printf("%s (architecture ", filename);
-	else
-		printf("\n%s (for architecture ", filename);
-	if (arch->cputype == CPU_TYPE_X86_64)
-		printf("x86_64");
-	else if (arch->cputype == CPU_TYPE_I386)
-		printf("i386");
-	else if (arch->cputype == CPU_TYPE_POWERPC)
-		printf("ppc");
-	else if (arch->cputype == CPU_TYPE_POWERPC64)
-		printf("ppc64");
-	else if (arch->cputype == CPU_TYPE_ARM)
-		printf("arm");
-	else if (arch->cputype == CPU_TYPE_ARM64)
-		printf("arm64");
-	else if (arch->cputype == CPU_TYPE_SPARC)
-		printf("sparc");
-	else if (arch->cputype == CPU_TYPE_I860)
-		printf("i860");
-	else if (arch->cputype == CPU_TYPE_HPPA)
-		printf("hppa");
-	else if (arch->cputype == CPU_TYPE_MC680x0)
-		printf("mc680x0");
-	else if (arch->cputype == CPU_TYPE_MC98000)
-		printf("mc98000");
-	else if (arch->cputype == CPU_TYPE_MC88000)
-		printf("mc88000");
-	else
-		printf("unknown");
-	printf("):\n");
-}
-
-void						print_symbols(t_arch *arch, int IS_64)
+void						print_symbols(t_arch *arch, int is_64)
 {
 	t_symbol 				*tmp;
 	t_symbol				*sym_to_free;
@@ -64,14 +29,7 @@ void						print_symbols(t_arch *arch, int IS_64)
 			tmp->type_char = arch->sect_char[tmp->section_index];
 		if (tmp->is_external)
 			tmp->type_char = ft_toupper(tmp->type_char);
-		if (ft_toupper(tmp->type_char) != 'U' && IS_64)
-			printf("%016llx %c %s\n", tmp->value, tmp->type_char, name);
-		else if (ft_toupper(tmp->type_char) != 'U' && !IS_64)
-			printf("%08llx %c %s\n", tmp->value, tmp->type_char, name);
-		else if (IS_64)
-			printf("%16s %c %s\n", " ", tmp->type_char, name);
-		else
-			printf("%8s %c %s\n", " ", tmp->type_char, name);
+		print_symbol(tmp, name, is_64);
 		sym_to_free = tmp;
 		tmp = tmp->next;
 		free(name);
@@ -88,10 +46,7 @@ void						print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 	arch_to_free = tmp;
 	if (!file->is_fat)
 	{
-		if (ar_name)
-			printf("\n%s(%s):\n", ar_name, file->name);
-		else if (multiple_files)
-			printf("\n%s:\n", file->name);
+		print_filename(file->name, ar_name, multiple_files, TRUE);
 		print_symbols(tmp, tmp->name_int == ARCH_64);
 		free(arch_to_free);
 		return ;
@@ -100,10 +55,8 @@ void						print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 	{
 		if (file->display_multiple_cpu > 1)
 			print_filename_and_cpu(file, tmp, file->name);
-		else if (ar_name)
-			printf("\n%s(%s):\n", ar_name, file->name);
-		else if (multiple_files)
-			printf("\n%s:\n", file->name);
+		else
+			print_filename(file->name, ar_name, multiple_files, TRUE);
 		print_symbols(tmp, tmp->name_int == ARCH_64);
 		tmp = tmp->next;
 		free(arch_to_free);

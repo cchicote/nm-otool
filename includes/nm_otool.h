@@ -281,7 +281,7 @@ int							is_filetype_dylib(uint32_t filetype);
 **							PRINT_SYMBOLS.C
 */
 void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename);
-void						print_symbols(t_arch *arch, int IS_64);
+void						print_symbols(t_arch *arch, int is_64);
 void						print_arch_sym(t_file *file, int multiple_files, char *ar_name);
 
 /*
@@ -292,6 +292,30 @@ void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name);
 void						print_hexdump_32(t_arch *arch);
 void						print_hexdump_64(t_arch *arch);
 void						print_hexdump_ppc(t_arch *arch);
+
+/*
+**							PRINT_NM.C
+*/
+void                        print_sym_value(uint64_t value, char to_fill, int is_64);
+void						print_symbol(t_symbol *symbol, char *name, int is_64);
+void						print_filename(char *filename, char *ar_name, int multiple_files, int is_nm);
+void						print_cputype(cpu_type_t cputype);
+void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename);
+
+/*
+**							PRINT_OTOOL.C
+*/
+void						print_otool_address(uint64_t addr, int size);
+void						print_hex_char(char value);
+void						print_hex_num(uint32_t value);
+
+/*
+**							LLUTOA_BASE.C
+*/
+char						*fill_with_char(char *src, char to_fill, int size);
+size_t						get_number_len(uint64_t nb, int base);
+char						*ft_llutoa_base(uint64_t nb, int base);
+
 
 
 

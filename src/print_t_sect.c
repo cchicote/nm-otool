@@ -22,23 +22,23 @@ void						print_hexdump_ppc(t_arch *arch)
 	content = (arch->addr + sect->offset);
 	sect->size /= 4;
 	i = 0;
-	printf("Contents of (__TEXT,__text) section\n");
+	ft_putendl("Contents of (__TEXT,__text) section");
 	while (i < sect->size)
 	{
 		if (i % 4 == 0)
 		{
-			printf("%08x\t", sect->addr);
+			print_otool_address(sect->addr, 8);
 			sect->addr += 16;
 		}
 		if (arch->is_little_endian)
 			SWAP(content[i]);
-		printf("%.8x ", content[i]);
+		print_hex_num(content[i]);
 		i++;
 		if (i % 4 == 0)
-			printf("\n");
+			ft_putchar('\n');
 	}
 	if (i % 4 != 0)
-		printf("\n");
+		ft_putchar('\n');
 }
 
 void						print_hexdump_32(t_arch *arch)
@@ -50,21 +50,23 @@ void						print_hexdump_32(t_arch *arch)
 	sect = arch->t_sect_addr;
 	content = arch->addr;
 	i = 0;
-	printf("Contents of (__TEXT,__text) section\n");
+	ft_putendl("Contents of (__TEXT,__text) section");
 	while (i < sect->size)
 	{
 		if (i % 16 == 0)
 		{
-			printf("%08x\t", sect->addr);
+			print_otool_address(sect->addr, 8);
 			sect->addr += 16;
 		}
-		printf("%.2hhx ", content[sect->offset + i]);
+		if (arch->is_little_endian)
+			SWAP(content[sect->offset + i]);
+		print_hex_char(content[sect->offset + i]);
 		i++;
 		if (i % 16 == 0)
-			printf("\n");
+			ft_putchar('\n');
 	}
 	if (i % 16 != 0)
-		printf("\n");
+		ft_putchar('\n');
 }
 
 void						print_hexdump_64(t_arch *arch)
@@ -76,40 +78,35 @@ void						print_hexdump_64(t_arch *arch)
 	sect = arch->t_sect_addr;
 	content = arch->addr;
 	i = 0;
-	printf("Contents of (__TEXT,__text) section\n");
+	ft_putendl("Contents of (__TEXT,__text) section");
 	while (i < sect->size)
 	{
 		if (i % 16 == 0)
 		{
-			printf("%016llx\t", sect->addr);
+			print_otool_address(sect->addr, 16);
 			sect->addr += 16;
 		}
-		printf("%.2hhx ", content[sect->offset + i]);
+		if (arch->is_little_endian)
+			SWAP(content[sect->offset + i]);
+		print_hex_char(content[sect->offset + i]);
 		i++;
 		if (i % 16 == 0)
-			printf("\n");
+			ft_putchar('\n');
 	}
 	if (i % 16 != 0)
-		printf("\n");
+		ft_putchar('\n');
 }
 
 void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name)
 {
 	if (!file->is_fat)
-	{
-		if (ar_name)
-			printf("%s(%s):\n", ar_name, file->name);
-		else
-			printf("%s:\n", file->name);
-	}
+		print_filename(file->name, ar_name, TRUE, FALSE);
 	else
 	{
 		if (file->display_multiple_cpu > 1)
 			print_filename_and_cpu(file, arch, file->name);
-		else if (ar_name)
-			printf("%s(%s):\n", ar_name, file->name);
 		else
-			printf("%s:\n", file->name);
+			print_filename(file->name, ar_name, TRUE, FALSE);
 	}
 	if (arch->name_int == ARCH_64)
 		print_hexdump_64(arch);

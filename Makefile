@@ -45,6 +45,9 @@ UTILS_SRCS		= handle_file.c \
 					handle_64_symbol.c \
 					print_symbols.c \
 					print_t_sect.c \
+					print_nm.c \
+					print_otool.c \
+					llutoa_base.c \
 					handle_sorting.c \
 					utils.c
 NM_SRCS			= ft_nm.c \

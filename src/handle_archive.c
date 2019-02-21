@@ -111,7 +111,10 @@ int							handle_archive(t_file *file)
 		+ sizeof(struct ar_hdr) + SARMAG;
 	offset_max = parse_ar_symtab_max_offset(file->content);
 	if (ft_strcmp(file->command, "ft_otool") == 0)
-		printf("Archive : %s\n", file->name);
+	{
+		ft_putstr("Archive : ");
+		ft_putendl(file->name);
+	}
 	while (curr_offset <= offset_max)
 	{
 		if (ft_strcmp(file->command, "ft_nm") == 0)
