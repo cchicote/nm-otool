@@ -13,7 +13,7 @@
 NM_NAME 		= ft_nm
 OTOOL_NAME 		= ft_otool
 CC 				= gcc
-CFLAGS 			= -Wall -Wextra -O1 -g -fsanitize=address #-Werror
+CFLAGS 			= -Wall -Wextra -Werror#-O1 -g -fsanitize=address
 LFLAGS 			= -lft
 INC 			= -I$(INCLUDE_PATH)
 
@@ -49,6 +49,7 @@ UTILS_SRCS		= handle_file.c \
 					print_otool.c \
 					llutoa_base.c \
 					handle_sorting.c \
+					handle_options.c \
 					utils.c
 NM_SRCS			= ft_nm.c \
 					$(UTILS_SRCS)

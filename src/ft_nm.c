@@ -12,13 +12,14 @@
 
 #include "nm_otool.h"
 
-int							ft_nm(char *filename, int multiple_files)
+int							ft_nm(char *filename, char *options, int multiple_files)
 {
 	t_file					file;
 
 	file = check_file("ft_nm", filename);
 	if (!file.content)
 		return (EXIT_FAILURE);
+	file.options = options;
 	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
 		return (handle_archive(&file));
 	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
@@ -32,17 +33,26 @@ int							ft_nm(char *filename, int multiple_files)
 int						main(int argc, char **argv)
 {
 	int					i;
+	char				*options;
 
 	i = 0;
-
-	if (argc < 2)
-		ft_nm("a.out", argc > 2);
-	else
+	options = init_options();
+	if (argc > 1 && argv[1][0] == '-')
+	{
+		if (parse_options(options, argv[1]) == EXIT_FAILURE)
+			return (EXIT_FAILURE);
+		i++;
+	}
+	if (argc == 1 || (argc == 2 && argv[1][0] == '-'))
+		ft_nm("a.out", options, FALSE);
+	else if (argc > 1)
 	{
 		while (++i < argc)
 		{
-			ft_nm(argv[i], argc > 2);
+			ft_nm(argv[i], options, (argc > 2 && argv[1][0] != '-'));
 		}
 	}
+	else
+		perror_missing_file("ft_nm");
 	return (EXIT_SUCCESS);
 }

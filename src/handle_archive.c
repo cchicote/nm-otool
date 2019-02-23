@@ -28,7 +28,7 @@ uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr)
 	return (size);
 }
 
-t_file						generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr)
+int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr)
 {
 	t_file					file;
 	uint32_t				size;
@@ -41,7 +41,7 @@ t_file						generate_file_from_archive_nm(char *command, char *ar_name, void *hd
 	if (!file.content)
 	{
 		perror_maperror(command, filename);
-		return (file);
+		return (EXIT_FAILURE);
 	}
 	file.content = hdr_ptr+ sizeof(struct ar_hdr)
 		+ get_name_size_from_ar_hdr(hdr_ptr);
@@ -49,13 +49,14 @@ t_file						generate_file_from_archive_nm(char *command, char *ar_name, void *hd
 	file.len = size;
 	file.command = ft_strdup(command);
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (file);
+		return (EXIT_FAILURE);
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, TRUE, ar_name);
-	return (file);
+	unmap_file(&file);
+	return (EXIT_SUCCESS);
 }
 
-t_file						generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr)
+int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr)
 {
 	t_file					file;
 	uint32_t				size;
@@ -68,7 +69,7 @@ t_file						generate_file_from_archive_otool(char *command, char *ar_name, void 
 	if (!file.content)
 	{
 		perror_maperror(command, filename);
-		return (file);
+		return (EXIT_FAILURE);
 	}
 	file.content = hdr_ptr+ sizeof(struct ar_hdr)
 		+ get_name_size_from_ar_hdr(hdr_ptr);
@@ -76,9 +77,10 @@ t_file						generate_file_from_archive_otool(char *command, char *ar_name, void 
 	file.len = size;
 	file.command = ft_strdup(command);
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (file);
+		return (EXIT_FAILURE);
 	print_t_sect(&file, ar_name);
-	return (file);
+	unmap_file(&file);
+	return (EXIT_SUCCESS);
 }
 
 uint32_t					parse_ar_symtab_max_offset(void *content)
@@ -126,5 +128,6 @@ int							handle_archive(t_file *file)
 		curr_offset += get_file_size_from_ar_hdr(file->content + curr_offset)
 			+ sizeof(struct ar_hdr);
 	}
+	unmap_file(file);
 	return (EXIT_SUCCESS);
 }

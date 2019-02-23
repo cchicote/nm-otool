@@ -14,6 +14,8 @@
 
 void						unmap_file(t_file *file)
 {
+	if (!ft_strcmp(file->command, "ft_nm"))
+		free(file->options);
 	free(file->command);
 	munmap(file->content, file->len);
 }

@@ -12,6 +12,15 @@
 
 #include "nm_otool.h"
 
+void						print_char_filled(char *src, char to_fill, int size)
+{
+	char					*ret;
+
+	ret = fill_with_char(src, to_fill, size);
+	ft_putstr(ret);
+	free(ret);
+}
+
 char						*fill_with_char(char *src, char to_fill, int size)
 {
 	char					*ret;

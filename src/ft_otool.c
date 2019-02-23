@@ -12,10 +12,6 @@
 
 #include "nm_otool.h"
 
-/*
-** file->curr_arch + sect[i].offset
-*/
-
 int							ft_otool(char *filename)
 {
 	t_file					file;
@@ -44,7 +40,8 @@ int						main(int argc, char **argv)
 	{
 		while (++i < argc)
 		{
-			ft_otool(argv[i]);
+			if (ft_otool(argv[i]) == EXIT_FAILURE)
+				return (EXIT_FAILURE);
 		}
 	}
 	return (EXIT_SUCCESS);

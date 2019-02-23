@@ -14,23 +14,34 @@
 
 void						print_otool_address(uint64_t addr, int size)
 {
-	ft_putstr(fill_with_char(ft_llutoa_base(addr, 16), '0', size));
+	char					*str_value;
+
+	str_value = ft_llutoa_base(addr, 16);
+	print_char_filled(str_value, '0', size);
 	ft_putchar('\t');
+	free(str_value);
 }
 
 void						print_hex_num(uint32_t value)
 {
-	ft_putstr(fill_with_char(ft_llutoa_base(value, 16), '0', 8));
+	char					*str_value;
+
+	str_value = ft_llutoa_base(value, 16);
+	print_char_filled(str_value, '0', 8);
 	ft_putchar(' ');
+	free(str_value);
 }
 
 void						print_hex_char(char value)
 {
 	char					*tmp;
+	char					*converted;
 
-	tmp = fill_with_char(ft_llutoa_base(value, 16), '0', 16);
+	converted = ft_llutoa_base(value, 16);
+	tmp = fill_with_char(converted, '0', 16);
 	ft_putchar(tmp[14]);
 	ft_putchar(tmp[15]);
 	ft_putchar(' ');
+	free(converted);
 	free(tmp);
 }

@@ -30,6 +30,15 @@
 # define PPC 4
 # define FAT 3
 # define SWAP(x)			swap_endian((unsigned char*)&x, sizeof(x))
+/*
+**		 LC = LowerCase / UC = UpperCase
+*/
+# define LCG 0
+# define LCP 1
+# define LCR 2
+# define LCU 3
+# define LCJ 4
+# define UCU 5
 
 typedef struct				s_symbol
 {
@@ -70,6 +79,7 @@ typedef struct				s_file
 	int						display_multiple_cpu;
 	void					*curr_arch;
 	void					*curr_header_end;
+	char					*options;
 }							t_file;
 
 typedef struct				s_ar_header
@@ -87,7 +97,7 @@ typedef struct				s_ar_symtab
 /*
 **							FT_NM.C
 */
-int							ft_nm(char *filename, int multiple_files);
+int							ft_nm(char *filename, char *options, int multiple_files);
 
 /*
 **							FT_OTOOL.C
@@ -104,7 +114,8 @@ int							dispatch_by_magic(t_file *file);
 */
 uint32_t					parse_ar_symtab_max_offset(void *content);
 int							handle_archive(t_file *file);
-t_file						generate_file_from_archive(char *command, char *ar_name, void *hdr_ptr);
+int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr);
+int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr);
 uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr);
 uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr);
 
@@ -120,7 +131,6 @@ void						unmap_file(t_file *file);
 int							handle_fat_header(t_file *file);
 cpu_type_t					get_current_cpu_type(void);
 int							check_valid_cpu_type(cpu_type_t cputype);
-
 
 /*
 **							HANDLE_ARCH.C
@@ -222,9 +232,9 @@ void						add_arch_to_list(t_file *file, t_arch *arch);
 **							HANDLE_SORTING.C
 */
 int							cmp_null_values(char *a, char *b);
-t_symbol*					sorted_merge(t_symbol *a, t_symbol *b);
+t_symbol*					sorted_merge(t_symbol *a, t_symbol *b, char reverse);
 void						front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **backRef);
-void						merge_sort(t_symbol **headRef);
+void						merge_sort(t_symbol **headRef, char reverse);
 void						sort_arch_symbols(t_file *file);
 
 /*
@@ -281,7 +291,7 @@ int							is_filetype_dylib(uint32_t filetype);
 **							PRINT_SYMBOLS.C
 */
 void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename);
-void						print_symbols(t_arch *arch, int is_64);
+void						print_symbols(t_arch *arch, char *options, int is_64);
 void						print_arch_sym(t_file *file, int multiple_files, char *ar_name);
 
 /*
@@ -297,7 +307,7 @@ void						print_hexdump_ppc(t_arch *arch);
 **							PRINT_NM.C
 */
 void                        print_sym_value(uint64_t value, char to_fill, int is_64);
-void						print_symbol(t_symbol *symbol, char *name, int is_64);
+void						print_symbol(t_symbol *symbol, char *name, char *options, int is_64);
 void						print_filename(char *filename, char *ar_name, int multiple_files, int is_nm);
 void						print_cputype(cpu_type_t cputype);
 void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename);
@@ -315,8 +325,14 @@ void						print_hex_num(uint32_t value);
 char						*fill_with_char(char *src, char to_fill, int size);
 size_t						get_number_len(uint64_t nb, int base);
 char						*ft_llutoa_base(uint64_t nb, int base);
+void						print_char_filled(char *src, char to_fill, int size);
 
-
+/*
+**							HANDLE_OPTIONS.C
+*/
+int							parse_options(char *options, char *str);
+char						*init_options(void);
+void						perror_wrong_option(char *option);
 
 
 #endif

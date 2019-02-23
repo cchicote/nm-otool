@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-void						print_symbols(t_arch *arch, int is_64)
+void						print_symbols(t_arch *arch, char *options, int is_64)
 {
 	t_symbol 				*tmp;
 	t_symbol				*sym_to_free;
@@ -29,7 +29,7 @@ void						print_symbols(t_arch *arch, int is_64)
 			tmp->type_char = arch->sect_char[tmp->section_index];
 		if (tmp->is_external)
 			tmp->type_char = ft_toupper(tmp->type_char);
-		print_symbol(tmp, name, is_64);
+		print_symbol(tmp, name, options, is_64);
 		sym_to_free = tmp;
 		tmp = tmp->next;
 		free(name);
@@ -47,7 +47,7 @@ void						print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 	if (!file->is_fat)
 	{
 		print_filename(file->name, ar_name, multiple_files, TRUE);
-		print_symbols(tmp, tmp->name_int == ARCH_64);
+		print_symbols(tmp, file->options, tmp->name_int == ARCH_64);
 		free(arch_to_free);
 		return ;
 	}
@@ -57,7 +57,7 @@ void						print_arch_sym(t_file *file, int multiple_files, char *ar_name)
 			print_filename_and_cpu(file, tmp, file->name);
 		else
 			print_filename(file->name, ar_name, multiple_files, TRUE);
-		print_symbols(tmp, tmp->name_int == ARCH_64);
+		print_symbols(tmp, file->options, tmp->name_int == ARCH_64);
 		tmp = tmp->next;
 		free(arch_to_free);
 		arch_to_free = tmp;

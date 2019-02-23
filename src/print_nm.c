@@ -15,23 +15,37 @@
 void                        print_sym_value(uint64_t value, char to_fill, int is_64)
 {
 	int						size;
+	char					*str_value;
 
 	size = is_64 ? 16 : 8;
 	if (!value)
-		ft_putstr(fill_with_char("", to_fill, size));
+		print_char_filled("", to_fill, size);
 	else
-		ft_putstr(fill_with_char(ft_llutoa_base(value, 16), to_fill, size));
+	{
+		str_value = ft_llutoa_base(value, 16);
+		print_char_filled(str_value, to_fill, size);
+		free(str_value);
+	}
 }
 
-void						print_symbol(t_symbol *symbol, char *name, int is_64)
+void						print_symbol(t_symbol *symbol, char *name, char *options, int is_64)
 {
-	if (ft_toupper(symbol->type_char) != 'U')
-		print_sym_value(symbol->value, '0', is_64);
-	else
-		print_sym_value(symbol->value, ' ', is_64);	
-	ft_putchar(' ');
-	ft_putchar(symbol->type_char);
-	ft_putchar(' ');
+	if (options[LCG] && !ft_isupper(symbol->type_char))
+		return ;
+	if (options[LCU] && ft_toupper(symbol->type_char) != 'U')
+		return ;
+	if (options[UCU] && ft_toupper(symbol->type_char) == 'U')
+		return ;
+	if (!options[LCJ] && !options[LCU])
+	{
+		if (ft_toupper(symbol->type_char) != 'U')
+			print_sym_value(symbol->value, '0', is_64);
+		else
+			print_sym_value(symbol->value, ' ', is_64);	
+		ft_putchar(' ');
+		ft_putchar(symbol->type_char);
+		ft_putchar(' ');
+	}
 	ft_putendl(name);
 }
 

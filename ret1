@@ -1,6 +1,1 @@
-files_test/safe/simple_test_bis_32-bit:
-Contents of (__TEXT,__text) section
-00001f40	55 89 e5 83 ec 18 e8 00 00 00 00 58 8d 88 4b 00 
-00001f50	00 00 c7 45 fc 00 00 00 00 8b 80 c1 00 00 00 89 
-00001f60	0c 24 89 44 24 04 e8 0d 00 00 00 31 c9 89 45 f8 
-00001f70	89 c8 83 c4 18 5d c3 
+ft_otool: files_test/safe/invalid/lc_extends_EOF_x86-64: truncated or malformed object (load command 1 extends past the end all load commands in the file)
