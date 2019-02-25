@@ -25,13 +25,9 @@
 # include <ar.h>
 # include <stdio.h>
 
-# define ARCH_32 1
-# define ARCH_64 2
-# define PPC 4
-# define FAT 3
-# define SWAP(x)			swap_endian((unsigned char*)&x, sizeof(x))
 /*
-**		 LC = LowerCase / UC = UpperCase
+** Options: LC = LowerCase / UC = UpperCase
+** LCU = -u meanwhile UCU = -U
 */
 # define LCG 0
 # define LCP 1
@@ -39,6 +35,17 @@
 # define LCU 3
 # define LCJ 4
 # define UCU 5
+/*
+** Architecture related
+*/
+# define ARCH_32 1
+# define ARCH_64 2
+# define PPC 4
+# define FAT 3
+/*
+** Space saving define
+*/
+# define SWAP(x)			swap_endian((unsigned char*)&x, sizeof(x))
 
 typedef struct				s_symbol
 {
@@ -105,41 +112,6 @@ int							ft_nm(char *filename, char *options, int multiple_files);
 int							ft_otool(char *filename);
 
 /*
-**							HANDLE_INIT.C
-*/
-int							dispatch_by_magic(t_file *file);
-
-/*
-**							HANDLE_ARCHIVE.C
-*/
-uint32_t					parse_ar_symtab_max_offset(void *content);
-int							handle_archive(t_file *file);
-int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr);
-int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr);
-uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr);
-uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr);
-
-/*
-**							HANDLE_FILE.C
-*/
-t_file						check_file(char *command, char *filename);
-void						unmap_file(t_file *file);
-
-/*
-**							HANDLE_FAT_HEADER.C
-*/
-int							handle_fat_header(t_file *file);
-cpu_type_t					get_current_cpu_type(void);
-int							check_valid_cpu_type(cpu_type_t cputype);
-
-/*
-**							HANDLE_ARCH.C
-*/
-int							handle_new_arch(t_file *file, uint32_t offset);
-int							handle_32_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset);
-int							handle_64_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset);
-
-/*
 **							HANDLE_32_HEADER.C
 */
 int							handle_nm_32_header(t_file *file, t_arch *arch);
@@ -147,23 +119,6 @@ int							handle_otool_32_header(t_file *file, t_arch *arch);
 void						update_32_header_values(t_file *file, t_arch *arch, struct mach_header *header);
 void						lc_is_32_symtab(t_file *file, t_arch *arch, struct load_command *lc);
 int							lc_is_32_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i);
-
-/*
-**							HANDLE_64_HEADER.C
-*/
-int							handle_nm_64_header(t_file *file, t_arch *arch);
-int							handle_otool_64_header(t_file *file, t_arch *arch);
-void						update_64_header_values(t_file *file, t_arch *arch, struct mach_header_64 *header);
-void						lc_is_64_symtab(t_file *file, t_arch *arch, struct load_command *lc);
-int							lc_is_64_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i);
-
-/*
-**							HANDLE_SEGMENT.C
-*/
-int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset);
-int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset);
-int							get_64_text_sect_addr(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset);
-int							get_32_text_sect_addr(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset);
 
 /*
 **							HANDLE_32_SYMBOL.C
@@ -175,6 +130,15 @@ void						get_symbol_value_32(t_symbol *symbol, struct nlist array);
 void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arch);
 
 /*
+**							HANDLE_64_HEADER.C
+*/
+int							handle_nm_64_header(t_file *file, t_arch *arch);
+int							handle_otool_64_header(t_file *file, t_arch *arch);
+void						update_64_header_values(t_file *file, t_arch *arch, struct mach_header_64 *header);
+void						lc_is_64_symtab(t_file *file, t_arch *arch, struct load_command *lc);
+int							lc_is_64_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i);
+
+/*
 **							HANDLE_64_SYMBOL.C
 */
 int							check_stab_64(struct nlist_64 array);
@@ -184,21 +148,24 @@ void						get_symbol_value_64(t_symbol *symbol, struct nlist_64 array);
 void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch);
 
 /*
-**							HANDLE_ERROR.C
+**							HANDLE_ARCH.C
 */
-void						perror_nosuchfile(char *command, char *filename);
-void						perror_fileerror(char *command, char *filename);
-void						perror_maperror(char *command, char *filename);
-void						perror_directory(char *command, char *filename);
-t_file						perror_return(t_file file, char *command, char *filename, void (*perror_func)(char *cmd, char *fnm));
+int							handle_new_arch(t_file *file, uint32_t offset);
+int							handle_32_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset);
+int							handle_64_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset);
 
 /*
-**							HANDLE_ERROR_UTILS.C
+**							HANDLE_ARCHIVE.C
 */
-void						perror_command(char *command);
-void						perror_filename(char *filename);
-void						perror_missing_file(char *command);
-void						perror_invalid_file(char *command, char *filename);
+uint32_t					parse_ar_symtab_max_offset(void *content);
+int							handle_archive(t_file *file);
+uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr);
+uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr);
+
+/*
+**							HANDLE_DISPATCH.C
+*/
+int							dispatch_by_magic(t_file *file);
 
 /*
 **							HANDLE_ERROR_TRUNCATED.c
@@ -210,32 +177,36 @@ void						perror_truncated_malformed_seg_nsect(char *command, char *filename, ch
 void						perror_truncated_malformed_seg_eof(char *command, char *filename, char *segname, uint32_t failing_seg);
 
 /*
-**							HANDLE_NM_ERROR_TRUNCATED.C
+**							HANDLE_ERROR_UTILS.C
 */
-void						perror_nm_truncated_malformed_sect_file(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
-void						perror_nm_truncated_malformed_sect_header(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+void						perror_command(char *command);
+void						perror_filename(char *filename);
+void						perror_missing_file(char *command);
+void						perror_invalid_file(char *command, char *filename);
 
 /*
-**							HANDLE_OTOOL_ERROR_TRUNCATED.C
+**							HANDLE_ERROR.C
 */
-void						perror_otool_truncated_malformed_sect_file(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
-void						perror_otool_truncated_malformed_sect_header(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+void						perror_nosuchfile(char *command, char *filename);
+void						perror_fileerror(char *command, char *filename);
+void						perror_maperror(char *command, char *filename);
+void						perror_directory(char *command, char *filename);
+t_file						perror_return(t_file file, char *command, char *filename, void (*perror_func)(char *cmd, char *fnm));
 
 /*
-**							UTILS.C
+**							HANDLE_FAT_HEADER.C
 */
-void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol);
-t_symbol					*new_symbol(void);
-void						add_arch_to_list(t_file *file, t_arch *arch);
+int							handle_fat_header(t_file *file);
+cpu_type_t					get_current_cpu_type(void);
+int							check_valid_cpu_type(cpu_type_t cputype);
 
 /*
-**							HANDLE_SORTING.C
+**							HANDLE_FILE.C
 */
-int							cmp_null_values(char *a, char *b);
-t_symbol*					sorted_merge(t_symbol *a, t_symbol *b, char reverse);
-void						front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **backRef);
-void						merge_sort(t_symbol **headRef, char reverse);
-void						sort_arch_symbols(t_file *file);
+t_file						check_file(char *command, char *filename);
+void						unmap_file(t_file *file);
+int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr);
+int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr);
 
 /*
 **							HANDLE_LITTLE_ENDIAN.C
@@ -247,20 +218,30 @@ void						swap_section_32(struct section *sect);
 void						swap_section_64(struct section_64 *sect_64);
 
 /*
-**							SWAP_HEADER.C
+**							HANDLE_NM_ERROR_TRUNCATED.C
 */
-void						swap_32_header(t_file *file, uint32_t offset);
-void						swap_64_header(t_file *file, uint32_t offset);
-void						swap_fat_header(t_file *file, uint32_t offset);
-void						swap_fat_arch(t_file *file, uint32_t offset, uint32_t i);
+void						perror_nm_truncated_malformed_sect_file(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+void						perror_nm_truncated_malformed_sect_header(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
 
 /*
-**							SWAP_COMMAND.C
+**							HANDLE_OPTIONS.C
 */
-void						swap_load_command(struct load_command *lc);
-void						swap_32_segment_command(struct segment_command *sc);
-void						swap_64_segment_command(struct segment_command_64 *sc);
-void						swap_symtab_command(struct symtab_command *sc);
+int							parse_options(char *options, char *str);
+char						*init_options(void);
+void						perror_wrong_option(char *option);
+
+/*
+**							HANDLE_OTOOL_ERROR_TRUNCATED.C
+*/
+void						perror_otool_truncated_malformed_sect_file(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+void						perror_otool_truncated_malformed_sect_header(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname);
+
+/*
+**							HANDLE_SAFE_LC.C
+*/
+int							check_lc(t_file *file, void *lc, void *lc_end, uint32_t i);
+int							check_lc_multiple(struct load_command *lc);
+int							check_lc_end(void *lc_end, void *lc);
 
 /*
 **							HANDLE_SAFE_PTR.C
@@ -272,13 +253,6 @@ int							check_segment_64(t_file *file, uint32_t cmdsize, struct segment_comman
 int							check_eof(t_file *file, uint64_t fileoff, uint64_t filesize);
 
 /*
-**							HANDLE_SAFE_LC.C
-*/
-int							check_lc(t_file *file, void *lc, void *lc_end, uint32_t i);
-int							check_lc_multiple(struct load_command *lc);
-int							check_lc_end(void *lc_end, void *lc);
-
-/*
 **							HANDLE_SAFE_SECT.C
 */
 int							check_sect_offset_file(t_file *file, uint32_t offset);
@@ -288,20 +262,29 @@ int							check_section_64(t_file *file, struct section_64 sect, uint32_t sect_i
 int							is_filetype_dylib(uint32_t filetype);
 
 /*
-**							PRINT_SYMBOLS.C
+**							HANDLE_SEGMENT.C
 */
-void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename);
-void						print_symbols(t_arch *arch, char *options, int is_64);
-void						print_arch_sym(t_file *file, int multiple_files, char *ar_name);
+int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset);
+int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset);
+int							get_64_text_sect_addr(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset);
+int							get_32_text_sect_addr(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset);
 
 /*
-**							PRINT_T_SECT.C
+**							HANDLE_SORTING.C
 */
-void						print_t_sect(t_file *file, char *ar_name);
-void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name);
-void						print_hexdump_32(t_arch *arch);
-void						print_hexdump_64(t_arch *arch);
-void						print_hexdump_ppc(t_arch *arch);
+int							cmp_null_values(char *a, char *b);
+t_symbol*					sorted_merge(t_symbol *a, t_symbol *b, char reverse);
+void						front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **backRef);
+void						merge_sort(t_symbol **headRef, char reverse);
+void						sort_arch_symbols(t_file *file);
+
+/*
+**							LLUTOA_BASE.C
+*/
+char						*fill_with_char(char *src, char to_fill, int size);
+size_t						get_number_len(uint64_t nb, int base);
+char						*ft_llutoa_base(uint64_t nb, int base);
+void						print_char_filled(char *src, char to_fill, int size);
 
 /*
 **							PRINT_NM.C
@@ -320,19 +303,42 @@ void						print_hex_char(char value);
 void						print_hex_num(uint32_t value);
 
 /*
-**							LLUTOA_BASE.C
+**							PRINT_SYMBOLS.C
 */
-char						*fill_with_char(char *src, char to_fill, int size);
-size_t						get_number_len(uint64_t nb, int base);
-char						*ft_llutoa_base(uint64_t nb, int base);
-void						print_char_filled(char *src, char to_fill, int size);
+void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename);
+void						print_symbols(t_arch *arch, char *options, int is_64);
+void						print_arch_sym(t_file *file, int multiple_files, char *ar_name);
 
 /*
-**							HANDLE_OPTIONS.C
+**							PRINT_T_SECT.C
 */
-int							parse_options(char *options, char *str);
-char						*init_options(void);
-void						perror_wrong_option(char *option);
+void						print_t_sect(t_file *file, char *ar_name);
+void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name);
+void						print_hexdump_32(t_arch *arch);
+void						print_hexdump_64(t_arch *arch);
+void						print_hexdump_ppc(t_arch *arch);
 
+/*
+**							SWAP_COMMAND.C
+*/
+void						swap_load_command(struct load_command *lc);
+void						swap_32_segment_command(struct segment_command *sc);
+void						swap_64_segment_command(struct segment_command_64 *sc);
+void						swap_symtab_command(struct symtab_command *sc);
+
+/*
+**							SWAP_HEADER.C
+*/
+void						swap_32_header(t_file *file, uint32_t offset);
+void						swap_64_header(t_file *file, uint32_t offset);
+void						swap_fat_header(t_file *file, uint32_t offset);
+void						swap_fat_arch(t_file *file, uint32_t offset, uint32_t i);
+
+/*
+**							UTILS.C
+*/
+void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol);
+t_symbol					*new_symbol(void);
+void						add_arch_to_list(t_file *file, t_arch *arch);
 
 #endif

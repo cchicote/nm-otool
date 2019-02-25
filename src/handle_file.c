@@ -47,3 +47,58 @@ t_file						check_file(char *command, char *filename)
 	file.command = ft_strdup(command);
 	return (file);
 }
+
+int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr)
+{
+	t_file					file;
+	uint32_t				size;
+	char					*filename;
+
+	size = get_file_size_from_ar_hdr(hdr_ptr);
+	filename = hdr_ptr + sizeof(struct ar_hdr);
+	ft_bzero(&file, sizeof(t_file));
+	file.content = mmap(0, size, PROT_READ | PROT_WRITE, MAP_PRIVATE, -1, 0);
+	if (!file.content)
+	{
+		perror_maperror(command, filename);
+		return (EXIT_FAILURE);
+	}
+	file.content = hdr_ptr+ sizeof(struct ar_hdr)
+		+ get_name_size_from_ar_hdr(hdr_ptr);
+	file.name = filename;
+	file.len = size;
+	file.command = ft_strdup(command);
+	if (dispatch_by_magic(&file) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	sort_arch_symbols(&file);
+	print_arch_sym(&file, TRUE, ar_name);
+	unmap_file(&file);
+	return (EXIT_SUCCESS);
+}
+
+int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr)
+{
+	t_file					file;
+	uint32_t				size;
+	char					*filename;
+
+	size = get_file_size_from_ar_hdr(hdr_ptr);
+	filename = hdr_ptr + sizeof(struct ar_hdr);
+	ft_bzero(&file, sizeof(t_file));
+	file.content = mmap(0, size, PROT_READ | PROT_WRITE, MAP_PRIVATE, -1, 0);
+	if (!file.content)
+	{
+		perror_maperror(command, filename);
+		return (EXIT_FAILURE);
+	}
+	file.content = hdr_ptr+ sizeof(struct ar_hdr)
+		+ get_name_size_from_ar_hdr(hdr_ptr);
+	file.name = filename;
+	file.len = size;
+	file.command = ft_strdup(command);
+	if (dispatch_by_magic(&file) == EXIT_FAILURE)
+		return (EXIT_FAILURE);
+	print_t_sect(&file, ar_name);
+	unmap_file(&file);
+	return (EXIT_SUCCESS);
+}

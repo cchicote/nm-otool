@@ -10,55 +10,55 @@
 #                                                                              #
 # **************************************************************************** #
 
-NM_NAME 		= ft_nm
-OTOOL_NAME 		= ft_otool
-CC 				= gcc
-CFLAGS 			= -Wall -Wextra -Werror#-O1 -g -fsanitize=address
-LFLAGS 			= -lft
-INC 			= -I$(INCLUDE_PATH)
+NM_NAME 		=	ft_nm
+OTOOL_NAME		=	ft_otool
+CC				=	gcc
+CFLAGS			=	-Wall -Wextra -Werror
+LFLAGS			=	-lft
+INC				=	-I$(INCLUDE_PATH)
 
-INCLUDE_PATH 	= ./includes
-LIBFT_PATH 		= ./libft
-SRC_PATH 		= ./src/
-OBJ_PATH 		= ./obj/
+INCLUDE_PATH 	=	./includes
+LIBFT_PATH 		=	./libft
+SRC_PATH 		=	./src/
+OBJ_PATH 		=	./obj/
 
-UTILS_SRCS		= handle_file.c \
-					handle_archive.c \
-					handle_arch.c \
-					handle_error.c \
-					handle_error_utils.c \
-					handle_error_truncated.c \
-					handle_safe_ptr.c \
-					handle_safe_lc.c \
-					handle_safe_sect.c \
-					handle_nm_error_truncated.c \
-					handle_otool_error_truncated.c \
-					handle_little_endian.c \
-					swap_header.c \
-					swap_command.c \
-					handle_dispatch.c \
-					handle_32_header.c \
-					handle_64_header.c \
-					handle_fat_header.c \
-					handle_segment.c \
+UTILS_SRCS		= 	handle_32_header.c \
 					handle_32_symbol.c \
+					handle_64_header.c \
 					handle_64_symbol.c \
-					print_symbols.c \
-					print_t_sect.c \
+					handle_arch.c \
+					handle_archive.c \
+					handle_dispatch.c \
+					handle_error_truncated.c \
+					handle_error_utils.c \
+					handle_error.c \
+					handle_fat_header.c \
+					handle_file.c \
+					handle_little_endian.c \
+					handle_nm_error_truncated.c \
+					handle_options.c \
+					handle_otool_error_truncated.c \
+					handle_safe_lc.c \
+					handle_safe_ptr.c \
+					handle_safe_sect.c \
+					handle_segment.c \
+					handle_sorting.c \
+					llutoa_base.c \
 					print_nm.c \
 					print_otool.c \
-					llutoa_base.c \
-					handle_sorting.c \
-					handle_options.c \
+					print_symbols.c \
+					print_t_sect.c \
+					swap_command.c \
+					swap_header.c \
 					utils.c
-NM_SRCS			= ft_nm.c \
+NM_SRCS			=	ft_nm.c \
 					$(UTILS_SRCS)
-OTOOL_SRCS		= ft_otool.c \
+OTOOL_SRCS		=	ft_otool.c \
 					$(UTILS_SRCS)
-LIBFT 			= $(LIBFT_PATH)/libft.a
+LIBFT 			=	$(LIBFT_PATH)/libft.a
 
-NM_OBJ 			= $(addprefix $(OBJ_PATH), $(NM_SRCS:.c=.o))
-OTOOL_OBJ 		= $(addprefix $(OBJ_PATH), $(OTOOL_SRCS:.c=.o))
+NM_OBJ 			=	$(addprefix $(OBJ_PATH), $(NM_SRCS:.c=.o))
+OTOOL_OBJ 		=	$(addprefix $(OBJ_PATH), $(OTOOL_SRCS:.c=.o))
 
 
 all: $(NM_NAME) $(OTOOL_NAME)
