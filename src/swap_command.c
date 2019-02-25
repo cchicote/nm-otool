@@ -14,40 +14,40 @@
 
 void						swap_load_command(struct load_command *lc)
 {
-	SWAP(lc->cmd);
-	SWAP(lc->cmdsize);
+	swap_endian((unsigned char*)&lc->cmd, sizeof(lc->cmd));
+	swap_endian((unsigned char*)&lc->cmdsize, sizeof(lc->cmdsize));
 }
 
 void						swap_32_segment_command(struct segment_command *sc)
 {
-	SWAP(sc->segname);
-	SWAP(sc->vmaddr);
-	SWAP(sc->vmsize);
-	SWAP(sc->fileoff);
-	SWAP(sc->filesize);
-	SWAP(sc->maxprot);
-	SWAP(sc->initprot);
-	SWAP(sc->nsects);
-	SWAP(sc->flags);
+	swap_endian((unsigned char*)&sc->segname, sizeof(sc->segname));
+	swap_endian((unsigned char*)&sc->vmaddr, sizeof(sc->vmaddr));
+	swap_endian((unsigned char*)&sc->vmsize, sizeof(sc->vmsize));
+	swap_endian((unsigned char*)&sc->fileoff, sizeof(sc->fileoff));
+	swap_endian((unsigned char*)&sc->filesize, sizeof(sc->filesize));
+	swap_endian((unsigned char*)&sc->maxprot, sizeof(sc->maxprot));
+	swap_endian((unsigned char*)&sc->initprot, sizeof(sc->initprot));
+	swap_endian((unsigned char*)&sc->nsects, sizeof(sc->nsects));
+	swap_endian((unsigned char*)&sc->flags, sizeof(sc->flags));
 }
 
 void						swap_64_segment_command(struct segment_command_64 *sc)
 {
-	SWAP(sc->segname);
-	SWAP(sc->vmaddr);
-	SWAP(sc->vmsize);
-	SWAP(sc->fileoff);
-	SWAP(sc->filesize);
-	SWAP(sc->maxprot);
-	SWAP(sc->initprot);
-	SWAP(sc->nsects);
-	SWAP(sc->flags);
+	swap_endian((unsigned char*)&sc->segname, sizeof(sc->segname));
+	swap_endian((unsigned char*)&sc->vmaddr, sizeof(sc->vmaddr));
+	swap_endian((unsigned char*)&sc->vmsize, sizeof(sc->vmsize));
+	swap_endian((unsigned char*)&sc->fileoff, sizeof(sc->fileoff));
+	swap_endian((unsigned char*)&sc->filesize, sizeof(sc->filesize));
+	swap_endian((unsigned char*)&sc->maxprot, sizeof(sc->maxprot));
+	swap_endian((unsigned char*)&sc->initprot, sizeof(sc->initprot));
+	swap_endian((unsigned char*)&sc->nsects, sizeof(sc->nsects));
+	swap_endian((unsigned char*)&sc->flags, sizeof(sc->flags));
 }
 
 void						swap_symtab_command(struct symtab_command *sc)
 {
-	SWAP(sc->symoff);
-	SWAP(sc->nsyms);
-	SWAP(sc->stroff);
-	SWAP(sc->strsize);
+	swap_endian((unsigned char*)&sc->symoff, sizeof(sc->symoff));
+	swap_endian((unsigned char*)&sc->nsyms, sizeof(sc->nsyms));
+	swap_endian((unsigned char*)&sc->stroff, sizeof(sc->stroff));
+	swap_endian((unsigned char*)&sc->strsize, sizeof(sc->strsize));
 }

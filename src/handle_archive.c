@@ -66,10 +66,10 @@ int							handle_archive(t_file *file)
 	{
 		if (ft_strcmp(file->command, "ft_nm") == 0)
 			generate_file_from_archive_nm(file->command, file->name,
-				file->content + curr_offset);
+				file->content + curr_offset, file->options);
 		else if (ft_strcmp(file->command, "ft_otool") == 0)
 			generate_file_from_archive_otool(file->command, file->name,
-			file->content + curr_offset);
+			file->content + curr_offset, init_options());
 		curr_offset += get_file_size_from_ar_hdr(file->content + curr_offset)
 			+ sizeof(struct ar_hdr);
 	}

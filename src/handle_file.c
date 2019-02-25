@@ -14,8 +14,7 @@
 
 void						unmap_file(t_file *file)
 {
-	if (!ft_strcmp(file->command, "ft_nm"))
-		free(file->options);
+	free(file->options);
 	free(file->command);
 	munmap(file->content, file->len);
 }
@@ -48,7 +47,7 @@ t_file						check_file(char *command, char *filename)
 	return (file);
 }
 
-int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr)
+int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr, char *options)
 {
 	t_file					file;
 	uint32_t				size;
@@ -68,6 +67,7 @@ int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_
 	file.name = filename;
 	file.len = size;
 	file.command = ft_strdup(command);
+	file.options = ft_strdup(options);
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	sort_arch_symbols(&file);
@@ -76,7 +76,7 @@ int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_
 	return (EXIT_SUCCESS);
 }
 
-int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr)
+int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr, char *options)
 {
 	t_file					file;
 	uint32_t				size;
@@ -96,6 +96,7 @@ int							generate_file_from_archive_otool(char *command, char *ar_name, void *h
 	file.name = filename;
 	file.len = size;
 	file.command = ft_strdup(command);
+	file.options = ft_strdup(options);
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	print_t_sect(&file, ar_name);

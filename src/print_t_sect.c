@@ -22,7 +22,6 @@ void						print_hexdump_ppc(t_arch *arch)
 	content = (arch->addr + sect->offset);
 	sect->size /= 4;
 	i = 0;
-	ft_putendl("Contents of (__TEXT,__text) section");
 	while (i < sect->size)
 	{
 		if (i % 4 == 0)
@@ -31,7 +30,7 @@ void						print_hexdump_ppc(t_arch *arch)
 			sect->addr += 16;
 		}
 		if (arch->is_little_endian)
-			SWAP(content[i]);
+			swap_endian((unsigned char*)&content[i], sizeof(content[i]));
 		print_hex_num(content[i]);
 		i++;
 		if (i % 4 == 0)
@@ -59,7 +58,8 @@ void						print_hexdump_32(t_arch *arch)
 			sect->addr += 16;
 		}
 		if (arch->is_little_endian)
-			SWAP(content[sect->offset + i]);
+			swap_endian((unsigned char*)&content[sect->offset + i],
+				sizeof(content[sect->offset + i]));
 		print_hex_char(content[sect->offset + i]);
 		i++;
 		if (i % 16 == 0)
@@ -87,7 +87,8 @@ void						print_hexdump_64(t_arch *arch)
 			sect->addr += 16;
 		}
 		if (arch->is_little_endian)
-			SWAP(content[sect->offset + i]);
+			swap_endian((unsigned char*)&content[sect->offset + i],
+				sizeof(content[sect->offset + i]));
 		print_hex_char(content[sect->offset + i]);
 		i++;
 		if (i % 16 == 0)
@@ -99,6 +100,8 @@ void						print_hexdump_64(t_arch *arch)
 
 void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name)
 {
+	if (!arch->t_sect_addr)
+		return ;
 	if (!file->is_fat)
 		print_filename(file->name, ar_name, TRUE, FALSE);
 	else
@@ -111,7 +114,10 @@ void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name)
 	if (arch->name_int == ARCH_64)
 		print_hexdump_64(arch);
 	else if (arch->name_int == ARCH_32 && arch->cputype == CPU_TYPE_POWERPC)
+	{
+		ft_putendl("Contents of (__TEXT,__text) section");
 		print_hexdump_ppc(arch);
+	}
 	else if (arch->name_int == ARCH_32)
 		print_hexdump_32(arch);
 }

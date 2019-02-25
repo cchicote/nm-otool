@@ -42,10 +42,6 @@
 # define ARCH_64 2
 # define PPC 4
 # define FAT 3
-/*
-** Space saving define
-*/
-# define SWAP(x)			swap_endian((unsigned char*)&x, sizeof(x))
 
 typedef struct				s_symbol
 {
@@ -104,7 +100,8 @@ typedef struct				s_ar_symtab
 /*
 **							FT_NM.C
 */
-int							ft_nm(char *filename, char *options, int multiple_files);
+int							ft_nm(char *filename, char *options,
+								int multiple_files);
 
 /*
 **							FT_OTOOL.C
@@ -116,43 +113,59 @@ int							ft_otool(char *filename);
 */
 int							handle_nm_32_header(t_file *file, t_arch *arch);
 int							handle_otool_32_header(t_file *file, t_arch *arch);
-void						update_32_header_values(t_file *file, t_arch *arch, struct mach_header *header);
-void						lc_is_32_symtab(t_file *file, t_arch *arch, struct load_command *lc);
-int							lc_is_32_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i);
+void						update_32_header_values(t_file *file, t_arch *arch,
+								struct mach_header *header);
+void						lc_is_32_symtab(t_file *file, t_arch *arch,
+								struct load_command *lc);
+int							lc_is_32_segment(t_file *file, t_arch *arch,
+								struct load_command *lc, uint32_t i);
 
 /*
 **							HANDLE_32_SYMBOL.C
 */
 int							check_stab_32(struct nlist array);
-void						get_symbol_type_char_32(t_symbol *symbol, struct nlist array);
-void						get_symbol_name_32(t_file *file, t_symbol *symbol, struct nlist array, char *stringtable);
-void						get_symbol_value_32(t_symbol *symbol, struct nlist array);
-void						parse_symtable_32(t_file *file, struct symtab_command *sc, t_arch *arch);
+void						get_symbol_type_char_32(t_symbol *symbol,
+								struct nlist array);
+void						get_symbol_name_32(t_file *file, t_symbol *symbol,
+								struct nlist array, char *stringtable);
+void						get_symbol_value_32(t_symbol *symbol,
+								struct nlist array);
+void						parse_symtable_32(t_file *file,
+								struct symtab_command *sc, t_arch *arch);
 
 /*
 **							HANDLE_64_HEADER.C
 */
 int							handle_nm_64_header(t_file *file, t_arch *arch);
 int							handle_otool_64_header(t_file *file, t_arch *arch);
-void						update_64_header_values(t_file *file, t_arch *arch, struct mach_header_64 *header);
-void						lc_is_64_symtab(t_file *file, t_arch *arch, struct load_command *lc);
-int							lc_is_64_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i);
+void						update_64_header_values(t_file *file, t_arch *arch,
+								struct mach_header_64 *header);
+void						lc_is_64_symtab(t_file *file, t_arch *arch,
+								struct load_command *lc);
+int							lc_is_64_segment(t_file *file, t_arch *arch,
+								struct load_command *lc, uint32_t i);
 
 /*
 **							HANDLE_64_SYMBOL.C
 */
 int							check_stab_64(struct nlist_64 array);
-void						get_symbol_type_char_64(t_symbol *symbol, struct nlist_64 array);
-void						get_symbol_name_64(t_file *file, t_symbol *symbol, struct nlist_64 array, char *stringtable);
-void						get_symbol_value_64(t_symbol *symbol, struct nlist_64 array);
-void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch);
+void						get_symbol_type_char_64(t_symbol *symbol,
+								struct nlist_64 array);
+void						get_symbol_name_64(t_file *file, t_symbol *symbol,
+								struct nlist_64 array, char *stringtable);
+void						get_symbol_value_64(t_symbol *symbol,
+								struct nlist_64 array);
+void						parse_symtable_64(t_file *file,
+								struct symtab_command *sc, t_arch *arch);
 
 /*
 **							HANDLE_ARCH.C
 */
 int							handle_new_arch(t_file *file, uint32_t offset);
-int							handle_32_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset);
-int							handle_64_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset);
+int							handle_32_arch(t_file *file, t_arch *arch,
+								uint32_t magic, uint32_t offset);
+int							handle_64_arch(t_file *file, t_arch *arch,
+								uint32_t magic, uint32_t offset);
 
 /*
 **							HANDLE_ARCHIVE.C
@@ -205,13 +218,13 @@ int							check_valid_cpu_type(cpu_type_t cputype);
 */
 t_file						check_file(char *command, char *filename);
 void						unmap_file(t_file *file);
-int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr);
-int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr);
+int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr, char *options);
+int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr, char *options);
 
 /*
 **							HANDLE_LITTLE_ENDIAN.C
 */
-unsigned char				*swap_endian(unsigned char *data, size_t n);
+unsigned char				*swap_endian(unsigned char *data, size_t size);
 void						swap_nlist_32(t_file *file, t_arch *arch, uint32_t offset, uint32_t i);
 void						swap_nlist_64(t_file *file, t_arch *arch, uint32_t offset, uint32_t i);
 void						swap_section_32(struct section *sect);
