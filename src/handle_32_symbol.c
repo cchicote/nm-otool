@@ -6,7 +6,7 @@
 /*   By: cchicote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/26 00:14:48 by cchicote          #+#    #+#             */
-/*   Updated: 2019/01/26 00:14:54 by cchicote         ###   ########.fr       */
+/*   Updated: 2019/02/27 00:17:19 by cchicote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ void						get_symbol_type_char_32(t_symbol *symbol,
 	else if ((n_type_value == N_UNDF && !array.n_value) ||
 		n_type_value == N_PBUD)
 		symbol->type_char = 'u';
-	else if (array.n_desc & N_WEAK_REF)
-		symbol->type_char = 'D';
 	else if (n_type_value == N_SECT && !symbol->type_char)
 		symbol->type_char = '?';
 	if (N_EXT & array.n_type)

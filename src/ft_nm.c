@@ -6,7 +6,7 @@
 /*   By: cchicote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 17:27:50 by cchicote          #+#    #+#             */
-/*   Updated: 2018/12/21 17:27:59 by cchicote         ###   ########.fr       */
+/*   Updated: 2019/02/27 00:16:22 by cchicote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,5 @@ int							main(int argc, char **argv)
 	else
 		perror_missing_file("ft_nm");
 	free(options);
-	while (1)
-		;
 	return (EXIT_SUCCESS);
 }
