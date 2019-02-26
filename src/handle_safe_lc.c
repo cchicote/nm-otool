@@ -22,7 +22,8 @@ int							check_lc_multiple(struct load_command *lc)
 	return (lc->cmdsize % 4 == 0);
 }
 
-int							check_lc(t_file *file, void *lc, void *lc_end, uint32_t i)
+int							check_lc(t_file *file, void *lc, void *lc_end,
+								uint32_t i)
 {
 	if (!check_lc_end(lc_end, lc))
 	{

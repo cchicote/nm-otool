@@ -18,7 +18,7 @@ void						swap_load_command(struct load_command *lc)
 	swap_endian((unsigned char*)&lc->cmdsize, sizeof(lc->cmdsize));
 }
 
-void						swap_32_segment_command(struct segment_command *sc)
+void						swap_32_seg_command(struct segment_command *sc)
 {
 	swap_endian((unsigned char*)&sc->segname, sizeof(sc->segname));
 	swap_endian((unsigned char*)&sc->vmaddr, sizeof(sc->vmaddr));
@@ -31,7 +31,7 @@ void						swap_32_segment_command(struct segment_command *sc)
 	swap_endian((unsigned char*)&sc->flags, sizeof(sc->flags));
 }
 
-void						swap_64_segment_command(struct segment_command_64 *sc)
+void						swap_64_seg_command(struct segment_command_64 *sc)
 {
 	swap_endian((unsigned char*)&sc->segname, sizeof(sc->segname));
 	swap_endian((unsigned char*)&sc->vmaddr, sizeof(sc->vmaddr));

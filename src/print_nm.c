@@ -12,7 +12,8 @@
 
 #include "nm_otool.h"
 
-void                        print_sym_value(uint64_t value, char to_fill, int is_64)
+void						print_sym_value(uint64_t value, char to_fill,
+								int is_64)
 {
 	int						size;
 	char					*str_value;
@@ -28,7 +29,8 @@ void                        print_sym_value(uint64_t value, char to_fill, int is
 	}
 }
 
-void						print_symbol(t_symbol *symbol, char *name, char *options, int is_64)
+void						print_symbol(t_symbol *symbol, char *name,
+								char *options, int is_64)
 {
 	if (options[LCG] && !ft_isupper(symbol->type_char))
 		return ;
@@ -41,7 +43,7 @@ void						print_symbol(t_symbol *symbol, char *name, char *options, int is_64)
 		if (ft_toupper(symbol->type_char) != 'U')
 			print_sym_value(symbol->value, '0', is_64);
 		else
-			print_sym_value(symbol->value, ' ', is_64);	
+			print_sym_value(symbol->value, ' ', is_64);
 		ft_putchar(' ');
 		ft_putchar(symbol->type_char);
 		ft_putchar(' ');
@@ -49,14 +51,15 @@ void						print_symbol(t_symbol *symbol, char *name, char *options, int is_64)
 	ft_putendl(name);
 }
 
-void						print_filename(char *filename, char *ar_name, int multiple_files, int is_nm)
+void						print_filename(char *filename, char *ar_name,
+								int multiple_files, int is_nm)
 {
 	if (!ar_name && !multiple_files)
 		return ;
 	if (is_nm)
 		ft_putchar('\n');
 	if (ar_name)
-	{	
+	{
 		ft_putstr(ar_name);
 		ft_putchar('(');
 		ft_putstr(filename);
@@ -89,7 +92,8 @@ void						print_cputype(cpu_type_t cputype)
 		ft_putstr("unknown");
 }
 
-void						print_filename_and_cpu(t_file *file, t_arch *arch, char *filename)
+void						print_filename_and_cpu(t_file *file,
+								t_arch *arch, char *filename)
 {
 	if (ft_strcmp(file->command, "ft_otool") == 0)
 	{

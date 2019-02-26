@@ -21,10 +21,11 @@ int							cmp_null_values(char *a, char *b)
 	return (1);
 }
 
-t_symbol*					sorted_merge(t_symbol *a, t_symbol *b, char reverse)
+t_symbol					*sorted_merge(t_symbol *a, t_symbol *b,
+								char reverse)
 {
-	t_symbol		*result;
-	int				ret;
+	t_symbol				*result;
+	int						ret;
 
 	result = NULL;
 	if (!a)
@@ -46,13 +47,14 @@ t_symbol*					sorted_merge(t_symbol *a, t_symbol *b, char reverse)
 		result = b;
 		result->next = sorted_merge(a, b->next, reverse);
 	}
-	return(result);
-} 
+	return (result);
+}
 
-void						front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **backRef)
+void						front_back_split(t_symbol *source,
+								t_symbol **front_ref, t_symbol **back_ref)
 {
-	t_symbol		*fast;
-	t_symbol		*slow;
+	t_symbol				*fast;
+	t_symbol				*slow;
 
 	slow = source;
 	fast = source->next;
@@ -65,29 +67,29 @@ void						front_back_split(t_symbol *source, t_symbol **frontRef, t_symbol **bac
 			fast = fast->next;
 		}
 	}
-	*frontRef = source;
-	*backRef = slow->next;
+	*front_ref = source;
+	*back_ref = slow->next;
 	slow->next = NULL;
 }
 
-void						merge_sort(t_symbol **headRef, char reverse)
+void						merge_sort(t_symbol **head_ref, char reverse)
 {
-	t_symbol		*head;
-	t_symbol		*a;
-	t_symbol		*b;
+	t_symbol				*head;
+	t_symbol				*a;
+	t_symbol				*b;
 
-	head = *headRef;
+	head = *head_ref;
 	if (!head || !head->next)
 		return ;
 	front_back_split(head, &a, &b);
 	merge_sort(&a, reverse);
 	merge_sort(&b, reverse);
-	*headRef = sorted_merge(a, b, reverse);
+	*head_ref = sorted_merge(a, b, reverse);
 }
 
 void						sort_arch_symbols(t_file *file)
 {
-	t_arch				*tmp;
+	t_arch					*tmp;
 
 	tmp = file->arch;
 	if (file->options[LCP])

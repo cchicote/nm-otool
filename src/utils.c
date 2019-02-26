@@ -39,7 +39,8 @@ t_symbol					*new_symbol(void)
 	return (new);
 }
 
-void						add_symbol_to_list(t_symbol **sym_head, t_symbol *symbol)
+void						add_symbol_to_list(t_symbol **sym_head,
+								t_symbol *symbol)
 {
 	t_symbol				*tmp;
 

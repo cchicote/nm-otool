@@ -12,10 +12,11 @@
 
 #include "nm_otool.h"
 
-int							lc_is_32_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i)
+int							lc_is_32_segment(t_file *file, t_arch *arch,
+								struct load_command *lc, uint32_t i)
 {
 	if (arch->is_little_endian)
-		swap_32_segment_command((struct segment_command*)lc);
+		swap_32_seg_command((struct segment_command*)lc);
 	if (!ft_strcmp(file->command, "ft_nm")
 		&& (check_segment_32(file, lc->cmdsize, (struct segment_command*)lc,
 		i) == EXIT_FAILURE || parse_32_segments(file,
@@ -29,14 +30,16 @@ int							lc_is_32_segment(t_file *file, t_arch *arch, struct load_command *lc, 
 	return (EXIT_SUCCESS);
 }
 
-void						lc_is_32_symtab(t_file *file, t_arch *arch, struct load_command *lc)
+void						lc_is_32_symtab(t_file *file, t_arch *arch,
+								struct load_command *lc)
 {
 	if (arch->is_little_endian)
 		swap_symtab_command((struct symtab_command*)lc);
 	parse_symtable_32(file, (struct symtab_command*)lc, arch);
 }
 
-void						update_32_header_values(t_file *file, t_arch *arch, struct mach_header *header)
+void						update_32_header_values(t_file *file, t_arch *arch,
+								struct mach_header *header)
 {
 	arch->cputype = header->cputype;
 	arch->addr = (void*)header;
@@ -94,7 +97,7 @@ int							handle_nm_32_header(t_file *file, t_arch *arch)
 			return (EXIT_FAILURE);
 		if (lc->cmd == LC_SEGMENT
 			&& lc_is_32_segment(file, arch, lc, i) == EXIT_FAILURE)
-				return (EXIT_FAILURE);
+			return (EXIT_FAILURE);
 		else if (lc->cmd == LC_SYMTAB)
 			lc_is_32_symtab(file, arch, lc);
 		lc = (void*)lc + lc->cmdsize;

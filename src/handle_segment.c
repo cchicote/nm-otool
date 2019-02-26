@@ -12,7 +12,9 @@
 
 #include "nm_otool.h"
 
-int							get_64_text_sect_addr(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset)
+int							get_64_text_sect_addr(t_file *file,
+								struct segment_command_64 *sc, t_arch *arch,
+								uint32_t seg_offset)
 {
 	uint32_t				i;
 	struct section_64		*sect;
@@ -36,7 +38,9 @@ int							get_64_text_sect_addr(t_file *file, struct segment_command_64 *sc, t_a
 	return (EXIT_SUCCESS);
 }
 
-int							get_32_text_sect_addr(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset)
+int							get_32_text_sect_addr(t_file *file,
+								struct segment_command *sc, t_arch *arch,
+								uint32_t seg_offset)
 {
 	uint32_t				i;
 	struct section			*sect;
@@ -60,7 +64,9 @@ int							get_32_text_sect_addr(t_file *file, struct segment_command *sc, t_arch
 	return (EXIT_SUCCESS);
 }
 
-int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *arch, uint32_t seg_offset)
+int							parse_32_segments(t_file *file,
+								struct segment_command *sc, t_arch *arch,
+								uint32_t seg_offset)
 {
 	uint32_t				i;
 	struct section			*sect;
@@ -89,7 +95,9 @@ int							parse_32_segments(t_file *file, struct segment_command *sc, t_arch *ar
 	return (EXIT_SUCCESS);
 }
 
-int							parse_64_segments(t_file *file, struct segment_command_64 *sc, t_arch *arch, uint32_t seg_offset)
+int							parse_64_segments(t_file *file,
+								struct segment_command_64 *sc, t_arch *arch,
+								uint32_t seg_offset)
 {
 	uint32_t				i;
 	struct section_64		*sect;

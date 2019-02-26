@@ -16,7 +16,7 @@ int							handle_new_arch(t_file *file, uint32_t offset)
 {
 	uint32_t				magic;
 	t_arch					*new_arch;
-	
+
 	if (offset >= file->len)
 	{
 		perror_invalid_file(file->command, file->name);
@@ -41,7 +41,8 @@ int							handle_new_arch(t_file *file, uint32_t offset)
 	return (EXIT_SUCCESS);
 }
 
-int							handle_32_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset)
+int							handle_32_arch(t_file *file, t_arch *arch,
+								uint32_t magic, uint32_t offset)
 {
 	file->display_multiple_cpu++;
 	if (magic == MH_CIGAM)
@@ -57,7 +58,8 @@ int							handle_32_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t of
 	return (EXIT_SUCCESS);
 }
 
-int							handle_64_arch(t_file *file, t_arch *arch, uint32_t magic, uint32_t offset)
+int							handle_64_arch(t_file *file, t_arch *arch,
+								uint32_t magic, uint32_t offset)
 {
 	file->display_multiple_cpu++;
 	if (magic == MH_CIGAM_64)

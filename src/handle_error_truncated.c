@@ -12,7 +12,8 @@
 
 #include "nm_otool.h"
 
-void						perror_truncated_malformed_file(char *command, char *filename, uint32_t failing_lc)
+void						perror_truncated_malformed_file(char *command,
+								char *filename, uint32_t failing_lc)
 {
 	perror_command(command);
 	perror_filename(filename);
@@ -21,7 +22,8 @@ void						perror_truncated_malformed_file(char *command, char *filename, uint32_
 	ft_putendl(" extends past the end of file)");
 }
 
-void						perror_truncated_malformed_multiple(char *command, char *filename, uint32_t failing_lc)
+void						perror_truncated_malformed_multiple(char *command,
+								char *filename, uint32_t failing_lc)
 {
 	perror_command(command);
 	perror_filename(filename);
@@ -30,7 +32,8 @@ void						perror_truncated_malformed_multiple(char *command, char *filename, uin
 	ft_putendl(" cmdsize not a multiple of 4)");
 }
 
-void						perror_truncated_malformed_lc(char *command, char *filename, uint32_t failing_lc)
+void						perror_truncated_malformed_lc(char *command,
+								char *filename, uint32_t failing_lc)
 {
 	perror_command(command);
 	perror_filename(filename);
@@ -39,7 +42,9 @@ void						perror_truncated_malformed_lc(char *command, char *filename, uint32_t 
 	ft_putendl(" extends past the end all load commands in the file)");
 }
 
-void						perror_truncated_malformed_seg_eof(char *command, char *filename, char *segname, uint32_t failing_seg)
+void						perror_truncated_malformed_seg_eof(char *command,
+								char *filename, char *segname,
+								uint32_t failing_seg)
 {
 	perror_command(command);
 	perror_filename(filename);
@@ -50,7 +55,9 @@ void						perror_truncated_malformed_seg_eof(char *command, char *filename, char
 	ft_putendl(" extends past the end of the file)");
 }
 
-void						perror_truncated_malformed_seg_nsect(char *command, char *filename, char *segname, uint32_t failing_seg)
+void						perror_truncated_malformed_seg_nsect(char *command,
+								char *filename, char *segname,
+								uint32_t failing_seg)
 {
 	perror_command(command);
 	perror_filename(filename);

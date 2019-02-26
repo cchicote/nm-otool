@@ -12,7 +12,8 @@
 
 #include "nm_otool.h"
 
-void						print_char_filled(char *src, char to_fill, int size)
+void						print_char_filled(char *src, char to_fill,
+								int size)
 {
 	char					*ret;
 
@@ -45,7 +46,7 @@ char						*fill_with_char(char *src, char to_fill, int size)
 
 size_t						get_number_len(uint64_t nb, int base)
 {
-	size_t 					len;
+	size_t					len;
 
 	len = 0;
 	while (nb > 0)

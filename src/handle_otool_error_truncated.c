@@ -12,7 +12,9 @@
 
 #include "nm_otool.h"
 
-void						perror_otool_truncated_malformed_sect_file(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname)
+void						perror_otool_trunc_malf_sect_file(char *filename,
+								uint32_t failing_sect, uint32_t failing_seg,
+								char *segname)
 {
 	perror_command("ft_otool");
 	perror_filename(filename);
@@ -25,7 +27,9 @@ void						perror_otool_truncated_malformed_sect_file(char *filename, uint32_t fa
 	ft_putendl(" extends past the end of the file)");
 }
 
-void						perror_otool_truncated_malformed_sect_header(char *filename, uint32_t failing_sect, uint32_t failing_seg, char *segname)
+void						perror_otool_trunc_malf_sect_header(char *filename,
+								uint32_t failing_sect, uint32_t failing_seg,
+								char *segname)
 {
 	perror_command("ft_otool");
 	perror_filename(filename);

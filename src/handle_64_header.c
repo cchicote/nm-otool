@@ -12,10 +12,11 @@
 
 #include "nm_otool.h"
 
-int							lc_is_64_segment(t_file *file, t_arch *arch, struct load_command *lc, uint32_t i)
+int							lc_is_64_segment(t_file *file, t_arch *arch,
+								struct load_command *lc, uint32_t i)
 {
 	if (arch->is_little_endian)
-		swap_64_segment_command((struct segment_command_64*)lc);
+		swap_64_seg_command((struct segment_command_64*)lc);
 	if (!ft_strcmp(file->command, "ft_nm")
 		&& (check_segment_64(file, lc->cmdsize, (struct segment_command_64*)lc,
 		i) == EXIT_FAILURE || parse_64_segments(file,
@@ -29,14 +30,16 @@ int							lc_is_64_segment(t_file *file, t_arch *arch, struct load_command *lc, 
 	return (EXIT_SUCCESS);
 }
 
-void						lc_is_64_symtab(t_file *file, t_arch *arch, struct load_command *lc)
+void						lc_is_64_symtab(t_file *file, t_arch *arch,
+								struct load_command *lc)
 {
 	if (arch->is_little_endian)
 		swap_symtab_command((struct symtab_command*)lc);
 	parse_symtable_64(file, (struct symtab_command*)lc, arch);
 }
 
-void						update_64_header_values(t_file *file, t_arch *arch, struct mach_header_64 *header)
+void						update_64_header_values(t_file *file, t_arch *arch,
+								struct mach_header_64 *header)
 {
 	arch->cputype = header->cputype;
 	arch->addr = (void*)header;

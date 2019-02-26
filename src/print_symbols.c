@@ -12,9 +12,10 @@
 
 #include "nm_otool.h"
 
-void						print_symbols(t_arch *arch, char *options, int is_64)
+void						print_symbols(t_arch *arch, char *options,
+								int is_64)
 {
-	t_symbol 				*tmp;
+	t_symbol				*tmp;
 	t_symbol				*sym_to_free;
 	char					*name;
 
@@ -37,7 +38,8 @@ void						print_symbols(t_arch *arch, char *options, int is_64)
 	}
 }
 
-void						print_arch_sym(t_file *file, int multiple_files, char *ar_name)
+void						print_arch_sym(t_file *file, int multiple_files,
+								char *ar_name)
 {
 	t_arch				*tmp;
 	t_arch				*arch_to_free;

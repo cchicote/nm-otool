@@ -1,0 +1,1 @@
+ft_nm: files_test/unsafe/mmeisson/sa_seg: truncated or malformed object (load command 3 fileoff field plus filesize field in LC_SEGMENT_64 extends past the end of the file)

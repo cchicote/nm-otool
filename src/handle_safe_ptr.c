@@ -22,17 +22,21 @@ int							check_ptr(t_file *file, void *lc)
 	return (lc <= file_end && (lc + load_co->cmdsize) <= file_end);
 }
 
-int							check_seg_nsect(uint32_t sect_size, uint32_t cmdsize, uint32_t nsects)
+int							check_seg_nsect(uint32_t sect_size,
+								uint32_t cmdsize, uint32_t nsects)
 {
 	return (sect_size * nsects <= cmdsize);
 }
 
-int							check_eof(t_file *file, uint64_t fileoff, uint64_t filesize)
+int							check_eof(t_file *file, uint64_t fileoff,
+								uint64_t filesize)
 {
 	return (fileoff + filesize <= file->len);
 }
 
-int							check_segment_32(t_file *file, uint32_t cmdsize, struct segment_command *seg, uint32_t seg_index)
+int							check_segment_32(t_file *file, uint32_t cmdsize,
+								struct segment_command *seg,
+								uint32_t seg_index)
 {
 	if (!check_eof(file, seg->fileoff, seg->filesize))
 	{
@@ -49,7 +53,9 @@ int							check_segment_32(t_file *file, uint32_t cmdsize, struct segment_comman
 	return (EXIT_SUCCESS);
 }
 
-int							check_segment_64(t_file *file, uint32_t cmdsize, struct segment_command_64 *seg, uint32_t seg_index)
+int							check_segment_64(t_file *file, uint32_t cmdsize,
+								struct segment_command_64 *seg,
+								uint32_t seg_index)
 {
 	if (!check_eof(file, seg->fileoff, seg->filesize))
 	{

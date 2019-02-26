@@ -22,18 +22,17 @@ int							ft_otool(char *filename)
 	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
 		return (handle_archive(&file));
 	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (unmap_file_failure(&file, EXIT_FAILURE));
+		return (EXIT_FAILURE);
 	print_t_sect(&file, NULL);
 	unmap_file(&file);
 	return (EXIT_SUCCESS);
 }
 
-int						main(int argc, char **argv)
+int							main(int argc, char **argv)
 {
-	int					i;
+	int						i;
 
 	i = 0;
-
 	if (argc < 2)
 		perror_missing_file("ft_otool");
 	else
@@ -44,7 +43,5 @@ int						main(int argc, char **argv)
 				return (EXIT_FAILURE);
 		}
 	}
-	while (1)
-	;
 	return (EXIT_SUCCESS);
 }

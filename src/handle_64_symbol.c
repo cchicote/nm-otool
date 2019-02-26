@@ -19,7 +19,8 @@ int							check_stab_64(struct nlist_64 array)
 	return (FALSE);
 }
 
-void						get_symbol_type_char_64(t_symbol *symbol, struct nlist_64 array)
+void						get_symbol_type_char_64(t_symbol *symbol,
+								struct nlist_64 array)
 {
 	uint8_t					n_type_value;
 
@@ -45,25 +46,27 @@ void						get_symbol_type_char_64(t_symbol *symbol, struct nlist_64 array)
 		symbol->is_external = TRUE;
 }
 
-void						get_symbol_value_64(t_symbol *symbol, struct nlist_64 array)
+void						get_symbol_value_64(t_symbol *symbol,
+								struct nlist_64 array)
 {
 	if (array.n_type & N_TYPE)
 		symbol->value = array.n_value;
 }
 
-void						get_symbol_name_64(t_file *file, t_symbol *symbol, struct nlist_64 array, char *stringtable)
+void						get_symbol_name_64(t_file *file, t_symbol *symbol,
+								struct nlist_64 array, char *stringtable)
 {
 	symbol->name = (void*)(stringtable + array.n_un.n_strx)
 		> (file->content + file->len) ? NULL : stringtable + array.n_un.n_strx;
 }
 
-void						parse_symtable_64(t_file *file, struct symtab_command *sc, t_arch *arch)
+void						parse_symtable_64(t_file *file,
+								struct symtab_command *sc, t_arch *arch)
 {
 	uint32_t				i;
 	t_symbol				*symbol;
 
 	i = -1;
-
 	while (++i < sc->nsyms)
 	{
 		if (arch->is_little_endian)

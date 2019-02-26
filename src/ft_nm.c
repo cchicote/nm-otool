@@ -12,7 +12,8 @@
 
 #include "nm_otool.h"
 
-int							ft_nm(char *filename, char *options, int multiple_files)
+int							ft_nm(char *filename, char *options,
+								int multiple_files)
 {
 	t_file					file;
 
@@ -23,17 +24,17 @@ int							ft_nm(char *filename, char *options, int multiple_files)
 	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
 		return (handle_archive(&file));
 	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (unmap_file_failure(&file, EXIT_FAILURE));
+		return (EXIT_FAILURE);
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, multiple_files, NULL);
 	unmap_file(&file);
 	return (EXIT_SUCCESS);
 }
 
-int						main(int argc, char **argv)
+int							main(int argc, char **argv)
 {
-	int					i;
-	char				*options;
+	int						i;
+	char					*options;
 
 	i = 0;
 	options = init_options();

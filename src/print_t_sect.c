@@ -98,7 +98,8 @@ void						print_hexdump_64(t_arch *arch)
 		ft_putchar('\n');
 }
 
-void						print_name_and_sect(t_file *file, t_arch *arch, char *ar_name)
+void						print_name_and_sect(t_file *file,
+								t_arch *arch, char *ar_name)
 {
 	if (!arch->t_sect_addr)
 		return ;

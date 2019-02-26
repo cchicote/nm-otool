@@ -55,7 +55,6 @@ int							parse_options(char *options, char *str)
 			options[UCU] = 1;
 		else
 		{
-			printf("[%c]\n", str[i]);
 			perror_wrong_option(str);
 			return (EXIT_FAILURE);
 		}

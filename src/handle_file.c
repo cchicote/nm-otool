@@ -30,8 +30,8 @@ void						unmap_file(t_file *file)
 
 t_file						check_file(char *command, char *filename)
 {
-    t_file					file;
-    int						fd;
+	t_file					file;
+	int						fd;
 	struct stat				stat_ret;
 
 	ft_bzero(&file, sizeof(t_file));
@@ -56,7 +56,8 @@ t_file						check_file(char *command, char *filename)
 	return (file);
 }
 
-int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr, char *options)
+int							generate_file_from_archive_nm(char *command,
+								char *ar_name, void *hdr_ptr, char *options)
 {
 	t_file					file;
 	uint32_t				size;
@@ -71,7 +72,7 @@ int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_
 		perror_maperror(command, filename);
 		return (EXIT_FAILURE);
 	}
-	file.content = hdr_ptr+ sizeof(struct ar_hdr)
+	file.content = hdr_ptr + sizeof(struct ar_hdr)
 		+ get_name_size_from_ar_hdr(hdr_ptr);
 	file.name = filename;
 	file.len = size;
@@ -85,7 +86,8 @@ int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_
 	return (EXIT_SUCCESS);
 }
 
-int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr, char *options)
+int							generate_file_from_archive_otool(char *command,
+								char *ar_name, void *hdr_ptr, char *options)
 {
 	t_file					file;
 	uint32_t				size;
@@ -100,7 +102,7 @@ int							generate_file_from_archive_otool(char *command, char *ar_name, void *h
 		perror_maperror(command, filename);
 		return (EXIT_FAILURE);
 	}
-	file.content = hdr_ptr+ sizeof(struct ar_hdr)
+	file.content = hdr_ptr + sizeof(struct ar_hdr)
 		+ get_name_size_from_ar_hdr(hdr_ptr);
 	file.name = filename;
 	file.len = size;
