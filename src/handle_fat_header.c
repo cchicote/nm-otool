@@ -50,6 +50,6 @@ int							handle_fat_header(t_file *file)
 	while (++i < narch)
 		if (check_valid_cpu_type((cpu_type_t)fat_arch[i].cputype)
 			&& handle_new_arch(file, fat_arch[i].offset) == EXIT_FAILURE)
-			return (EXIT_FAILURE);
+			return (unmap_file_failure(file, EXIT_FAILURE));
 	return (EXIT_SUCCESS);
 }

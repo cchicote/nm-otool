@@ -170,8 +170,9 @@ int							handle_64_arch(t_file *file, t_arch *arch,
 /*
 **							HANDLE_ARCHIVE.C
 */
-uint32_t					parse_ar_symtab_max_offset(void *content);
+uint32_t					parse_ar_symtab_max_offset(t_file *file);
 int							handle_archive(t_file *file);
+void						print_archive_name_otool(t_file *file);
 uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr);
 uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr);
 
@@ -217,6 +218,7 @@ int							check_valid_cpu_type(cpu_type_t cputype);
 **							HANDLE_FILE.C
 */
 t_file						check_file(char *command, char *filename);
+int							unmap_file_failure(t_file *file, int exit_value);
 void						unmap_file(t_file *file);
 int							generate_file_from_archive_nm(char *command, char *ar_name, void *hdr_ptr, char *options);
 int							generate_file_from_archive_otool(char *command, char *ar_name, void *hdr_ptr, char *options);

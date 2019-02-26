@@ -20,23 +20,23 @@ int							handle_new_arch(t_file *file, uint32_t offset)
 	if (offset >= file->len)
 	{
 		perror_invalid_file(file->command, file->name);
-		return (EXIT_FAILURE);
+		return (unmap_file_failure(file, EXIT_FAILURE));
 	}
 	magic = *(uint32_t*)(file->content + offset);
 	if ((new_arch = (t_arch*)ft_memalloc(sizeof(t_arch))) == NULL)
-		return (EXIT_FAILURE);
+		return (unmap_file_failure(file, EXIT_FAILURE));
 	ft_bzero(new_arch, sizeof(t_arch));
 	new_arch->offset = offset;
 	new_arch->is_little_endian = (magic == MH_CIGAM || magic == MH_CIGAM_64);
 	if (magic == MH_MAGIC || magic == MH_CIGAM)
 	{
 		if (handle_32_arch(file, new_arch, magic, offset) == EXIT_FAILURE)
-			return (EXIT_FAILURE);
+			return (unmap_file_failure(file, EXIT_FAILURE));
 	}
 	else if (magic == MH_MAGIC_64 || magic == MH_CIGAM_64)
 	{
 		if (handle_64_arch(file, new_arch, magic, offset) == EXIT_FAILURE)
-			return (EXIT_FAILURE);
+			return (unmap_file_failure(file, EXIT_FAILURE));
 	}
 	return (EXIT_SUCCESS);
 }

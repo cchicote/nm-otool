@@ -28,7 +28,7 @@ uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr)
 	return (size);
 }
 
-uint32_t					parse_ar_symtab_max_offset(void *content)
+uint32_t					parse_ar_symtab_max_offset(t_file *file)
 {
 	uint32_t				offset;
 	uint32_t				size;
@@ -38,15 +38,26 @@ uint32_t					parse_ar_symtab_max_offset(void *content)
 	offset = SARMAG + sizeof(struct ar_hdr) + 20 + sizeof(uint32_t) * 2;
 	size = 0;
 	offset_max = 0;
-	symtab_size = *(uint32_t*)(content + offset - 2 * sizeof(uint32_t));
+	symtab_size = *(uint32_t*)(file->content + offset - 2 * sizeof(uint32_t));
 	while (size < symtab_size)
 	{
-		offset_max = *(uint32_t*)(content + offset)
-			> offset_max ? *(uint32_t*)(content + offset) : offset_max;
+		offset_max = *(uint32_t*)(file->content + offset)
+			> offset_max ? *(uint32_t*)(file->content + offset) : offset_max;
+		if (file->content + offset_max > file->content + file->len)
+			return (offset_max);
 		offset += sizeof(uint32_t) * 2;
 		size = size + sizeof(uint32_t) + sizeof(uint32_t);
 	}
 	return (offset_max);
+}
+
+void						print_archive_name_otool(t_file *file)
+{
+	if (ft_strcmp(file->command, "ft_otool") == 0)
+	{
+		ft_putstr("Archive : ");
+		ft_putendl(file->name);
+	}
 }
 
 int							handle_archive(t_file *file)
@@ -56,12 +67,13 @@ int							handle_archive(t_file *file)
 
 	curr_offset = get_file_size_from_ar_hdr(file->content + SARMAG)
 		+ sizeof(struct ar_hdr) + SARMAG;
-	offset_max = parse_ar_symtab_max_offset(file->content);
-	if (ft_strcmp(file->command, "ft_otool") == 0)
+	if (file->content + (offset_max = parse_ar_symtab_max_offset(file))
+		> file->content + file->len)
 	{
-		ft_putstr("Archive : ");
-		ft_putendl(file->name);
+		perror_invalid_file(file->command, file->name);
+		return (unmap_file_failure(file, EXIT_FAILURE));
 	}
+	print_archive_name_otool(file);
 	while (curr_offset <= offset_max)
 	{
 		if (ft_strcmp(file->command, "ft_nm") == 0)

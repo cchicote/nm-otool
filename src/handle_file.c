@@ -12,11 +12,20 @@
 
 #include "nm_otool.h"
 
+int							unmap_file_failure(t_file *file, int exit_value)
+{
+	unmap_file(file);
+	return (exit_value);
+}
+
 void						unmap_file(t_file *file)
 {
-	free(file->options);
-	free(file->command);
-	munmap(file->content, file->len);
+	if (file->options)
+		free(file->options);
+	if (file->command)
+		free(file->command);
+	if (file->content)
+		munmap(file->content, file->len);
 }
 
 t_file						check_file(char *command, char *filename)
@@ -96,7 +105,7 @@ int							generate_file_from_archive_otool(char *command, char *ar_name, void *h
 	file.name = filename;
 	file.len = size;
 	file.command = ft_strdup(command);
-	file.options = ft_strdup(options);
+	file.options = options;
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	print_t_sect(&file, ar_name);
