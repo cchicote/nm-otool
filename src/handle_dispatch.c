@@ -28,7 +28,7 @@ int							dispatch_by_magic(t_file *file)
 	else
 	{
 		perror_fileerror(file->command, file->name);
-		return (unmap_file_failure(file, EXIT_FAILURE));
+		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
 }

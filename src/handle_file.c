@@ -20,12 +20,8 @@ int							unmap_file_failure(t_file *file, int exit_value)
 
 void						unmap_file(t_file *file)
 {
-	if (file->options)
-		free(file->options);
-	if (file->command)
-		free(file->command);
-	if (file->content)
-		munmap(file->content, file->len);
+	free(file->command);
+	munmap(file->content, file->len);
 }
 
 t_file						check_file(char *command, char *filename)
@@ -61,20 +57,18 @@ int							generate_file_from_archive_nm(char *command,
 {
 	t_file					file;
 	uint32_t				size;
-	char					*filename;
 
 	size = get_file_size_from_ar_hdr(hdr_ptr);
-	filename = hdr_ptr + sizeof(struct ar_hdr);
 	ft_bzero(&file, sizeof(t_file));
 	file.content = mmap(0, size, PROT_READ | PROT_WRITE, MAP_PRIVATE, -1, 0);
 	if (!file.content)
 	{
-		perror_maperror(command, filename);
+		perror_maperror(command, hdr_ptr + sizeof(struct ar_hdr));
 		return (EXIT_FAILURE);
 	}
 	file.content = hdr_ptr + sizeof(struct ar_hdr)
 		+ get_name_size_from_ar_hdr(hdr_ptr);
-	file.name = filename;
+	file.name = hdr_ptr + sizeof(struct ar_hdr);
 	file.len = size;
 	file.command = ft_strdup(command);
 	file.options = ft_strdup(options);
@@ -82,6 +76,7 @@ int							generate_file_from_archive_nm(char *command,
 		return (EXIT_FAILURE);
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, TRUE, ar_name);
+	free(file.options);
 	unmap_file(&file);
 	return (EXIT_SUCCESS);
 }
@@ -111,6 +106,7 @@ int							generate_file_from_archive_otool(char *command,
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	print_t_sect(&file, ar_name);
+	free(file.options);
 	unmap_file(&file);
 	return (EXIT_SUCCESS);
 }

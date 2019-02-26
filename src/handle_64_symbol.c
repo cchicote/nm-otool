@@ -39,7 +39,7 @@ void						get_symbol_type_char_64(t_symbol *symbol,
 		n_type_value == N_PBUD)
 		symbol->type_char = 'u';
 	else if (array.n_desc & N_WEAK_REF)
-		symbol->type_char = 'W';
+		symbol->type_char = 'D';
 	else if (n_type_value == N_SECT && !symbol->type_char)
 		symbol->type_char = '?';
 	if (N_EXT & array.n_type)

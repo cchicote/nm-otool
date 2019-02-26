@@ -22,9 +22,13 @@ int							ft_nm(char *filename, char *options,
 		return (EXIT_FAILURE);
 	file.options = options;
 	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
-		return (handle_archive(&file));
+	{
+		handle_archive(&file, 0);
+		unmap_file(&file);
+		return (EXIT_SUCCESS);
+	}
 	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (EXIT_FAILURE);
+		return (unmap_file_failure(&file, EXIT_FAILURE));
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, multiple_files, NULL);
 	unmap_file(&file);
@@ -49,11 +53,12 @@ int							main(int argc, char **argv)
 	else if (argc > 1)
 	{
 		while (++i < argc)
-		{
 			ft_nm(argv[i], options, (argc > 2 && argv[1][0] != '-'));
-		}
 	}
 	else
 		perror_missing_file("ft_nm");
+	free(options);
+	while (1)
+		;
 	return (EXIT_SUCCESS);
 }

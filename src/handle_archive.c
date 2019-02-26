@@ -28,7 +28,8 @@ uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr)
 	return (size);
 }
 
-uint32_t					parse_ar_symtab_max_offset(t_file *file)
+uint32_t					parse_ar_symtab_max_offset(void *content,
+								uint32_t len)
 {
 	uint32_t				offset;
 	uint32_t				size;
@@ -38,12 +39,12 @@ uint32_t					parse_ar_symtab_max_offset(t_file *file)
 	offset = SARMAG + sizeof(struct ar_hdr) + 20 + sizeof(uint32_t) * 2;
 	size = 0;
 	offset_max = 0;
-	symtab_size = *(uint32_t*)(file->content + offset - 2 * sizeof(uint32_t));
+	symtab_size = *(uint32_t*)(content + offset - 2 * sizeof(uint32_t));
 	while (size < symtab_size)
 	{
-		offset_max = *(uint32_t*)(file->content + offset)
-			> offset_max ? *(uint32_t*)(file->content + offset) : offset_max;
-		if (file->content + offset_max > file->content + file->len)
+		offset_max = *(uint32_t*)(content + offset)
+			> offset_max ? *(uint32_t*)(content + offset) : offset_max;
+		if (content + offset_max > content + len)
 			return (offset_max);
 		offset += sizeof(uint32_t) * 2;
 		size = size + sizeof(uint32_t) + sizeof(uint32_t);
@@ -60,31 +61,31 @@ void						print_archive_name_otool(t_file *file)
 	}
 }
 
-int							handle_archive(t_file *file)
+int							handle_archive(t_file *file, uint32_t off)
 {
-	uint32_t				offset_max;
-	uint32_t				curr_offset;
+	uint32_t				offmax;
+	uint32_t				curr_off;
 
-	curr_offset = get_file_size_from_ar_hdr(file->content + SARMAG)
+	curr_off = get_file_size_from_ar_hdr(file->content + off + SARMAG)
 		+ sizeof(struct ar_hdr) + SARMAG;
-	if (file->content + (offset_max = parse_ar_symtab_max_offset(file))
-		> file->content + file->len)
+	if (file->content + off
+		+ (offmax = parse_ar_symtab_max_offset(file->content + off, file->len))
+		> file->content + off + file->len)
 	{
 		perror_invalid_file(file->command, file->name);
 		return (unmap_file_failure(file, EXIT_FAILURE));
 	}
 	print_archive_name_otool(file);
-	while (curr_offset <= offset_max)
+	while (curr_off <= offmax)
 	{
 		if (ft_strcmp(file->command, "ft_nm") == 0)
 			generate_file_from_archive_nm(file->command, file->name,
-				file->content + curr_offset, file->options);
+				file->content + off + curr_off, file->options);
 		else if (ft_strcmp(file->command, "ft_otool") == 0)
 			generate_file_from_archive_otool(file->command, file->name,
-			file->content + curr_offset, init_options());
-		curr_offset += get_file_size_from_ar_hdr(file->content + curr_offset)
+			file->content + off + curr_off, init_options());
+		curr_off += get_file_size_from_ar_hdr(file->content + off + curr_off)
 			+ sizeof(struct ar_hdr);
 	}
-	unmap_file(file);
 	return (EXIT_SUCCESS);
 }

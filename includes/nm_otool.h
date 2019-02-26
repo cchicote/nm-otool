@@ -167,8 +167,8 @@ int							handle_64_arch(t_file *file, t_arch *arch,
 /*
 **							HANDLE_ARCHIVE.C
 */
-uint32_t					parse_ar_symtab_max_offset(t_file *file);
-int							handle_archive(t_file *file);
+uint32_t					parse_ar_symtab_max_offset(void *content, uint32_t len);
+int							handle_archive(t_file *file, uint32_t offset);
 void						print_archive_name_otool(t_file *file);
 uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr);
 uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr);

@@ -20,9 +20,9 @@ int							ft_otool(char *filename)
 	if (!file.content)
 		return (EXIT_FAILURE);
 	if (ft_strncmp(file.content, ARMAG, SARMAG) == 0)
-		return (handle_archive(&file));
+		return (handle_archive(&file, 0));
 	else if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (EXIT_FAILURE);
+		return (unmap_file_failure(&file, EXIT_FAILURE));
 	print_t_sect(&file, NULL);
 	unmap_file(&file);
 	return (EXIT_SUCCESS);
@@ -40,7 +40,11 @@ int							main(int argc, char **argv)
 		while (++i < argc)
 		{
 			if (ft_otool(argv[i]) == EXIT_FAILURE)
+			{
+				while (1)
+					;
 				return (EXIT_FAILURE);
+			}
 		}
 	}
 	return (EXIT_SUCCESS);
