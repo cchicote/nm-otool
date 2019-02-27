@@ -71,10 +71,7 @@ int							handle_archive(t_file *file, uint32_t off)
 	if (file->content + off
 		+ (offmax = parse_ar_symtab_max_offset(file->content + off, file->len))
 		> file->content + off + file->len)
-	{
-		perror_invalid_file(file->command, file->name);
-		return (unmap_file_failure(file, EXIT_FAILURE));
-	}
+		return (perror_and_unmap(file));
 	print_archive_name_otool(file);
 	while (curr_off <= offmax)
 	{
@@ -85,7 +82,8 @@ int							handle_archive(t_file *file, uint32_t off)
 			generate_file_from_archive_otool(file->command, file->name,
 			file->content + off + curr_off, init_options());
 		curr_off += get_file_size_from_ar_hdr(file->content + off + curr_off)
-			+ sizeof(struct ar_hdr);
+		+ sizeof(struct ar_hdr);
 	}
+	unmap_file(file);
 	return (EXIT_SUCCESS);
 }

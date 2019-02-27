@@ -23,7 +23,6 @@
 # include <mach/machine.h>
 # include <mach-o/ranlib.h>
 # include <ar.h>
-# include <stdio.h>
 
 /*
 ** Options: LC = LowerCase / UC = UpperCase
@@ -80,6 +79,7 @@ typedef struct				s_file
 	void					*curr_arch;
 	void					*curr_header_end;
 	char					*options;
+	int						is_free;
 }							t_file;
 
 typedef struct				s_ar_header
@@ -167,7 +167,8 @@ int							handle_64_arch(t_file *file, t_arch *arch,
 /*
 **							HANDLE_ARCHIVE.C
 */
-uint32_t					parse_ar_symtab_max_offset(void *content, uint32_t len);
+uint32_t					parse_ar_symtab_max_offset(void *content,
+								uint32_t len);
 int							handle_archive(t_file *file, uint32_t offset);
 void						print_archive_name_otool(t_file *file);
 uint32_t					get_file_size_from_ar_hdr(void *hdr_ptr);
@@ -201,6 +202,7 @@ void						perror_command(char *command);
 void						perror_filename(char *filename);
 void						perror_missing_file(char *command);
 void						perror_invalid_file(char *command, char *filename);
+int							perror_and_unmap(t_file *file);
 
 /*
 **							HANDLE_ERROR.C

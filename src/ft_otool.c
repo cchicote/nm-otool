@@ -40,11 +40,7 @@ int							main(int argc, char **argv)
 		while (++i < argc)
 		{
 			if (ft_otool(argv[i]) == EXIT_FAILURE)
-			{
-				while (1)
-					;
 				return (EXIT_FAILURE);
-			}
 		}
 	}
 	return (EXIT_SUCCESS);

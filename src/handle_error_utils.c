@@ -37,3 +37,9 @@ void						perror_missing_file(char *command)
 	perror_command(command);
 	ft_putendl("at least one file must be specified");
 }
+
+int							perror_and_unmap(t_file *file)
+{
+	perror_invalid_file(file->command, file->name);
+	return (unmap_file_failure(file, EXIT_FAILURE));
+}

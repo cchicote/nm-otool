@@ -20,8 +20,11 @@ int							unmap_file_failure(t_file *file, int exit_value)
 
 void						unmap_file(t_file *file)
 {
+	if (file->is_free)
+		return ;
 	free(file->command);
 	munmap(file->content, file->len);
+	file->is_free = TRUE;
 }
 
 t_file						check_file(char *command, char *filename)
@@ -73,7 +76,7 @@ int							generate_file_from_archive_nm(char *command,
 	file.command = ft_strdup(command);
 	file.options = ft_strdup(options);
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (EXIT_FAILURE);
+		return (unmap_file_failure(&file, EXIT_FAILURE));
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, TRUE, ar_name);
 	free(file.options);
@@ -104,7 +107,7 @@ int							generate_file_from_archive_otool(char *command,
 	file.command = ft_strdup(command);
 	file.options = options;
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
-		return (EXIT_FAILURE);
+		return (unmap_file_failure(&file, EXIT_FAILURE));
 	print_t_sect(&file, ar_name);
 	free(file.options);
 	unmap_file(&file);

@@ -1,0 +1,3210 @@
+/usr/bin/2to3 :
+
+
+1c1
+< ft_otool: /usr/bin/2to3: The file was not recognized as a valid object file
+---
+> /usr/bin/2to3: is not an object file
+/usr/bin/2to3- :
+
+
+1c1
+< ft_otool: /usr/bin/2to3-: The file was not recognized as a valid object file
+---
+> /usr/bin/2to3-: is not an object file
+/usr/bin/2to3-2.7 :
+
+
+1c1
+< ft_otool: /usr/bin/2to3-2.7: The file was not recognized as a valid object file
+---
+> /usr/bin/2to3-2.7: is not an object file
+/usr/bin/2to3-3.4 :
+
+
+1c1
+< ft_otool: /usr/bin/2to3-3.4: The file was not recognized as a valid object file
+---
+> /usr/bin/2to3-3.4: is not an object file
+/usr/bin/2to32.6 :
+
+
+1c1
+< ft_otool: /usr/bin/2to32.6: The file was not recognized as a valid object file
+---
+> /usr/bin/2to32.6: is not an object file
+/usr/bin/afmtodit :
+
+
+1c1
+< ft_otool: /usr/bin/afmtodit: The file was not recognized as a valid object file
+---
+> /usr/bin/afmtodit: is not an object file
+/usr/bin/alias :
+
+
+1c1
+< ft_otool: /usr/bin/alias: The file was not recognized as a valid object file
+---
+> /usr/bin/alias: is not an object file
+/usr/bin/apropos :
+
+
+1c1
+< ft_otool: /usr/bin/apropos: The file was not recognized as a valid object file
+---
+> /usr/bin/apropos: is not an object file
+/usr/bin/auval :
+
+
+1c1
+< ft_otool: /usr/bin/auval: The file was not recognized as a valid object file
+---
+> /usr/bin/auval: is not an object file
+/usr/bin/bashbug :
+
+
+1c1
+< ft_otool: /usr/bin/bashbug: The file was not recognized as a valid object file
+---
+> /usr/bin/bashbug: is not an object file
+/usr/bin/bg :
+
+
+1c1
+< ft_otool: /usr/bin/bg: The file was not recognized as a valid object file
+---
+> /usr/bin/bg: is not an object file
+/usr/bin/binhex.pl :
+
+
+1c1
+< ft_otool: /usr/bin/binhex.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/binhex.pl: is not an object file
+/usr/bin/binhex5.18.pl :
+
+
+1c1
+< ft_otool: /usr/bin/binhex5.18.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/binhex5.18.pl: is not an object file
+/usr/bin/bitesize.d :
+
+
+1c1
+< ft_otool: /usr/bin/bitesize.d: The file was not recognized as a valid object file
+---
+> /usr/bin/bitesize.d: is not an object file
+/usr/bin/btmmdiagnose :
+
+
+1c1
+< ft_otool: /usr/bin/btmmdiagnose: The file was not recognized as a valid object file
+---
+> /usr/bin/btmmdiagnose: is not an object file
+/usr/bin/bzcmp :
+
+
+1c1
+< ft_otool: /usr/bin/bzcmp: The file was not recognized as a valid object file
+---
+> /usr/bin/bzcmp: is not an object file
+/usr/bin/bzdiff :
+
+
+1c1
+< ft_otool: /usr/bin/bzdiff: The file was not recognized as a valid object file
+---
+> /usr/bin/bzdiff: is not an object file
+/usr/bin/bzless :
+
+
+1c1
+< ft_otool: /usr/bin/bzless: The file was not recognized as a valid object file
+---
+> /usr/bin/bzless: is not an object file
+/usr/bin/bzmore :
+
+
+1c1
+< ft_otool: /usr/bin/bzmore: The file was not recognized as a valid object file
+---
+> /usr/bin/bzmore: is not an object file
+/usr/bin/c2ph :
+
+
+1c1
+< ft_otool: /usr/bin/c2ph: The file was not recognized as a valid object file
+---
+> /usr/bin/c2ph: is not an object file
+/usr/bin/c2ph5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/c2ph5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/c2ph5.16: is not an object file
+/usr/bin/c2ph5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/c2ph5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/c2ph5.18: is not an object file
+/usr/bin/c_rehash :
+
+
+1c1
+< ft_otool: /usr/bin/c_rehash: The file was not recognized as a valid object file
+---
+> /usr/bin/c_rehash: is not an object file
+/usr/bin/cd :
+
+
+1c1
+< ft_otool: /usr/bin/cd: The file was not recognized as a valid object file
+---
+> /usr/bin/cd: is not an object file
+/usr/bin/command :
+
+
+1c1
+< ft_otool: /usr/bin/command: The file was not recognized as a valid object file
+---
+> /usr/bin/command: is not an object file
+/usr/bin/config_data :
+
+
+1c1
+< ft_otool: /usr/bin/config_data: The file was not recognized as a valid object file
+---
+> /usr/bin/config_data: is not an object file
+/usr/bin/config_data5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/config_data5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/config_data5.16: is not an object file
+/usr/bin/config_data5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/config_data5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/config_data5.18: is not an object file
+/usr/bin/corelist :
+
+
+1c1
+< ft_otool: /usr/bin/corelist: The file was not recognized as a valid object file
+---
+> /usr/bin/corelist: is not an object file
+/usr/bin/corelist5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/corelist5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/corelist5.16: is not an object file
+/usr/bin/corelist5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/corelist5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/corelist5.18: is not an object file
+/usr/bin/cpan :
+
+
+1c1
+< ft_otool: /usr/bin/cpan: The file was not recognized as a valid object file
+---
+> /usr/bin/cpan: is not an object file
+/usr/bin/cpan2dist :
+
+
+1c1
+< ft_otool: /usr/bin/cpan2dist: The file was not recognized as a valid object file
+---
+> /usr/bin/cpan2dist: is not an object file
+/usr/bin/cpan2dist5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/cpan2dist5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/cpan2dist5.16: is not an object file
+/usr/bin/cpan2dist5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/cpan2dist5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/cpan2dist5.18: is not an object file
+/usr/bin/cpan5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/cpan5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/cpan5.16: is not an object file
+/usr/bin/cpan5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/cpan5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/cpan5.18: is not an object file
+/usr/bin/cpanp :
+
+
+1c1
+< ft_otool: /usr/bin/cpanp: The file was not recognized as a valid object file
+---
+> /usr/bin/cpanp: is not an object file
+/usr/bin/cpanp-run-perl :
+
+
+1c1
+< ft_otool: /usr/bin/cpanp-run-perl: The file was not recognized as a valid object file
+---
+> /usr/bin/cpanp-run-perl: is not an object file
+/usr/bin/cpanp-run-perl5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/cpanp-run-perl5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/cpanp-run-perl5.16: is not an object file
+/usr/bin/cpanp-run-perl5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/cpanp-run-perl5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/cpanp-run-perl5.18: is not an object file
+/usr/bin/cpanp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/cpanp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/cpanp5.16: is not an object file
+/usr/bin/cpanp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/cpanp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/cpanp5.18: is not an object file
+/usr/bin/cpu_profiler.d :
+
+
+1c1
+< ft_otool: /usr/bin/cpu_profiler.d: The file was not recognized as a valid object file
+---
+> /usr/bin/cpu_profiler.d: is not an object file
+/usr/bin/cpuwalk.d :
+
+
+1c1
+< ft_otool: /usr/bin/cpuwalk.d: The file was not recognized as a valid object file
+---
+> /usr/bin/cpuwalk.d: is not an object file
+/usr/bin/crc32 :
+
+
+1c1
+< ft_otool: /usr/bin/crc32: The file was not recognized as a valid object file
+---
+> /usr/bin/crc32: is not an object file
+/usr/bin/crc325.16 :
+
+
+1c1
+< ft_otool: /usr/bin/crc325.16: The file was not recognized as a valid object file
+---
+> /usr/bin/crc325.16: is not an object file
+/usr/bin/crc325.18 :
+
+
+1c1
+< ft_otool: /usr/bin/crc325.18: The file was not recognized as a valid object file
+---
+> /usr/bin/crc325.18: is not an object file
+/usr/bin/creatbyproc.d :
+
+
+1c1
+< ft_otool: /usr/bin/creatbyproc.d: The file was not recognized as a valid object file
+---
+> /usr/bin/creatbyproc.d: is not an object file
+/usr/bin/csdiagnose :
+
+
+1c1
+< ft_otool: /usr/bin/csdiagnose: The file was not recognized as a valid object file
+---
+> /usr/bin/csdiagnose: is not an object file
+/usr/bin/cups-config :
+
+
+1c1
+< ft_otool: /usr/bin/cups-config: The file was not recognized as a valid object file
+---
+> /usr/bin/cups-config: is not an object file
+/usr/bin/curl-config :
+
+
+1c1
+< ft_otool: /usr/bin/curl-config: The file was not recognized as a valid object file
+---
+> /usr/bin/curl-config: is not an object file
+/usr/bin/dappprof :
+
+
+1c1
+< ft_otool: /usr/bin/dappprof: The file was not recognized as a valid object file
+---
+> /usr/bin/dappprof: is not an object file
+/usr/bin/dapptrace :
+
+
+1c1
+< ft_otool: /usr/bin/dapptrace: The file was not recognized as a valid object file
+---
+> /usr/bin/dapptrace: is not an object file
+/usr/bin/dbicadmin :
+
+
+1c1
+< ft_otool: /usr/bin/dbicadmin: The file was not recognized as a valid object file
+---
+> /usr/bin/dbicadmin: is not an object file
+/usr/bin/dbicadmin5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/dbicadmin5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/dbicadmin5.16: is not an object file
+/usr/bin/dbicadmin5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/dbicadmin5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/dbicadmin5.18: is not an object file
+/usr/bin/dbilogstrip :
+
+
+1c1
+< ft_otool: /usr/bin/dbilogstrip: The file was not recognized as a valid object file
+---
+> /usr/bin/dbilogstrip: is not an object file
+/usr/bin/dbilogstrip5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/dbilogstrip5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/dbilogstrip5.16: is not an object file
+/usr/bin/dbilogstrip5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/dbilogstrip5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/dbilogstrip5.18: is not an object file
+/usr/bin/dbiprof :
+
+
+1c1
+< ft_otool: /usr/bin/dbiprof: The file was not recognized as a valid object file
+---
+> /usr/bin/dbiprof: is not an object file
+/usr/bin/dbiprof5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/dbiprof5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/dbiprof5.16: is not an object file
+/usr/bin/dbiprof5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/dbiprof5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/dbiprof5.18: is not an object file
+/usr/bin/dbiproxy :
+
+
+1c1
+< ft_otool: /usr/bin/dbiproxy: The file was not recognized as a valid object file
+---
+> /usr/bin/dbiproxy: is not an object file
+/usr/bin/dbiproxy5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/dbiproxy5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/dbiproxy5.16: is not an object file
+/usr/bin/dbiproxy5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/dbiproxy5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/dbiproxy5.18: is not an object file
+/usr/bin/debinhex.pl :
+
+
+1c1
+< ft_otool: /usr/bin/debinhex.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/debinhex.pl: is not an object file
+/usr/bin/debinhex5.18.pl :
+
+
+1c1
+< ft_otool: /usr/bin/debinhex5.18.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/debinhex5.18.pl: is not an object file
+/usr/bin/diskhits :
+
+
+1c1
+< ft_otool: /usr/bin/diskhits: The file was not recognized as a valid object file
+---
+> /usr/bin/diskhits: is not an object file
+/usr/bin/dispqlen.d :
+
+
+1c1
+< ft_otool: /usr/bin/dispqlen.d: The file was not recognized as a valid object file
+---
+> /usr/bin/dispqlen.d: is not an object file
+/usr/bin/dockutil :
+
+
+1c1
+< ft_otool: /usr/bin/dockutil: The file was not recognized as a valid object file
+---
+> /usr/bin/dockutil: is not an object file
+/usr/bin/dtruss :
+
+
+1c1
+< ft_otool: /usr/bin/dtruss: The file was not recognized as a valid object file
+---
+> /usr/bin/dtruss: is not an object file
+/usr/bin/easy_install :
+
+
+1c1
+< ft_otool: /usr/bin/easy_install: The file was not recognized as a valid object file
+---
+> /usr/bin/easy_install: is not an object file
+/usr/bin/easy_install-2.6 :
+
+
+1c1
+< ft_otool: /usr/bin/easy_install-2.6: The file was not recognized as a valid object file
+---
+> /usr/bin/easy_install-2.6: is not an object file
+/usr/bin/easy_install-2.7 :
+
+
+1c1
+< ft_otool: /usr/bin/easy_install-2.7: The file was not recognized as a valid object file
+---
+> /usr/bin/easy_install-2.7: is not an object file
+/usr/bin/easy_install-3.4 :
+
+
+1c1
+< ft_otool: /usr/bin/easy_install-3.4: The file was not recognized as a valid object file
+---
+> /usr/bin/easy_install-3.4: is not an object file
+/usr/bin/enc2xs :
+
+
+1c1
+< ft_otool: /usr/bin/enc2xs: The file was not recognized as a valid object file
+---
+> /usr/bin/enc2xs: is not an object file
+/usr/bin/enc2xs5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/enc2xs5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/enc2xs5.16: is not an object file
+/usr/bin/enc2xs5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/enc2xs5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/enc2xs5.18: is not an object file
+/usr/bin/erb :
+
+
+1c1
+< ft_otool: /usr/bin/erb: The file was not recognized as a valid object file
+---
+> /usr/bin/erb: is not an object file
+/usr/bin/errinfo :
+
+
+1c1
+< ft_otool: /usr/bin/errinfo: The file was not recognized as a valid object file
+---
+> /usr/bin/errinfo: is not an object file
+/usr/bin/examshell :
+
+
+1c1
+< ft_otool: /usr/bin/examshell: The file was not recognized as a valid object file
+---
+> /usr/bin/examshell: is not an object file
+/usr/bin/execsnoop :
+
+
+1c1
+< ft_otool: /usr/bin/execsnoop: The file was not recognized as a valid object file
+---
+> /usr/bin/execsnoop: is not an object file
+/usr/bin/eyapp :
+
+
+1c1
+< ft_otool: /usr/bin/eyapp: The file was not recognized as a valid object file
+---
+> /usr/bin/eyapp: is not an object file
+/usr/bin/eyapp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/eyapp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/eyapp5.16: is not an object file
+/usr/bin/eyapp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/eyapp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/eyapp5.18: is not an object file
+/usr/bin/fc :
+
+
+1c1
+< ft_otool: /usr/bin/fc: The file was not recognized as a valid object file
+---
+> /usr/bin/fc: is not an object file
+/usr/bin/fddist :
+
+
+1c1
+< ft_otool: /usr/bin/fddist: The file was not recognized as a valid object file
+---
+> /usr/bin/fddist: is not an object file
+/usr/bin/fg :
+
+
+1c1
+< ft_otool: /usr/bin/fg: The file was not recognized as a valid object file
+---
+> /usr/bin/fg: is not an object file
+/usr/bin/filebyproc.d :
+
+
+1c1
+< ft_otool: /usr/bin/filebyproc.d: The file was not recognized as a valid object file
+---
+> /usr/bin/filebyproc.d: is not an object file
+/usr/bin/find2perl :
+
+
+1c1
+< ft_otool: /usr/bin/find2perl: The file was not recognized as a valid object file
+---
+> /usr/bin/find2perl: is not an object file
+/usr/bin/find2perl5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/find2perl5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/find2perl5.16: is not an object file
+/usr/bin/find2perl5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/find2perl5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/find2perl5.18: is not an object file
+/usr/bin/findrule :
+
+
+1c1
+< ft_otool: /usr/bin/findrule: The file was not recognized as a valid object file
+---
+> /usr/bin/findrule: is not an object file
+/usr/bin/findrule5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/findrule5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/findrule5.16: is not an object file
+/usr/bin/findrule5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/findrule5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/findrule5.18: is not an object file
+/usr/bin/fixproc :
+
+
+1c1
+< ft_otool: /usr/bin/fixproc: The file was not recognized as a valid object file
+---
+> /usr/bin/fixproc: is not an object file
+/usr/bin/format-sql :
+
+
+1c1
+< ft_otool: /usr/bin/format-sql: The file was not recognized as a valid object file
+---
+> /usr/bin/format-sql: is not an object file
+/usr/bin/format-sql5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/format-sql5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/format-sql5.16: is not an object file
+/usr/bin/format-sql5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/format-sql5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/format-sql5.18: is not an object file
+/usr/bin/fuser :
+
+
+1c1
+< ft_otool: /usr/bin/fuser: The file was not recognized as a valid object file
+---
+> /usr/bin/fuser: is not an object file
+/usr/bin/gdiffmk :
+
+
+1c1
+< ft_otool: /usr/bin/gdiffmk: The file was not recognized as a valid object file
+---
+> /usr/bin/gdiffmk: is not an object file
+/usr/bin/gem :
+
+
+1c1
+< ft_otool: /usr/bin/gem: The file was not recognized as a valid object file
+---
+> /usr/bin/gem: is not an object file
+/usr/bin/gen_bridge_metadata :
+
+
+1c1
+< ft_otool: /usr/bin/gen_bridge_metadata: The file was not recognized as a valid object file
+---
+> /usr/bin/gen_bridge_metadata: is not an object file
+/usr/bin/getopts :
+
+
+1c1
+< ft_otool: /usr/bin/getopts: The file was not recognized as a valid object file
+---
+> /usr/bin/getopts: is not an object file
+/usr/bin/gnuattach :
+
+
+1c1
+< ft_otool: /usr/bin/gnuattach: The file was not recognized as a valid object file
+---
+> /usr/bin/gnuattach: is not an object file
+/usr/bin/gnudoit :
+
+
+1c1
+< ft_otool: /usr/bin/gnudoit: The file was not recognized as a valid object file
+---
+> /usr/bin/gnudoit: is not an object file
+/usr/bin/groffer :
+
+
+1c1
+< ft_otool: /usr/bin/groffer: The file was not recognized as a valid object file
+---
+> /usr/bin/groffer: is not an object file
+/usr/bin/grog :
+
+
+1c1
+< ft_otool: /usr/bin/grog: The file was not recognized as a valid object file
+---
+> /usr/bin/grog: is not an object file
+/usr/bin/gzexe :
+
+
+1c1
+< ft_otool: /usr/bin/gzexe: The file was not recognized as a valid object file
+---
+> /usr/bin/gzexe: is not an object file
+/usr/bin/h2ph :
+
+
+1c1
+< ft_otool: /usr/bin/h2ph: The file was not recognized as a valid object file
+---
+> /usr/bin/h2ph: is not an object file
+/usr/bin/h2ph5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/h2ph5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/h2ph5.16: is not an object file
+/usr/bin/h2ph5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/h2ph5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/h2ph5.18: is not an object file
+/usr/bin/h2xs :
+
+
+1c1
+< ft_otool: /usr/bin/h2xs: The file was not recognized as a valid object file
+---
+> /usr/bin/h2xs: is not an object file
+/usr/bin/h2xs5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/h2xs5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/h2xs5.16: is not an object file
+/usr/bin/h2xs5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/h2xs5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/h2xs5.18: is not an object file
+/usr/bin/hash :
+
+
+1c1
+< ft_otool: /usr/bin/hash: The file was not recognized as a valid object file
+---
+> /usr/bin/hash: is not an object file
+/usr/bin/hotspot.d :
+
+
+1c1
+< ft_otool: /usr/bin/hotspot.d: The file was not recognized as a valid object file
+---
+> /usr/bin/hotspot.d: is not an object file
+/usr/bin/htmltree :
+
+
+1c1
+< ft_otool: /usr/bin/htmltree: The file was not recognized as a valid object file
+---
+> /usr/bin/htmltree: is not an object file
+/usr/bin/htmltree5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/htmltree5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/htmltree5.16: is not an object file
+/usr/bin/htmltree5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/htmltree5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/htmltree5.18: is not an object file
+/usr/bin/httpdstat.d :
+
+
+1c1
+< ft_otool: /usr/bin/httpdstat.d: The file was not recognized as a valid object file
+---
+> /usr/bin/httpdstat.d: is not an object file
+/usr/bin/idle :
+
+
+1c1
+< ft_otool: /usr/bin/idle: The file was not recognized as a valid object file
+---
+> /usr/bin/idle: is not an object file
+/usr/bin/idle2.6 :
+
+
+1c1
+< ft_otool: /usr/bin/idle2.6: The file was not recognized as a valid object file
+---
+> /usr/bin/idle2.6: is not an object file
+/usr/bin/idle2.7 :
+
+
+1c1
+< ft_otool: /usr/bin/idle2.7: The file was not recognized as a valid object file
+---
+> /usr/bin/idle2.7: is not an object file
+/usr/bin/idle3 :
+
+
+1c1
+< ft_otool: /usr/bin/idle3: The file was not recognized as a valid object file
+---
+> /usr/bin/idle3: is not an object file
+/usr/bin/idle3.4 :
+
+
+1c1
+< ft_otool: /usr/bin/idle3.4: The file was not recognized as a valid object file
+---
+> /usr/bin/idle3.4: is not an object file
+/usr/bin/imptrace :
+
+
+1c1
+< ft_otool: /usr/bin/imptrace: The file was not recognized as a valid object file
+---
+> /usr/bin/imptrace: is not an object file
+/usr/bin/instmodsh :
+
+
+1c1
+< ft_otool: /usr/bin/instmodsh: The file was not recognized as a valid object file
+---
+> /usr/bin/instmodsh: is not an object file
+/usr/bin/instmodsh5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/instmodsh5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/instmodsh5.16: is not an object file
+/usr/bin/instmodsh5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/instmodsh5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/instmodsh5.18: is not an object file
+/usr/bin/iofile.d :
+
+
+1c1
+< ft_otool: /usr/bin/iofile.d: The file was not recognized as a valid object file
+---
+> /usr/bin/iofile.d: is not an object file
+/usr/bin/iofileb.d :
+
+
+1c1
+< ft_otool: /usr/bin/iofileb.d: The file was not recognized as a valid object file
+---
+> /usr/bin/iofileb.d: is not an object file
+/usr/bin/iopattern :
+
+
+1c1
+< ft_otool: /usr/bin/iopattern: The file was not recognized as a valid object file
+---
+> /usr/bin/iopattern: is not an object file
+/usr/bin/iopending :
+
+
+1c1
+< ft_otool: /usr/bin/iopending: The file was not recognized as a valid object file
+---
+> /usr/bin/iopending: is not an object file
+/usr/bin/iosnoop :
+
+
+1c1
+< ft_otool: /usr/bin/iosnoop: The file was not recognized as a valid object file
+---
+> /usr/bin/iosnoop: is not an object file
+/usr/bin/iotop :
+
+
+1c1
+< ft_otool: /usr/bin/iotop: The file was not recognized as a valid object file
+---
+> /usr/bin/iotop: is not an object file
+/usr/bin/ip2cc :
+
+
+1c1
+< ft_otool: /usr/bin/ip2cc: The file was not recognized as a valid object file
+---
+> /usr/bin/ip2cc: is not an object file
+/usr/bin/ip2cc5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/ip2cc5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/ip2cc5.16: is not an object file
+/usr/bin/ip2cc5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/ip2cc5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/ip2cc5.18: is not an object file
+/usr/bin/ipcount :
+
+
+1c1
+< ft_otool: /usr/bin/ipcount: The file was not recognized as a valid object file
+---
+> /usr/bin/ipcount: is not an object file
+/usr/bin/ipcount5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/ipcount5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/ipcount5.16: is not an object file
+/usr/bin/ipcount5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/ipcount5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/ipcount5.18: is not an object file
+/usr/bin/iptab :
+
+
+1c1
+< ft_otool: /usr/bin/iptab: The file was not recognized as a valid object file
+---
+> /usr/bin/iptab: is not an object file
+/usr/bin/iptab5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/iptab5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/iptab5.16: is not an object file
+/usr/bin/iptab5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/iptab5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/iptab5.18: is not an object file
+/usr/bin/irb :
+
+
+1c1
+< ft_otool: /usr/bin/irb: The file was not recognized as a valid object file
+---
+> /usr/bin/irb: is not an object file
+/usr/bin/jobs :
+
+
+1c1
+< ft_otool: /usr/bin/jobs: The file was not recognized as a valid object file
+---
+> /usr/bin/jobs: is not an object file
+/usr/bin/json_pp :
+
+
+1c1
+< ft_otool: /usr/bin/json_pp: The file was not recognized as a valid object file
+---
+> /usr/bin/json_pp: is not an object file
+/usr/bin/json_pp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/json_pp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/json_pp5.16: is not an object file
+/usr/bin/json_pp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/json_pp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/json_pp5.18: is not an object file
+/usr/bin/kill.d :
+
+
+1c1
+< ft_otool: /usr/bin/kill.d: The file was not recognized as a valid object file
+---
+> /usr/bin/kill.d: is not an object file
+/usr/bin/krb5-config :
+
+
+1c1
+< ft_otool: /usr/bin/krb5-config: The file was not recognized as a valid object file
+---
+> /usr/bin/krb5-config: is not an object file
+/usr/bin/lastwords :
+
+
+1c1
+< ft_otool: /usr/bin/lastwords: The file was not recognized as a valid object file
+---
+> /usr/bin/lastwords: is not an object file
+/usr/bin/libnetcfg :
+
+
+1c1
+< ft_otool: /usr/bin/libnetcfg: The file was not recognized as a valid object file
+---
+> /usr/bin/libnetcfg: is not an object file
+/usr/bin/libnetcfg5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/libnetcfg5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/libnetcfg5.16: is not an object file
+/usr/bin/libnetcfg5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/libnetcfg5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/libnetcfg5.18: is not an object file
+/usr/bin/loads.d :
+
+
+1c1
+< ft_otool: /usr/bin/loads.d: The file was not recognized as a valid object file
+---
+> /usr/bin/loads.d: is not an object file
+/usr/bin/localedef :
+
+
+1c1
+< ft_otool: /usr/bin/localedef: The file was not recognized as a valid object file
+---
+> /usr/bin/localedef: is not an object file
+/usr/bin/lwp-download :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-download: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-download: is not an object file
+/usr/bin/lwp-download5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-download5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-download5.16: is not an object file
+/usr/bin/lwp-download5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-download5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-download5.18: is not an object file
+/usr/bin/lwp-dump :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-dump: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-dump: is not an object file
+/usr/bin/lwp-dump5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-dump5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-dump5.16: is not an object file
+/usr/bin/lwp-dump5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-dump5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-dump5.18: is not an object file
+/usr/bin/lwp-mirror :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-mirror: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-mirror: is not an object file
+/usr/bin/lwp-mirror5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-mirror5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-mirror5.16: is not an object file
+/usr/bin/lwp-mirror5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-mirror5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-mirror5.18: is not an object file
+/usr/bin/lwp-request :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-request: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-request: is not an object file
+/usr/bin/lwp-request5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-request5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-request5.16: is not an object file
+/usr/bin/lwp-request5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/lwp-request5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/lwp-request5.18: is not an object file
+/usr/bin/macerror :
+
+
+1c1
+< ft_otool: /usr/bin/macerror: The file was not recognized as a valid object file
+---
+> /usr/bin/macerror: is not an object file
+/usr/bin/macerror5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/macerror5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/macerror5.16: is not an object file
+/usr/bin/macerror5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/macerror5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/macerror5.18: is not an object file
+/usr/bin/macreport :
+
+
+1d0
+< ft_otool: /usr/bin/macreport: No such file or directory.
+/usr/bin/mib2c :
+
+
+1c1
+< ft_otool: /usr/bin/mib2c: The file was not recognized as a valid object file
+---
+> /usr/bin/mib2c: is not an object file
+/usr/bin/mib2c-update :
+
+
+1c1
+< ft_otool: /usr/bin/mib2c-update: The file was not recognized as a valid object file
+---
+> /usr/bin/mib2c-update: is not an object file
+/usr/bin/mmroff :
+
+
+1c1
+< ft_otool: /usr/bin/mmroff: The file was not recognized as a valid object file
+---
+> /usr/bin/mmroff: is not an object file
+/usr/bin/moo-outdated :
+
+
+1c1
+< ft_otool: /usr/bin/moo-outdated: The file was not recognized as a valid object file
+---
+> /usr/bin/moo-outdated: is not an object file
+/usr/bin/moo-outdated5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/moo-outdated5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/moo-outdated5.18: is not an object file
+/usr/bin/moose-outdated :
+
+
+1c1
+< ft_otool: /usr/bin/moose-outdated: The file was not recognized as a valid object file
+---
+> /usr/bin/moose-outdated: is not an object file
+/usr/bin/moose-outdated5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/moose-outdated5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/moose-outdated5.16: is not an object file
+/usr/bin/moose-outdated5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/moose-outdated5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/moose-outdated5.18: is not an object file
+/usr/bin/mp2bug :
+
+
+1c1
+< ft_otool: /usr/bin/mp2bug: The file was not recognized as a valid object file
+---
+> /usr/bin/mp2bug: is not an object file
+/usr/bin/ncurses5.4-config :
+
+
+1c1
+< ft_otool: /usr/bin/ncurses5.4-config: The file was not recognized as a valid object file
+---
+> /usr/bin/ncurses5.4-config: is not an object file
+/usr/bin/neqn :
+
+
+1c1
+< ft_otool: /usr/bin/neqn: The file was not recognized as a valid object file
+---
+> /usr/bin/neqn: is not an object file
+/usr/bin/net-server :
+
+
+1c1
+< ft_otool: /usr/bin/net-server: The file was not recognized as a valid object file
+---
+> /usr/bin/net-server: is not an object file
+/usr/bin/net-server5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/net-server5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/net-server5.16: is not an object file
+/usr/bin/net-server5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/net-server5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/net-server5.18: is not an object file
+/usr/bin/net-snmp-cert :
+
+
+1c1
+< ft_otool: /usr/bin/net-snmp-cert: The file was not recognized as a valid object file
+---
+> /usr/bin/net-snmp-cert: is not an object file
+/usr/bin/net-snmp-config :
+
+
+1c1
+< ft_otool: /usr/bin/net-snmp-config: The file was not recognized as a valid object file
+---
+> /usr/bin/net-snmp-config: is not an object file
+/usr/bin/net-snmp-create-v3-user :
+
+
+1c1
+< ft_otool: /usr/bin/net-snmp-create-v3-user: The file was not recognized as a valid object file
+---
+> /usr/bin/net-snmp-create-v3-user: is not an object file
+/usr/bin/newproc.d :
+
+
+1c1
+< ft_otool: /usr/bin/newproc.d: The file was not recognized as a valid object file
+---
+> /usr/bin/newproc.d: is not an object file
+/usr/bin/norminette :
+
+
+1c1
+< ft_otool: /usr/bin/norminette: The file was not recognized as a valid object file
+---
+> /usr/bin/norminette: is not an object file
+/usr/bin/nroff :
+
+
+1c1
+< ft_otool: /usr/bin/nroff: The file was not recognized as a valid object file
+---
+> /usr/bin/nroff: is not an object file
+/usr/bin/opensnoop :
+
+
+1c1
+< ft_otool: /usr/bin/opensnoop: The file was not recognized as a valid object file
+---
+> /usr/bin/opensnoop: is not an object file
+/usr/bin/package-stash-conflicts :
+
+
+1c1
+< ft_otool: /usr/bin/package-stash-conflicts: The file was not recognized as a valid object file
+---
+> /usr/bin/package-stash-conflicts: is not an object file
+/usr/bin/package-stash-conflicts5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/package-stash-conflicts5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/package-stash-conflicts5.16: is not an object file
+/usr/bin/package-stash-conflicts5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/package-stash-conflicts5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/package-stash-conflicts5.18: is not an object file
+/usr/bin/pagesize :
+
+
+1c1
+< ft_otool: /usr/bin/pagesize: The file was not recognized as a valid object file
+---
+> /usr/bin/pagesize: is not an object file
+/usr/bin/par.pl :
+
+
+1c1
+< ft_otool: /usr/bin/par.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/par.pl: is not an object file
+/usr/bin/par5.16.pl :
+
+
+1c1
+< ft_otool: /usr/bin/par5.16.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/par5.16.pl: is not an object file
+/usr/bin/par5.18.pl :
+
+
+1c1
+< ft_otool: /usr/bin/par5.18.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/par5.18.pl: is not an object file
+/usr/bin/pathopens.d :
+
+
+1c1
+< ft_otool: /usr/bin/pathopens.d: The file was not recognized as a valid object file
+---
+> /usr/bin/pathopens.d: is not an object file
+/usr/bin/pcap-config :
+
+
+1c1
+< ft_otool: /usr/bin/pcap-config: The file was not recognized as a valid object file
+---
+> /usr/bin/pcap-config: is not an object file
+/usr/bin/perlbug :
+
+
+1c1
+< ft_otool: /usr/bin/perlbug: The file was not recognized as a valid object file
+---
+> /usr/bin/perlbug: is not an object file
+/usr/bin/perlbug5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/perlbug5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/perlbug5.16: is not an object file
+/usr/bin/perlbug5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/perlbug5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/perlbug5.18: is not an object file
+/usr/bin/perldoc :
+
+
+1c1
+< ft_otool: /usr/bin/perldoc: The file was not recognized as a valid object file
+---
+> /usr/bin/perldoc: is not an object file
+/usr/bin/perldoc5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/perldoc5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/perldoc5.16: is not an object file
+/usr/bin/perldoc5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/perldoc5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/perldoc5.18: is not an object file
+/usr/bin/perlivp :
+
+
+1c1
+< ft_otool: /usr/bin/perlivp: The file was not recognized as a valid object file
+---
+> /usr/bin/perlivp: is not an object file
+/usr/bin/perlivp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/perlivp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/perlivp5.16: is not an object file
+/usr/bin/perlivp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/perlivp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/perlivp5.18: is not an object file
+/usr/bin/perlthanks :
+
+
+1c1
+< ft_otool: /usr/bin/perlthanks: The file was not recognized as a valid object file
+---
+> /usr/bin/perlthanks: is not an object file
+/usr/bin/perlthanks5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/perlthanks5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/perlthanks5.16: is not an object file
+/usr/bin/perlthanks5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/perlthanks5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/perlthanks5.18: is not an object file
+/usr/bin/phar :
+
+
+1c1
+< ft_otool: /usr/bin/phar: The file was not recognized as a valid object file
+---
+> /usr/bin/phar: is not an object file
+/usr/bin/phar.phar :
+
+
+1c1
+< ft_otool: /usr/bin/phar.phar: The file was not recognized as a valid object file
+---
+> /usr/bin/phar.phar: is not an object file
+/usr/bin/php-config :
+
+
+1c1
+< ft_otool: /usr/bin/php-config: The file was not recognized as a valid object file
+---
+> /usr/bin/php-config: is not an object file
+/usr/bin/phpize :
+
+
+1c1
+< ft_otool: /usr/bin/phpize: The file was not recognized as a valid object file
+---
+> /usr/bin/phpize: is not an object file
+/usr/bin/piconv :
+
+
+1c1
+< ft_otool: /usr/bin/piconv: The file was not recognized as a valid object file
+---
+> /usr/bin/piconv: is not an object file
+/usr/bin/piconv5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/piconv5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/piconv5.16: is not an object file
+/usr/bin/piconv5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/piconv5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/piconv5.18: is not an object file
+/usr/bin/pidpersec.d :
+
+
+1c1
+< ft_otool: /usr/bin/pidpersec.d: The file was not recognized as a valid object file
+---
+> /usr/bin/pidpersec.d: is not an object file
+/usr/bin/pip3 :
+
+
+1c1
+< ft_otool: /usr/bin/pip3: The file was not recognized as a valid object file
+---
+> /usr/bin/pip3: is not an object file
+/usr/bin/pip3.4 :
+
+
+1c1
+< ft_otool: /usr/bin/pip3.4: The file was not recognized as a valid object file
+---
+> /usr/bin/pip3.4: is not an object file
+/usr/bin/pl2pm :
+
+
+1c1
+< ft_otool: /usr/bin/pl2pm: The file was not recognized as a valid object file
+---
+> /usr/bin/pl2pm: is not an object file
+/usr/bin/pl2pm5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pl2pm5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pl2pm5.16: is not an object file
+/usr/bin/pl2pm5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pl2pm5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pl2pm5.18: is not an object file
+/usr/bin/pod2html :
+
+
+1c1
+< ft_otool: /usr/bin/pod2html: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2html: is not an object file
+/usr/bin/pod2html5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2html5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2html5.16: is not an object file
+/usr/bin/pod2html5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2html5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2html5.18: is not an object file
+/usr/bin/pod2latex :
+
+
+1c1
+< ft_otool: /usr/bin/pod2latex: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2latex: is not an object file
+/usr/bin/pod2latex5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2latex5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2latex5.16: is not an object file
+/usr/bin/pod2latex5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2latex5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2latex5.18: is not an object file
+/usr/bin/pod2man :
+
+
+1c1
+< ft_otool: /usr/bin/pod2man: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2man: is not an object file
+/usr/bin/pod2man5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2man5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2man5.16: is not an object file
+/usr/bin/pod2man5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2man5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2man5.18: is not an object file
+/usr/bin/pod2readme :
+
+
+1c1
+< ft_otool: /usr/bin/pod2readme: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2readme: is not an object file
+/usr/bin/pod2readme5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2readme5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2readme5.16: is not an object file
+/usr/bin/pod2readme5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2readme5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2readme5.18: is not an object file
+/usr/bin/pod2text :
+
+
+1c1
+< ft_otool: /usr/bin/pod2text: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2text: is not an object file
+/usr/bin/pod2text5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2text5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2text5.16: is not an object file
+/usr/bin/pod2text5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2text5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2text5.18: is not an object file
+/usr/bin/pod2usage :
+
+
+1c1
+< ft_otool: /usr/bin/pod2usage: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2usage: is not an object file
+/usr/bin/pod2usage5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2usage5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2usage5.16: is not an object file
+/usr/bin/pod2usage5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pod2usage5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pod2usage5.18: is not an object file
+/usr/bin/podchecker :
+
+
+1c1
+< ft_otool: /usr/bin/podchecker: The file was not recognized as a valid object file
+---
+> /usr/bin/podchecker: is not an object file
+/usr/bin/podchecker5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/podchecker5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/podchecker5.16: is not an object file
+/usr/bin/podchecker5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/podchecker5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/podchecker5.18: is not an object file
+/usr/bin/podselect :
+
+
+1c1
+< ft_otool: /usr/bin/podselect: The file was not recognized as a valid object file
+---
+> /usr/bin/podselect: is not an object file
+/usr/bin/podselect5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/podselect5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/podselect5.16: is not an object file
+/usr/bin/podselect5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/podselect5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/podselect5.18: is not an object file
+/usr/bin/power_report.sh :
+
+
+1c1
+< ft_otool: /usr/bin/power_report.sh: The file was not recognized as a valid object file
+---
+> /usr/bin/power_report.sh: is not an object file
+/usr/bin/pp :
+
+
+1c1
+< ft_otool: /usr/bin/pp: The file was not recognized as a valid object file
+---
+> /usr/bin/pp: is not an object file
+/usr/bin/pp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pp5.16: is not an object file
+/usr/bin/pp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pp5.18: is not an object file
+/usr/bin/priclass.d :
+
+
+1c1
+< ft_otool: /usr/bin/priclass.d: The file was not recognized as a valid object file
+---
+> /usr/bin/priclass.d: is not an object file
+/usr/bin/pridist.d :
+
+
+1c1
+< ft_otool: /usr/bin/pridist.d: The file was not recognized as a valid object file
+---
+> /usr/bin/pridist.d: is not an object file
+/usr/bin/procsystime :
+
+
+1c1
+< ft_otool: /usr/bin/procsystime: The file was not recognized as a valid object file
+---
+> /usr/bin/procsystime: is not an object file
+/usr/bin/prove :
+
+
+1c1
+< ft_otool: /usr/bin/prove: The file was not recognized as a valid object file
+---
+> /usr/bin/prove: is not an object file
+/usr/bin/prove5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/prove5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/prove5.16: is not an object file
+/usr/bin/prove5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/prove5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/prove5.18: is not an object file
+/usr/bin/psed :
+
+
+1c1
+< ft_otool: /usr/bin/psed: The file was not recognized as a valid object file
+---
+> /usr/bin/psed: is not an object file
+/usr/bin/psed5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/psed5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/psed5.16: is not an object file
+/usr/bin/psed5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/psed5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/psed5.18: is not an object file
+/usr/bin/pstruct :
+
+
+1c1
+< ft_otool: /usr/bin/pstruct: The file was not recognized as a valid object file
+---
+> /usr/bin/pstruct: is not an object file
+/usr/bin/pstruct5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pstruct5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pstruct5.16: is not an object file
+/usr/bin/pstruct5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pstruct5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pstruct5.18: is not an object file
+/usr/bin/ptar :
+
+
+1c1
+< ft_otool: /usr/bin/ptar: The file was not recognized as a valid object file
+---
+> /usr/bin/ptar: is not an object file
+/usr/bin/ptar5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/ptar5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/ptar5.16: is not an object file
+/usr/bin/ptar5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/ptar5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/ptar5.18: is not an object file
+/usr/bin/ptardiff :
+
+
+1c1
+< ft_otool: /usr/bin/ptardiff: The file was not recognized as a valid object file
+---
+> /usr/bin/ptardiff: is not an object file
+/usr/bin/ptardiff5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/ptardiff5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/ptardiff5.16: is not an object file
+/usr/bin/ptardiff5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/ptardiff5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/ptardiff5.18: is not an object file
+/usr/bin/ptargrep :
+
+
+1c1
+< ft_otool: /usr/bin/ptargrep: The file was not recognized as a valid object file
+---
+> /usr/bin/ptargrep: is not an object file
+/usr/bin/ptargrep5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/ptargrep5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/ptargrep5.16: is not an object file
+/usr/bin/ptargrep5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/ptargrep5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/ptargrep5.18: is not an object file
+/usr/bin/pwhich :
+
+
+1c1
+< ft_otool: /usr/bin/pwhich: The file was not recognized as a valid object file
+---
+> /usr/bin/pwhich: is not an object file
+/usr/bin/pwhich5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/pwhich5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/pwhich5.16: is not an object file
+/usr/bin/pwhich5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/pwhich5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/pwhich5.18: is not an object file
+/usr/bin/pydoc :
+
+
+1c1
+< ft_otool: /usr/bin/pydoc: The file was not recognized as a valid object file
+---
+> /usr/bin/pydoc: is not an object file
+/usr/bin/pydoc2.6 :
+
+
+1c1
+< ft_otool: /usr/bin/pydoc2.6: The file was not recognized as a valid object file
+---
+> /usr/bin/pydoc2.6: is not an object file
+/usr/bin/pydoc2.7 :
+
+
+1c1
+< ft_otool: /usr/bin/pydoc2.7: The file was not recognized as a valid object file
+---
+> /usr/bin/pydoc2.7: is not an object file
+/usr/bin/pydoc3 :
+
+
+1c1
+< ft_otool: /usr/bin/pydoc3: The file was not recognized as a valid object file
+---
+> /usr/bin/pydoc3: is not an object file
+/usr/bin/pydoc3.4 :
+
+
+1c1
+< ft_otool: /usr/bin/pydoc3.4: The file was not recognized as a valid object file
+---
+> /usr/bin/pydoc3.4: is not an object file
+/usr/bin/python-config :
+
+
+1c1
+< ft_otool: /usr/bin/python-config: The file was not recognized as a valid object file
+---
+> /usr/bin/python-config: is not an object file
+/usr/bin/python2.6-config :
+
+
+1c1
+< ft_otool: /usr/bin/python2.6-config: The file was not recognized as a valid object file
+---
+> /usr/bin/python2.6-config: is not an object file
+/usr/bin/python2.7-config :
+
+
+1c1
+< ft_otool: /usr/bin/python2.7-config: The file was not recognized as a valid object file
+---
+> /usr/bin/python2.7-config: is not an object file
+/usr/bin/python3-config :
+
+
+1c1
+< ft_otool: /usr/bin/python3-config: The file was not recognized as a valid object file
+---
+> /usr/bin/python3-config: is not an object file
+/usr/bin/python3.4-config :
+
+
+1c1
+< ft_otool: /usr/bin/python3.4-config: The file was not recognized as a valid object file
+---
+> /usr/bin/python3.4-config: is not an object file
+/usr/bin/python3.4m-config :
+
+
+1c1
+< ft_otool: /usr/bin/python3.4m-config: The file was not recognized as a valid object file
+---
+> /usr/bin/python3.4m-config: is not an object file
+/usr/bin/pyvenv :
+
+
+1c1
+< ft_otool: /usr/bin/pyvenv: The file was not recognized as a valid object file
+---
+> /usr/bin/pyvenv: is not an object file
+/usr/bin/pyvenv-3.4 :
+
+
+1c1
+< ft_otool: /usr/bin/pyvenv-3.4: The file was not recognized as a valid object file
+---
+> /usr/bin/pyvenv-3.4: is not an object file
+/usr/bin/rails :
+
+
+1c1
+< ft_otool: /usr/bin/rails: The file was not recognized as a valid object file
+---
+> /usr/bin/rails: is not an object file
+/usr/bin/rake :
+
+
+1c1
+< ft_otool: /usr/bin/rake: The file was not recognized as a valid object file
+---
+> /usr/bin/rake: is not an object file
+/usr/bin/rbx :
+
+
+1c1
+< ft_otool: /usr/bin/rbx: The file was not recognized as a valid object file
+---
+> /usr/bin/rbx: is not an object file
+/usr/bin/rdoc :
+
+
+1c1
+< ft_otool: /usr/bin/rdoc: The file was not recognized as a valid object file
+---
+> /usr/bin/rdoc: is not an object file
+/usr/bin/read :
+
+
+1c1
+< ft_otool: /usr/bin/read: The file was not recognized as a valid object file
+---
+> /usr/bin/read: is not an object file
+/usr/bin/ri :
+
+
+1c1
+< ft_otool: /usr/bin/ri: The file was not recognized as a valid object file
+---
+> /usr/bin/ri: is not an object file
+/usr/bin/runocc.d :
+
+
+1c1
+< ft_otool: /usr/bin/runocc.d: The file was not recognized as a valid object file
+---
+> /usr/bin/runocc.d: is not an object file
+/usr/bin/rwbypid.d :
+
+
+1c1
+< ft_otool: /usr/bin/rwbypid.d: The file was not recognized as a valid object file
+---
+> /usr/bin/rwbypid.d: is not an object file
+/usr/bin/rwbytype.d :
+
+
+1c1
+< ft_otool: /usr/bin/rwbytype.d: The file was not recognized as a valid object file
+---
+> /usr/bin/rwbytype.d: is not an object file
+/usr/bin/rwsnoop :
+
+
+1c1
+< ft_otool: /usr/bin/rwsnoop: The file was not recognized as a valid object file
+---
+> /usr/bin/rwsnoop: is not an object file
+/usr/bin/s2p :
+
+
+1c1
+< ft_otool: /usr/bin/s2p: The file was not recognized as a valid object file
+---
+> /usr/bin/s2p: is not an object file
+/usr/bin/s2p5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/s2p5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/s2p5.16: is not an object file
+/usr/bin/s2p5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/s2p5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/s2p5.18: is not an object file
+/usr/bin/sampleproc :
+
+
+1c1
+< ft_otool: /usr/bin/sampleproc: The file was not recognized as a valid object file
+---
+> /usr/bin/sampleproc: is not an object file
+/usr/bin/scandeps.pl :
+
+
+1c1
+< ft_otool: /usr/bin/scandeps.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/scandeps.pl: is not an object file
+/usr/bin/scandeps5.16.pl :
+
+
+1c1
+< ft_otool: /usr/bin/scandeps5.16.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/scandeps5.16.pl: is not an object file
+/usr/bin/scandeps5.18.pl :
+
+
+1c1
+< ft_otool: /usr/bin/scandeps5.18.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/scandeps5.18.pl: is not an object file
+/usr/bin/sdx :
+
+
+1c1
+< ft_otool: /usr/bin/sdx: The file was not recognized as a valid object file
+---
+> /usr/bin/sdx: is not an object file
+/usr/bin/seeksize.d :
+
+
+1c1
+< ft_otool: /usr/bin/seeksize.d: The file was not recognized as a valid object file
+---
+> /usr/bin/seeksize.d: is not an object file
+/usr/bin/setregproptool :
+
+
+1d0
+< ft_otool: /usr/bin/setregproptool: No such file or directory.
+/usr/bin/setuids.d :
+
+
+1c1
+< ft_otool: /usr/bin/setuids.d: The file was not recognized as a valid object file
+---
+> /usr/bin/setuids.d: is not an object file
+/usr/bin/shar :
+
+
+1c1
+< ft_otool: /usr/bin/shar: The file was not recognized as a valid object file
+---
+> /usr/bin/shar: is not an object file
+/usr/bin/shasum :
+
+
+1c1
+< ft_otool: /usr/bin/shasum: The file was not recognized as a valid object file
+---
+> /usr/bin/shasum: is not an object file
+/usr/bin/shasum5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/shasum5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/shasum5.16: is not an object file
+/usr/bin/shasum5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/shasum5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/shasum5.18: is not an object file
+/usr/bin/sigdist.d :
+
+
+1c1
+< ft_otool: /usr/bin/sigdist.d: The file was not recognized as a valid object file
+---
+> /usr/bin/sigdist.d: is not an object file
+/usr/bin/smc :
+
+
+1d0
+< ft_otool: /usr/bin/smc: No such file or directory.
+/usr/bin/smtpd.py :
+
+
+1c1
+< ft_otool: /usr/bin/smtpd.py: The file was not recognized as a valid object file
+---
+> /usr/bin/smtpd.py: is not an object file
+/usr/bin/smtpd2.6.py :
+
+
+1c1
+< ft_otool: /usr/bin/smtpd2.6.py: The file was not recognized as a valid object file
+---
+> /usr/bin/smtpd2.6.py: is not an object file
+/usr/bin/smtpd2.7.py :
+
+
+1c1
+< ft_otool: /usr/bin/smtpd2.7.py: The file was not recognized as a valid object file
+---
+> /usr/bin/smtpd2.7.py: is not an object file
+/usr/bin/snmp-bridge-mib :
+
+
+1c1
+< ft_otool: /usr/bin/snmp-bridge-mib: The file was not recognized as a valid object file
+---
+> /usr/bin/snmp-bridge-mib: is not an object file
+/usr/bin/snmpconf :
+
+
+1c1
+< ft_otool: /usr/bin/snmpconf: The file was not recognized as a valid object file
+---
+> /usr/bin/snmpconf: is not an object file
+/usr/bin/spfd :
+
+
+1c1
+< ft_otool: /usr/bin/spfd: The file was not recognized as a valid object file
+---
+> /usr/bin/spfd: is not an object file
+/usr/bin/spfd5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/spfd5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/spfd5.16: is not an object file
+/usr/bin/spfd5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/spfd5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/spfd5.18: is not an object file
+/usr/bin/spfquery :
+
+
+1c1
+< ft_otool: /usr/bin/spfquery: The file was not recognized as a valid object file
+---
+> /usr/bin/spfquery: is not an object file
+/usr/bin/spfquery5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/spfquery5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/spfquery5.16: is not an object file
+/usr/bin/spfquery5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/spfquery5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/spfquery5.18: is not an object file
+/usr/bin/splain :
+
+
+1c1
+< ft_otool: /usr/bin/splain: The file was not recognized as a valid object file
+---
+> /usr/bin/splain: is not an object file
+/usr/bin/splain5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/splain5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/splain5.16: is not an object file
+/usr/bin/splain5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/splain5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/splain5.18: is not an object file
+/usr/bin/ssh-copy-id :
+
+
+1c1
+< ft_otool: /usr/bin/ssh-copy-id: The file was not recognized as a valid object file
+---
+> /usr/bin/ssh-copy-id: is not an object file
+/usr/bin/stty.pl :
+
+
+1c1
+< ft_otool: /usr/bin/stty.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/stty.pl: is not an object file
+/usr/bin/stty5.16.pl :
+
+
+1c1
+< ft_otool: /usr/bin/stty5.16.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/stty5.16.pl: is not an object file
+/usr/bin/stty5.18.pl :
+
+
+1c1
+< ft_otool: /usr/bin/stty5.18.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/stty5.18.pl: is not an object file
+/usr/bin/sudo :
+
+
+1d0
+< ft_otool: /usr/bin/sudo: No such file or directory.
+/usr/bin/syscallbypid.d :
+
+
+1c1
+< ft_otool: /usr/bin/syscallbypid.d: The file was not recognized as a valid object file
+---
+> /usr/bin/syscallbypid.d: is not an object file
+/usr/bin/syscallbyproc.d :
+
+
+1c1
+< ft_otool: /usr/bin/syscallbyproc.d: The file was not recognized as a valid object file
+---
+> /usr/bin/syscallbyproc.d: is not an object file
+/usr/bin/syscallbysysc.d :
+
+
+1c1
+< ft_otool: /usr/bin/syscallbysysc.d: The file was not recognized as a valid object file
+---
+> /usr/bin/syscallbysysc.d: is not an object file
+/usr/bin/systriage :
+
+
+1c1
+< ft_otool: /usr/bin/systriage: The file was not recognized as a valid object file
+---
+> /usr/bin/systriage: is not an object file
+/usr/bin/testrb :
+
+
+1c1
+< ft_otool: /usr/bin/testrb: The file was not recognized as a valid object file
+---
+> /usr/bin/testrb: is not an object file
+/usr/bin/tethered-caching :
+
+
+1c1
+< ft_otool: /usr/bin/tethered-caching: The file was not recognized as a valid object file
+---
+> /usr/bin/tethered-caching: is not an object file
+/usr/bin/texi2dvi :
+
+
+1c1
+< ft_otool: /usr/bin/texi2dvi: The file was not recognized as a valid object file
+---
+> /usr/bin/texi2dvi: is not an object file
+/usr/bin/texi2pdf :
+
+
+1c1
+< ft_otool: /usr/bin/texi2pdf: The file was not recognized as a valid object file
+---
+> /usr/bin/texi2pdf: is not an object file
+/usr/bin/timer_analyser.d :
+
+
+1c1
+< ft_otool: /usr/bin/timer_analyser.d: The file was not recognized as a valid object file
+---
+> /usr/bin/timer_analyser.d: is not an object file
+/usr/bin/timerfires :
+
+
+1c1
+< ft_otool: /usr/bin/timerfires: The file was not recognized as a valid object file
+---
+> /usr/bin/timerfires: is not an object file
+/usr/bin/tkcon :
+
+
+1c1
+< ft_otool: /usr/bin/tkcon: The file was not recognized as a valid object file
+---
+> /usr/bin/tkcon: is not an object file
+/usr/bin/tkmib :
+
+
+1c1
+< ft_otool: /usr/bin/tkmib: The file was not recognized as a valid object file
+---
+> /usr/bin/tkmib: is not an object file
+/usr/bin/tkpp :
+
+
+1c1
+< ft_otool: /usr/bin/tkpp: The file was not recognized as a valid object file
+---
+> /usr/bin/tkpp: is not an object file
+/usr/bin/tkpp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/tkpp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/tkpp5.16: is not an object file
+/usr/bin/tkpp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/tkpp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/tkpp5.18: is not an object file
+/usr/bin/topsyscall :
+
+
+1c1
+< ft_otool: /usr/bin/topsyscall: The file was not recognized as a valid object file
+---
+> /usr/bin/topsyscall: is not an object file
+/usr/bin/topsysproc :
+
+
+1c1
+< ft_otool: /usr/bin/topsysproc: The file was not recognized as a valid object file
+---
+> /usr/bin/topsysproc: is not an object file
+/usr/bin/traptoemail :
+
+
+1c1
+< ft_otool: /usr/bin/traptoemail: The file was not recognized as a valid object file
+---
+> /usr/bin/traptoemail: is not an object file
+/usr/bin/treereg :
+
+
+1c1
+< ft_otool: /usr/bin/treereg: The file was not recognized as a valid object file
+---
+> /usr/bin/treereg: is not an object file
+/usr/bin/treereg5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/treereg5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/treereg5.16: is not an object file
+/usr/bin/treereg5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/treereg5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/treereg5.18: is not an object file
+/usr/bin/type :
+
+
+1c1
+< ft_otool: /usr/bin/type: The file was not recognized as a valid object file
+---
+> /usr/bin/type: is not an object file
+/usr/bin/ulimit :
+
+
+1c1
+< ft_otool: /usr/bin/ulimit: The file was not recognized as a valid object file
+---
+> /usr/bin/ulimit: is not an object file
+/usr/bin/umask :
+
+
+1c1
+< ft_otool: /usr/bin/umask: The file was not recognized as a valid object file
+---
+> /usr/bin/umask: is not an object file
+/usr/bin/unalias :
+
+
+1c1
+< ft_otool: /usr/bin/unalias: The file was not recognized as a valid object file
+---
+> /usr/bin/unalias: is not an object file
+/usr/bin/uuto :
+
+
+1c1
+< ft_otool: /usr/bin/uuto: The file was not recognized as a valid object file
+---
+> /usr/bin/uuto: is not an object file
+/usr/bin/vimtutor :
+
+
+1c1
+< ft_otool: /usr/bin/vimtutor: The file was not recognized as a valid object file
+---
+> /usr/bin/vimtutor: is not an object file
+/usr/bin/wait :
+
+
+1c1
+< ft_otool: /usr/bin/wait: The file was not recognized as a valid object file
+---
+> /usr/bin/wait: is not an object file
+/usr/bin/weblatency.d :
+
+
+1c1
+< ft_otool: /usr/bin/weblatency.d: The file was not recognized as a valid object file
+---
+> /usr/bin/weblatency.d: is not an object file
+/usr/bin/whatis :
+
+
+1c1
+< ft_otool: /usr/bin/whatis: The file was not recognized as a valid object file
+---
+> /usr/bin/whatis: is not an object file
+/usr/bin/wish :
+
+
+1c1
+< ft_otool: /usr/bin/wish: The file was not recognized as a valid object file
+---
+> /usr/bin/wish: is not an object file
+/usr/bin/wish8.4 :
+
+
+1c1
+< ft_otool: /usr/bin/wish8.4: The file was not recognized as a valid object file
+---
+> /usr/bin/wish8.4: is not an object file
+/usr/bin/wish8.5 :
+
+
+1c1
+< ft_otool: /usr/bin/wish8.5: The file was not recognized as a valid object file
+---
+> /usr/bin/wish8.5: is not an object file
+/usr/bin/wrapper.app :
+
+
+1d0
+< ft_otool: /usr/bin/wrapper.app: No such file or directory.
+/usr/bin/xattr :
+
+
+1c1
+< ft_otool: /usr/bin/xattr: The file was not recognized as a valid object file
+---
+> /usr/bin/xattr: is not an object file
+/usr/bin/xattr-2.6 :
+
+
+1c1
+< ft_otool: /usr/bin/xattr-2.6: The file was not recognized as a valid object file
+---
+> /usr/bin/xattr-2.6: is not an object file
+/usr/bin/xattr-2.7 :
+
+
+1c1
+< ft_otool: /usr/bin/xattr-2.7: The file was not recognized as a valid object file
+---
+> /usr/bin/xattr-2.7: is not an object file
+/usr/bin/xgettext.pl :
+
+
+1c1
+< ft_otool: /usr/bin/xgettext.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/xgettext.pl: is not an object file
+/usr/bin/xgettext5.16.pl :
+
+
+1c1
+< ft_otool: /usr/bin/xgettext5.16.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/xgettext5.16.pl: is not an object file
+/usr/bin/xgettext5.18.pl :
+
+
+1c1
+< ft_otool: /usr/bin/xgettext5.18.pl: The file was not recognized as a valid object file
+---
+> /usr/bin/xgettext5.18.pl: is not an object file
+/usr/bin/xml2-config :
+
+
+1c1
+< ft_otool: /usr/bin/xml2-config: The file was not recognized as a valid object file
+---
+> /usr/bin/xml2-config: is not an object file
+/usr/bin/xpath :
+
+
+1c1
+< ft_otool: /usr/bin/xpath: The file was not recognized as a valid object file
+---
+> /usr/bin/xpath: is not an object file
+/usr/bin/xpath5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/xpath5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/xpath5.16: is not an object file
+/usr/bin/xpath5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/xpath5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/xpath5.18: is not an object file
+/usr/bin/xslt-config :
+
+
+1c1
+< ft_otool: /usr/bin/xslt-config: The file was not recognized as a valid object file
+---
+> /usr/bin/xslt-config: is not an object file
+/usr/bin/xsubpp :
+
+
+1c1
+< ft_otool: /usr/bin/xsubpp: The file was not recognized as a valid object file
+---
+> /usr/bin/xsubpp: is not an object file
+/usr/bin/xsubpp5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/xsubpp5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/xsubpp5.16: is not an object file
+/usr/bin/xsubpp5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/xsubpp5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/xsubpp5.18: is not an object file
+/usr/bin/zcmp :
+
+
+1c1
+< ft_otool: /usr/bin/zcmp: The file was not recognized as a valid object file
+---
+> /usr/bin/zcmp: is not an object file
+/usr/bin/zdiff :
+
+
+1c1
+< ft_otool: /usr/bin/zdiff: The file was not recognized as a valid object file
+---
+> /usr/bin/zdiff: is not an object file
+/usr/bin/zforce :
+
+
+1c1
+< ft_otool: /usr/bin/zforce: The file was not recognized as a valid object file
+---
+> /usr/bin/zforce: is not an object file
+/usr/bin/zipdetails :
+
+
+1c1
+< ft_otool: /usr/bin/zipdetails: The file was not recognized as a valid object file
+---
+> /usr/bin/zipdetails: is not an object file
+/usr/bin/zipdetails5.16 :
+
+
+1c1
+< ft_otool: /usr/bin/zipdetails5.16: The file was not recognized as a valid object file
+---
+> /usr/bin/zipdetails5.16: is not an object file
+/usr/bin/zipdetails5.18 :
+
+
+1c1
+< ft_otool: /usr/bin/zipdetails5.18: The file was not recognized as a valid object file
+---
+> /usr/bin/zipdetails5.18: is not an object file
+/usr/bin/zipgrep :
+
+
+1c1
+< ft_otool: /usr/bin/zipgrep: The file was not recognized as a valid object file
+---
+> /usr/bin/zipgrep: is not an object file
+/usr/bin/zless :
+
+
+1c1
+< ft_otool: /usr/bin/zless: The file was not recognized as a valid object file
+---
+> /usr/bin/zless: is not an object file
+/usr/bin/zmore :
+
+
+1c1
+< ft_otool: /usr/bin/zmore: The file was not recognized as a valid object file
+---
+> /usr/bin/zmore: is not an object file
+/usr/bin/znew :
+
+
+1c1
+< ft_otool: /usr/bin/znew: The file was not recognized as a valid object file
+---
+> /usr/bin/znew: is not an object file
+/bin/syslog.py :
+
+
+1c1
+< ft_otool: /bin/syslog.py: The file was not recognized as a valid object file
+---
+> /bin/syslog.py: is not an object file
+/sbin/yubikey_shell :
+
+
+1d0
+< ft_otool: /sbin/yubikey_shell: No such file or directory.
+/usr/lib/charset.alias :
+
+
+1c1
+< ft_otool: /usr/lib/charset.alias: The file was not recognized as a valid object file
+---
+> /usr/lib/charset.alias: is not an object file
+/usr/lib/cron :
+
+
+1d0
+< ft_otool: /usr/lib/cron: Is a directory.
+/usr/lib/dtrace :
+
+
+1d0
+< ft_otool: /usr/lib/dtrace: Is a directory.
+/usr/lib/groff :
+
+
+1d0
+< ft_otool: /usr/lib/groff: Is a directory.
+/usr/lib/libgutenprint.2.dylib :
+
+
+1d0
+< ft_otool: /usr/lib/libgutenprint.2.dylib: No such file or directory.
+/usr/lib/libkmodc++.a :
+
+
+1a2,5
+> /usr/lib/libkmodc++.a(cplus_start.o):
+> Contents of (__TEXT,__text) section
+> /usr/lib/libkmodc++.a(cplus_stop.o):
+> Contents of (__TEXT,__text) section
+/usr/lib/log :
+
+
+1d0
+< ft_otool: /usr/lib/log: Is a directory.
+/usr/lib/pam :
+
+
+1d0
+< ft_otool: /usr/lib/pam: Is a directory.
+/usr/lib/php :
+
+
+1d0
+< ft_otool: /usr/lib/php: Is a directory.
+/usr/lib/pkgconfig :
+
+
+1d0
+< ft_otool: /usr/lib/pkgconfig: Is a directory.
+/usr/lib/python2.6 :
+
+
+1d0
+< ft_otool: /usr/lib/python2.6: Is a directory.
+/usr/lib/python2.7 :
+
+
+1d0
+< ft_otool: /usr/lib/python2.7: Is a directory.
+/usr/lib/rpcsvc :
+
+
+1d0
+< ft_otool: /usr/lib/rpcsvc: Is a directory.
+/usr/lib/ruby :
+
+
+1d0
+< ft_otool: /usr/lib/ruby: Is a directory.
+/usr/lib/sasl2 :
+
+
+1d0
+< ft_otool: /usr/lib/sasl2: Is a directory.
+/usr/lib/sqlite3 :
+
+
+1d0
+< ft_otool: /usr/lib/sqlite3: Is a directory.
+/usr/lib/system :
+
+
+1d0
+< ft_otool: /usr/lib/system: Is a directory.
+/usr/lib/tclConfig.sh :
+
+
+1c1
+< ft_otool: /usr/lib/tclConfig.sh: The file was not recognized as a valid object file
+---
+> /usr/lib/tclConfig.sh: is not an object file
+/usr/lib/tkConfig.sh :
+
+
+1c1
+< ft_otool: /usr/lib/tkConfig.sh: The file was not recognized as a valid object file
+---
+> /usr/lib/tkConfig.sh: is not an object file
+/usr/lib/xpc :
+
+
+1d0
+< ft_otool: /usr/lib/xpc: Is a directory.
+/usr/lib/zsh :
+
+
+1d0
+< ft_otool: /usr/lib/zsh: Is a directory.
+/usr/sbin/apachectl :
+
+
+1c1
+< ft_otool: /usr/sbin/apachectl: The file was not recognized as a valid object file
+---
+> /usr/sbin/apachectl: is not an object file
+/usr/sbin/apxs :
+
+
+1c1
+< ft_otool: /usr/sbin/apxs: The file was not recognized as a valid object file
+---
+> /usr/sbin/apxs: is not an object file
+/usr/sbin/authserver :
+
+
+1d0
+< ft_otool: /usr/sbin/authserver: No such file or directory.
+/usr/sbin/cupsd :
+
+
+1d0
+< ft_otool: /usr/sbin/cupsd: No such file or directory.
+/usr/sbin/cvgather :
+
+
+1c1
+< ft_otool: /usr/sbin/cvgather: The file was not recognized as a valid object file
+---
+> /usr/sbin/cvgather: is not an object file
+/usr/sbin/dbmmanage :
+
+
+1c1
+< ft_otool: /usr/sbin/dbmmanage: The file was not recognized as a valid object file
+---
+> /usr/sbin/dbmmanage: is not an object file
+/usr/sbin/envvars :
+
+
+1c1
+< ft_otool: /usr/sbin/envvars: The file was not recognized as a valid object file
+---
+> /usr/sbin/envvars: is not an object file
+/usr/sbin/envvars-std :
+
+
+1c1
+< ft_otool: /usr/sbin/envvars-std: The file was not recognized as a valid object file
+---
+> /usr/sbin/envvars-std: is not an object file
+/usr/sbin/httpd-wrapper :
+
+
+1c1
+< ft_otool: /usr/sbin/httpd-wrapper: The file was not recognized as a valid object file
+---
+> /usr/sbin/httpd-wrapper: is not an object file
+/usr/sbin/kadmin.local :
+
+
+1c1
+< ft_otool: /usr/sbin/kadmin.local: The file was not recognized as a valid object file
+---
+> /usr/sbin/kadmin.local: is not an object file
+/usr/sbin/ntptrace :
+
+
+1c1
+< ft_otool: /usr/sbin/ntptrace: The file was not recognized as a valid object file
+---
+> /usr/sbin/ntptrace: is not an object file
+/usr/sbin/periodic :
+
+
+1c1
+< ft_otool: /usr/sbin/periodic: The file was not recognized as a valid object file
+---
+> /usr/sbin/periodic: is not an object file
+/usr/sbin/sc_auth :
+
+
+1c1
+< ft_otool: /usr/sbin/sc_auth: The file was not recognized as a valid object file
+---
+> /usr/sbin/sc_auth: is not an object file
+/usr/sbin/smbdiagnose :
+
+
+1c1
+< ft_otool: /usr/sbin/smbdiagnose: The file was not recognized as a valid object file
+---
+> /usr/sbin/smbdiagnose: is not an object file
+/usr/sbin/snmpd :
+
+
+1c1
+< ft_otool: /usr/sbin/snmpd: The file was not recognized as a valid object file
+---
+> /usr/sbin/snmpd: is not an object file
+/usr/sbin/uusched :
+
+
+1c1
+< ft_otool: /usr/sbin/uusched: The file was not recognized as a valid object file
+---
+> /usr/sbin/uusched: is not an object file
+/usr/sbin/visudo :
+
+
+1d0
+< ft_otool: /usr/sbin/visudo: No such file or directory.
+/usr/sbin/weakpass_edit :
+
+
+1d0
+< ft_otool: /usr/sbin/weakpass_edit: No such file or directory.
+libft/obj/* :
+
+
+1d0
+< ft_otool: libft/obj/*: No such file or directory.
+/usr/libexec/AppSandbox :
+
+
+1d0
+< ft_otool: /usr/libexec/AppSandbox: Is a directory.
+/usr/libexec/ApplicationFirewall :
+
+
+1d0
+< ft_otool: /usr/libexec/ApplicationFirewall: Is a directory.
+/usr/libexec/AssetCache :
+
+
+1d0
+< ft_otool: /usr/libexec/AssetCache: Is a directory.
+/usr/libexec/DeveloperTools :
+
+
+1d0
+< ft_otool: /usr/libexec/DeveloperTools: Is a directory.
+/usr/libexec/MiniTerm.app :
+
+
+1d0
+< ft_otool: /usr/libexec/MiniTerm.app: Is a directory.
+/usr/libexec/SmartCardServices :
+
+
+1d0
+< ft_otool: /usr/libexec/SmartCardServices: Is a directory.
+/usr/libexec/apache2 :
+
+
+1d0
+< ft_otool: /usr/libexec/apache2: Is a directory.
+/usr/libexec/checkLocalKDC :
+
+
+1c1
+< ft_otool: /usr/libexec/checkLocalKDC: The file was not recognized as a valid object file
+---
+> /usr/libexec/checkLocalKDC: is not an object file
+/usr/libexec/configureLocalKDC :
+
+
+1c1
+< ft_otool: /usr/libexec/configureLocalKDC: The file was not recognized as a valid object file
+---
+> /usr/libexec/configureLocalKDC: is not an object file
+/usr/libexec/cups :
+
+
+1d0
+< ft_otool: /usr/libexec/cups: Is a directory.
+/usr/libexec/dtrace :
+
+
+1d0
+< ft_otool: /usr/libexec/dtrace: Is a directory.
+/usr/libexec/emacs :
+
+
+1d0
+< ft_otool: /usr/libexec/emacs: Is a directory.
+/usr/libexec/emlog.pl :
+
+
+1c1
+< ft_otool: /usr/libexec/emlog.pl: The file was not recognized as a valid object file
+---
+> /usr/libexec/emlog.pl: is not an object file
+/usr/libexec/fax :
+
+
+1d0
+< ft_otool: /usr/libexec/fax: Is a directory.
+/usr/libexec/feedback :
+
+
+1d0
+< ft_otool: /usr/libexec/feedback: Is a directory.
+/usr/libexec/firmwarecheckers :
+
+
+1d0
+< ft_otool: /usr/libexec/firmwarecheckers: Is a directory.
+/usr/libexec/gkreport :
+
+
+1c1
+< ft_otool: /usr/libexec/gkreport: The file was not recognized as a valid object file
+---
+> /usr/libexec/gkreport: is not an object file
+/usr/libexec/locate.concatdb :
+
+
+1c1
+< ft_otool: /usr/libexec/locate.concatdb: The file was not recognized as a valid object file
+---
+> /usr/libexec/locate.concatdb: is not an object file
+/usr/libexec/locate.mklocatedb :
+
+
+1c1
+< ft_otool: /usr/libexec/locate.mklocatedb: The file was not recognized as a valid object file
+---
+> /usr/libexec/locate.mklocatedb: is not an object file
+/usr/libexec/locate.updatedb :
+
+
+1c1
+< ft_otool: /usr/libexec/locate.updatedb: The file was not recognized as a valid object file
+---
+> /usr/libexec/locate.updatedb: is not an object file
+/usr/libexec/makewhatis.local :
+
+
+1c1
+< ft_otool: /usr/libexec/makewhatis.local: The file was not recognized as a valid object file
+---
+> /usr/libexec/makewhatis.local: is not an object file
+/usr/libexec/migrateLocalKDC :
+
+
+1c1
+< ft_otool: /usr/libexec/migrateLocalKDC: The file was not recognized as a valid object file
+---
+> /usr/libexec/migrateLocalKDC: is not an object file
+/usr/libexec/ntpd-wrapper :
+
+
+1c1
+< ft_otool: /usr/libexec/ntpd-wrapper: The file was not recognized as a valid object file
+---
+> /usr/libexec/ntpd-wrapper: is not an object file
+/usr/libexec/postfix :
+
+
+1d0
+< ft_otool: /usr/libexec/postfix: Is a directory.
+/usr/libexec/security-checksystem :
+
+
+1c1
+< ft_otool: /usr/libexec/security-checksystem: The file was not recognized as a valid object file
+---
+> /usr/libexec/security-checksystem: is not an object file
+/usr/libexec/security_authtrampoline :
+
+
+1d0
+< ft_otool: /usr/libexec/security_authtrampoline: No such file or directory.
+/usr/libexec/ssh-keysign :
+
+
+1d0
+< ft_otool: /usr/libexec/ssh-keysign: No such file or directory.
+/usr/libexec/sshd-keygen-wrapper :
+
+
+1c1
+< ft_otool: /usr/libexec/sshd-keygen-wrapper: The file was not recognized as a valid object file
+---
+> /usr/libexec/sshd-keygen-wrapper: is not an object file
+/usr/libexec/upsshutdown :
+
+
+1c1
+< ft_otool: /usr/libexec/upsshutdown: The file was not recognized as a valid object file
+---
+> /usr/libexec/upsshutdown: is not an object file
+/usr/libexec/apache2/httpd.exp :
+
+
+1c1
+< ft_otool: /usr/libexec/apache2/httpd.exp: The file was not recognized as a valid object file
+---
+> /usr/libexec/apache2/httpd.exp: is not an object file
