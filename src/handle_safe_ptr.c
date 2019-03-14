@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <nm_otool.h>
+#include "nm_otool.h"
 
 int							check_ptr(t_file *file, void *lc)
 {

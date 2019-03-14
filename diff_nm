@@ -113,3 +113,2271 @@
 /usr/bin/c_rehash :
 1d0
 < ft_nm: /usr/bin/c_rehash: The file was not recognized as a valid object file
+
+
+/usr/bin/cd :
+1d0
+< ft_nm: /usr/bin/cd: The file was not recognized as a valid object file
+
+
+/usr/bin/command :
+1d0
+< ft_nm: /usr/bin/command: The file was not recognized as a valid object file
+
+
+/usr/bin/config_data :
+1d0
+< ft_nm: /usr/bin/config_data: The file was not recognized as a valid object file
+
+
+/usr/bin/config_data5.16 :
+1d0
+< ft_nm: /usr/bin/config_data5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/config_data5.18 :
+1d0
+< ft_nm: /usr/bin/config_data5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/corelist :
+1d0
+< ft_nm: /usr/bin/corelist: The file was not recognized as a valid object file
+
+
+/usr/bin/corelist5.16 :
+1d0
+< ft_nm: /usr/bin/corelist5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/corelist5.18 :
+1d0
+< ft_nm: /usr/bin/corelist5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/cpan :
+1d0
+< ft_nm: /usr/bin/cpan: The file was not recognized as a valid object file
+
+
+/usr/bin/cpan2dist :
+1d0
+< ft_nm: /usr/bin/cpan2dist: The file was not recognized as a valid object file
+
+
+/usr/bin/cpan2dist5.16 :
+1d0
+< ft_nm: /usr/bin/cpan2dist5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/cpan2dist5.18 :
+1d0
+< ft_nm: /usr/bin/cpan2dist5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/cpan5.16 :
+1d0
+< ft_nm: /usr/bin/cpan5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/cpan5.18 :
+1d0
+< ft_nm: /usr/bin/cpan5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/cpanp :
+1d0
+< ft_nm: /usr/bin/cpanp: The file was not recognized as a valid object file
+
+
+/usr/bin/cpanp-run-perl :
+1d0
+< ft_nm: /usr/bin/cpanp-run-perl: The file was not recognized as a valid object file
+
+
+/usr/bin/cpanp-run-perl5.16 :
+1d0
+< ft_nm: /usr/bin/cpanp-run-perl5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/cpanp-run-perl5.18 :
+1d0
+< ft_nm: /usr/bin/cpanp-run-perl5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/cpanp5.16 :
+1d0
+< ft_nm: /usr/bin/cpanp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/cpanp5.18 :
+1d0
+< ft_nm: /usr/bin/cpanp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/cpu_profiler.d :
+1d0
+< ft_nm: /usr/bin/cpu_profiler.d: The file was not recognized as a valid object file
+
+
+/usr/bin/cpuwalk.d :
+1d0
+< ft_nm: /usr/bin/cpuwalk.d: The file was not recognized as a valid object file
+
+
+/usr/bin/crc32 :
+1d0
+< ft_nm: /usr/bin/crc32: The file was not recognized as a valid object file
+
+
+/usr/bin/crc325.16 :
+1d0
+< ft_nm: /usr/bin/crc325.16: The file was not recognized as a valid object file
+
+
+/usr/bin/crc325.18 :
+1d0
+< ft_nm: /usr/bin/crc325.18: The file was not recognized as a valid object file
+
+
+/usr/bin/creatbyproc.d :
+1d0
+< ft_nm: /usr/bin/creatbyproc.d: The file was not recognized as a valid object file
+
+
+/usr/bin/csdiagnose :
+1d0
+< ft_nm: /usr/bin/csdiagnose: The file was not recognized as a valid object file
+
+
+/usr/bin/cups-config :
+1d0
+< ft_nm: /usr/bin/cups-config: The file was not recognized as a valid object file
+
+
+/usr/bin/curl-config :
+1d0
+< ft_nm: /usr/bin/curl-config: The file was not recognized as a valid object file
+
+
+/usr/bin/dappprof :
+1d0
+< ft_nm: /usr/bin/dappprof: The file was not recognized as a valid object file
+
+
+/usr/bin/dapptrace :
+1d0
+< ft_nm: /usr/bin/dapptrace: The file was not recognized as a valid object file
+
+
+/usr/bin/dbicadmin :
+1d0
+< ft_nm: /usr/bin/dbicadmin: The file was not recognized as a valid object file
+
+
+/usr/bin/dbicadmin5.16 :
+1d0
+< ft_nm: /usr/bin/dbicadmin5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/dbicadmin5.18 :
+1d0
+< ft_nm: /usr/bin/dbicadmin5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/dbilogstrip :
+1d0
+< ft_nm: /usr/bin/dbilogstrip: The file was not recognized as a valid object file
+
+
+/usr/bin/dbilogstrip5.16 :
+1d0
+< ft_nm: /usr/bin/dbilogstrip5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/dbilogstrip5.18 :
+1d0
+< ft_nm: /usr/bin/dbilogstrip5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/dbiprof :
+1d0
+< ft_nm: /usr/bin/dbiprof: The file was not recognized as a valid object file
+
+
+/usr/bin/dbiprof5.16 :
+1d0
+< ft_nm: /usr/bin/dbiprof5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/dbiprof5.18 :
+1d0
+< ft_nm: /usr/bin/dbiprof5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/dbiproxy :
+1d0
+< ft_nm: /usr/bin/dbiproxy: The file was not recognized as a valid object file
+
+
+/usr/bin/dbiproxy5.16 :
+1d0
+< ft_nm: /usr/bin/dbiproxy5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/dbiproxy5.18 :
+1d0
+< ft_nm: /usr/bin/dbiproxy5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/debinhex.pl :
+1d0
+< ft_nm: /usr/bin/debinhex.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/debinhex5.18.pl :
+1d0
+< ft_nm: /usr/bin/debinhex5.18.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/diskhits :
+1d0
+< ft_nm: /usr/bin/diskhits: The file was not recognized as a valid object file
+
+
+/usr/bin/dispqlen.d :
+1d0
+< ft_nm: /usr/bin/dispqlen.d: The file was not recognized as a valid object file
+
+
+/usr/bin/dockutil :
+1d0
+< ft_nm: /usr/bin/dockutil: The file was not recognized as a valid object file
+
+
+/usr/bin/dtruss :
+1d0
+< ft_nm: /usr/bin/dtruss: The file was not recognized as a valid object file
+
+
+/usr/bin/easy_install :
+1d0
+< ft_nm: /usr/bin/easy_install: The file was not recognized as a valid object file
+
+
+/usr/bin/easy_install-2.6 :
+1d0
+< ft_nm: /usr/bin/easy_install-2.6: The file was not recognized as a valid object file
+
+
+/usr/bin/easy_install-2.7 :
+1d0
+< ft_nm: /usr/bin/easy_install-2.7: The file was not recognized as a valid object file
+
+
+/usr/bin/easy_install-3.4 :
+1d0
+< ft_nm: /usr/bin/easy_install-3.4: The file was not recognized as a valid object file
+
+
+/usr/bin/enc2xs :
+1d0
+< ft_nm: /usr/bin/enc2xs: The file was not recognized as a valid object file
+
+
+/usr/bin/enc2xs5.16 :
+1d0
+< ft_nm: /usr/bin/enc2xs5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/enc2xs5.18 :
+1d0
+< ft_nm: /usr/bin/enc2xs5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/erb :
+1d0
+< ft_nm: /usr/bin/erb: The file was not recognized as a valid object file
+
+
+/usr/bin/errinfo :
+1d0
+< ft_nm: /usr/bin/errinfo: The file was not recognized as a valid object file
+
+
+/usr/bin/examshell :
+1d0
+< ft_nm: /usr/bin/examshell: The file was not recognized as a valid object file
+
+
+/usr/bin/execsnoop :
+1d0
+< ft_nm: /usr/bin/execsnoop: The file was not recognized as a valid object file
+
+
+/usr/bin/eyapp :
+1d0
+< ft_nm: /usr/bin/eyapp: The file was not recognized as a valid object file
+
+
+/usr/bin/eyapp5.16 :
+1d0
+< ft_nm: /usr/bin/eyapp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/eyapp5.18 :
+1d0
+< ft_nm: /usr/bin/eyapp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/fc :
+1d0
+< ft_nm: /usr/bin/fc: The file was not recognized as a valid object file
+
+
+/usr/bin/fddist :
+1d0
+< ft_nm: /usr/bin/fddist: The file was not recognized as a valid object file
+
+
+/usr/bin/fg :
+1d0
+< ft_nm: /usr/bin/fg: The file was not recognized as a valid object file
+
+
+/usr/bin/filebyproc.d :
+1d0
+< ft_nm: /usr/bin/filebyproc.d: The file was not recognized as a valid object file
+
+
+/usr/bin/find2perl :
+1d0
+< ft_nm: /usr/bin/find2perl: The file was not recognized as a valid object file
+
+
+/usr/bin/find2perl5.16 :
+1d0
+< ft_nm: /usr/bin/find2perl5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/find2perl5.18 :
+1d0
+< ft_nm: /usr/bin/find2perl5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/findrule :
+1d0
+< ft_nm: /usr/bin/findrule: The file was not recognized as a valid object file
+
+
+/usr/bin/findrule5.16 :
+1d0
+< ft_nm: /usr/bin/findrule5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/findrule5.18 :
+1d0
+< ft_nm: /usr/bin/findrule5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/fixproc :
+1d0
+< ft_nm: /usr/bin/fixproc: The file was not recognized as a valid object file
+
+
+/usr/bin/format-sql :
+1d0
+< ft_nm: /usr/bin/format-sql: The file was not recognized as a valid object file
+
+
+/usr/bin/format-sql5.16 :
+1d0
+< ft_nm: /usr/bin/format-sql5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/format-sql5.18 :
+1d0
+< ft_nm: /usr/bin/format-sql5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/fuser :
+1d0
+< ft_nm: /usr/bin/fuser: The file was not recognized as a valid object file
+
+
+/usr/bin/gdiffmk :
+1d0
+< ft_nm: /usr/bin/gdiffmk: The file was not recognized as a valid object file
+
+
+/usr/bin/gem :
+1d0
+< ft_nm: /usr/bin/gem: The file was not recognized as a valid object file
+
+
+/usr/bin/gen_bridge_metadata :
+1d0
+< ft_nm: /usr/bin/gen_bridge_metadata: The file was not recognized as a valid object file
+
+
+/usr/bin/getopts :
+1d0
+< ft_nm: /usr/bin/getopts: The file was not recognized as a valid object file
+
+
+/usr/bin/gnuattach :
+1d0
+< ft_nm: /usr/bin/gnuattach: The file was not recognized as a valid object file
+
+
+/usr/bin/gnudoit :
+1d0
+< ft_nm: /usr/bin/gnudoit: The file was not recognized as a valid object file
+
+
+/usr/bin/groffer :
+1d0
+< ft_nm: /usr/bin/groffer: The file was not recognized as a valid object file
+
+
+/usr/bin/grog :
+1d0
+< ft_nm: /usr/bin/grog: The file was not recognized as a valid object file
+
+
+/usr/bin/gzexe :
+1d0
+< ft_nm: /usr/bin/gzexe: The file was not recognized as a valid object file
+
+
+/usr/bin/h2ph :
+1d0
+< ft_nm: /usr/bin/h2ph: The file was not recognized as a valid object file
+
+
+/usr/bin/h2ph5.16 :
+1d0
+< ft_nm: /usr/bin/h2ph5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/h2ph5.18 :
+1d0
+< ft_nm: /usr/bin/h2ph5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/h2xs :
+1d0
+< ft_nm: /usr/bin/h2xs: The file was not recognized as a valid object file
+
+
+/usr/bin/h2xs5.16 :
+1d0
+< ft_nm: /usr/bin/h2xs5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/h2xs5.18 :
+1d0
+< ft_nm: /usr/bin/h2xs5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/hash :
+1d0
+< ft_nm: /usr/bin/hash: The file was not recognized as a valid object file
+
+
+/usr/bin/hotspot.d :
+1d0
+< ft_nm: /usr/bin/hotspot.d: The file was not recognized as a valid object file
+
+
+/usr/bin/htmltree :
+1d0
+< ft_nm: /usr/bin/htmltree: The file was not recognized as a valid object file
+
+
+/usr/bin/htmltree5.16 :
+1d0
+< ft_nm: /usr/bin/htmltree5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/htmltree5.18 :
+1d0
+< ft_nm: /usr/bin/htmltree5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/httpdstat.d :
+1d0
+< ft_nm: /usr/bin/httpdstat.d: The file was not recognized as a valid object file
+
+
+/usr/bin/idle :
+1d0
+< ft_nm: /usr/bin/idle: The file was not recognized as a valid object file
+
+
+/usr/bin/idle2.6 :
+1d0
+< ft_nm: /usr/bin/idle2.6: The file was not recognized as a valid object file
+
+
+/usr/bin/idle2.7 :
+1d0
+< ft_nm: /usr/bin/idle2.7: The file was not recognized as a valid object file
+
+
+/usr/bin/idle3 :
+1d0
+< ft_nm: /usr/bin/idle3: The file was not recognized as a valid object file
+
+
+/usr/bin/idle3.4 :
+1d0
+< ft_nm: /usr/bin/idle3.4: The file was not recognized as a valid object file
+
+
+/usr/bin/imptrace :
+1d0
+< ft_nm: /usr/bin/imptrace: The file was not recognized as a valid object file
+
+
+/usr/bin/instmodsh :
+1d0
+< ft_nm: /usr/bin/instmodsh: The file was not recognized as a valid object file
+
+
+/usr/bin/instmodsh5.16 :
+1d0
+< ft_nm: /usr/bin/instmodsh5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/instmodsh5.18 :
+1d0
+< ft_nm: /usr/bin/instmodsh5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/iofile.d :
+1d0
+< ft_nm: /usr/bin/iofile.d: The file was not recognized as a valid object file
+
+
+/usr/bin/iofileb.d :
+1d0
+< ft_nm: /usr/bin/iofileb.d: The file was not recognized as a valid object file
+
+
+/usr/bin/iopattern :
+1d0
+< ft_nm: /usr/bin/iopattern: The file was not recognized as a valid object file
+
+
+/usr/bin/iopending :
+1d0
+< ft_nm: /usr/bin/iopending: The file was not recognized as a valid object file
+
+
+/usr/bin/iosnoop :
+1d0
+< ft_nm: /usr/bin/iosnoop: The file was not recognized as a valid object file
+
+
+/usr/bin/iotop :
+1d0
+< ft_nm: /usr/bin/iotop: The file was not recognized as a valid object file
+
+
+/usr/bin/ip2cc :
+1d0
+< ft_nm: /usr/bin/ip2cc: The file was not recognized as a valid object file
+
+
+/usr/bin/ip2cc5.16 :
+1d0
+< ft_nm: /usr/bin/ip2cc5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/ip2cc5.18 :
+1d0
+< ft_nm: /usr/bin/ip2cc5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/ipcount :
+1d0
+< ft_nm: /usr/bin/ipcount: The file was not recognized as a valid object file
+
+
+/usr/bin/ipcount5.16 :
+1d0
+< ft_nm: /usr/bin/ipcount5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/ipcount5.18 :
+1d0
+< ft_nm: /usr/bin/ipcount5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/iptab :
+1d0
+< ft_nm: /usr/bin/iptab: The file was not recognized as a valid object file
+
+
+/usr/bin/iptab5.16 :
+1d0
+< ft_nm: /usr/bin/iptab5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/iptab5.18 :
+1d0
+< ft_nm: /usr/bin/iptab5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/irb :
+1d0
+< ft_nm: /usr/bin/irb: The file was not recognized as a valid object file
+
+
+/usr/bin/jobs :
+1d0
+< ft_nm: /usr/bin/jobs: The file was not recognized as a valid object file
+
+
+/usr/bin/json_pp :
+1d0
+< ft_nm: /usr/bin/json_pp: The file was not recognized as a valid object file
+
+
+/usr/bin/json_pp5.16 :
+1d0
+< ft_nm: /usr/bin/json_pp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/json_pp5.18 :
+1d0
+< ft_nm: /usr/bin/json_pp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/kill.d :
+1d0
+< ft_nm: /usr/bin/kill.d: The file was not recognized as a valid object file
+
+
+/usr/bin/krb5-config :
+1d0
+< ft_nm: /usr/bin/krb5-config: The file was not recognized as a valid object file
+
+
+/usr/bin/lastwords :
+1d0
+< ft_nm: /usr/bin/lastwords: The file was not recognized as a valid object file
+
+
+/usr/bin/libnetcfg :
+1d0
+< ft_nm: /usr/bin/libnetcfg: The file was not recognized as a valid object file
+
+
+/usr/bin/libnetcfg5.16 :
+1d0
+< ft_nm: /usr/bin/libnetcfg5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/libnetcfg5.18 :
+1d0
+< ft_nm: /usr/bin/libnetcfg5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/loads.d :
+1d0
+< ft_nm: /usr/bin/loads.d: The file was not recognized as a valid object file
+
+
+/usr/bin/localedef :
+1d0
+< ft_nm: /usr/bin/localedef: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-download :
+1d0
+< ft_nm: /usr/bin/lwp-download: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-download5.16 :
+1d0
+< ft_nm: /usr/bin/lwp-download5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-download5.18 :
+1d0
+< ft_nm: /usr/bin/lwp-download5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-dump :
+1d0
+< ft_nm: /usr/bin/lwp-dump: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-dump5.16 :
+1d0
+< ft_nm: /usr/bin/lwp-dump5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-dump5.18 :
+1d0
+< ft_nm: /usr/bin/lwp-dump5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-mirror :
+1d0
+< ft_nm: /usr/bin/lwp-mirror: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-mirror5.16 :
+1d0
+< ft_nm: /usr/bin/lwp-mirror5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-mirror5.18 :
+1d0
+< ft_nm: /usr/bin/lwp-mirror5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-request :
+1d0
+< ft_nm: /usr/bin/lwp-request: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-request5.16 :
+1d0
+< ft_nm: /usr/bin/lwp-request5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/lwp-request5.18 :
+1d0
+< ft_nm: /usr/bin/lwp-request5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/macerror :
+1d0
+< ft_nm: /usr/bin/macerror: The file was not recognized as a valid object file
+
+
+/usr/bin/macerror5.16 :
+1d0
+< ft_nm: /usr/bin/macerror5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/macerror5.18 :
+1d0
+< ft_nm: /usr/bin/macerror5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/macreport :
+1d0
+< ft_nm: /usr/bin/macreport: No such file or directory.
+
+
+/usr/bin/mib2c :
+1d0
+< ft_nm: /usr/bin/mib2c: The file was not recognized as a valid object file
+
+
+/usr/bin/mib2c-update :
+1d0
+< ft_nm: /usr/bin/mib2c-update: The file was not recognized as a valid object file
+
+
+/usr/bin/mmroff :
+1d0
+< ft_nm: /usr/bin/mmroff: The file was not recognized as a valid object file
+
+
+/usr/bin/moo-outdated :
+1d0
+< ft_nm: /usr/bin/moo-outdated: The file was not recognized as a valid object file
+
+
+/usr/bin/moo-outdated5.18 :
+1d0
+< ft_nm: /usr/bin/moo-outdated5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/moose-outdated :
+1d0
+< ft_nm: /usr/bin/moose-outdated: The file was not recognized as a valid object file
+
+
+/usr/bin/moose-outdated5.16 :
+1d0
+< ft_nm: /usr/bin/moose-outdated5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/moose-outdated5.18 :
+1d0
+< ft_nm: /usr/bin/moose-outdated5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/mp2bug :
+1d0
+< ft_nm: /usr/bin/mp2bug: The file was not recognized as a valid object file
+
+
+/usr/bin/ncurses5.4-config :
+1d0
+< ft_nm: /usr/bin/ncurses5.4-config: The file was not recognized as a valid object file
+
+
+/usr/bin/neqn :
+1d0
+< ft_nm: /usr/bin/neqn: The file was not recognized as a valid object file
+
+
+/usr/bin/net-server :
+1d0
+< ft_nm: /usr/bin/net-server: The file was not recognized as a valid object file
+
+
+/usr/bin/net-server5.16 :
+1d0
+< ft_nm: /usr/bin/net-server5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/net-server5.18 :
+1d0
+< ft_nm: /usr/bin/net-server5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/net-snmp-cert :
+1d0
+< ft_nm: /usr/bin/net-snmp-cert: The file was not recognized as a valid object file
+
+
+/usr/bin/net-snmp-config :
+1d0
+< ft_nm: /usr/bin/net-snmp-config: The file was not recognized as a valid object file
+
+
+/usr/bin/net-snmp-create-v3-user :
+1d0
+< ft_nm: /usr/bin/net-snmp-create-v3-user: The file was not recognized as a valid object file
+
+
+/usr/bin/newproc.d :
+1d0
+< ft_nm: /usr/bin/newproc.d: The file was not recognized as a valid object file
+
+
+/usr/bin/norminette :
+1d0
+< ft_nm: /usr/bin/norminette: The file was not recognized as a valid object file
+
+
+/usr/bin/nroff :
+1d0
+< ft_nm: /usr/bin/nroff: The file was not recognized as a valid object file
+
+
+/usr/bin/opensnoop :
+1d0
+< ft_nm: /usr/bin/opensnoop: The file was not recognized as a valid object file
+
+
+/usr/bin/package-stash-conflicts :
+1d0
+< ft_nm: /usr/bin/package-stash-conflicts: The file was not recognized as a valid object file
+
+
+/usr/bin/package-stash-conflicts5.16 :
+1d0
+< ft_nm: /usr/bin/package-stash-conflicts5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/package-stash-conflicts5.18 :
+1d0
+< ft_nm: /usr/bin/package-stash-conflicts5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pagesize :
+1d0
+< ft_nm: /usr/bin/pagesize: The file was not recognized as a valid object file
+
+
+/usr/bin/par.pl :
+1d0
+< ft_nm: /usr/bin/par.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/par5.16.pl :
+1d0
+< ft_nm: /usr/bin/par5.16.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/par5.18.pl :
+1d0
+< ft_nm: /usr/bin/par5.18.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/pathopens.d :
+1d0
+< ft_nm: /usr/bin/pathopens.d: The file was not recognized as a valid object file
+
+
+/usr/bin/pcap-config :
+1d0
+< ft_nm: /usr/bin/pcap-config: The file was not recognized as a valid object file
+
+
+/usr/bin/perlbug :
+1d0
+< ft_nm: /usr/bin/perlbug: The file was not recognized as a valid object file
+
+
+/usr/bin/perlbug5.16 :
+1d0
+< ft_nm: /usr/bin/perlbug5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/perlbug5.18 :
+1d0
+< ft_nm: /usr/bin/perlbug5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/perldoc :
+1d0
+< ft_nm: /usr/bin/perldoc: The file was not recognized as a valid object file
+
+
+/usr/bin/perldoc5.16 :
+1d0
+< ft_nm: /usr/bin/perldoc5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/perldoc5.18 :
+1d0
+< ft_nm: /usr/bin/perldoc5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/perlivp :
+1d0
+< ft_nm: /usr/bin/perlivp: The file was not recognized as a valid object file
+
+
+/usr/bin/perlivp5.16 :
+1d0
+< ft_nm: /usr/bin/perlivp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/perlivp5.18 :
+1d0
+< ft_nm: /usr/bin/perlivp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/perlthanks :
+1d0
+< ft_nm: /usr/bin/perlthanks: The file was not recognized as a valid object file
+
+
+/usr/bin/perlthanks5.16 :
+1d0
+< ft_nm: /usr/bin/perlthanks5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/perlthanks5.18 :
+1d0
+< ft_nm: /usr/bin/perlthanks5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/phar :
+1d0
+< ft_nm: /usr/bin/phar: The file was not recognized as a valid object file
+
+
+/usr/bin/phar.phar :
+1d0
+< ft_nm: /usr/bin/phar.phar: The file was not recognized as a valid object file
+
+
+/usr/bin/php-config :
+1d0
+< ft_nm: /usr/bin/php-config: The file was not recognized as a valid object file
+
+
+/usr/bin/phpize :
+1d0
+< ft_nm: /usr/bin/phpize: The file was not recognized as a valid object file
+
+
+/usr/bin/piconv :
+1d0
+< ft_nm: /usr/bin/piconv: The file was not recognized as a valid object file
+
+
+/usr/bin/piconv5.16 :
+1d0
+< ft_nm: /usr/bin/piconv5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/piconv5.18 :
+1d0
+< ft_nm: /usr/bin/piconv5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pidpersec.d :
+1d0
+< ft_nm: /usr/bin/pidpersec.d: The file was not recognized as a valid object file
+
+
+/usr/bin/pip3 :
+1d0
+< ft_nm: /usr/bin/pip3: The file was not recognized as a valid object file
+
+
+/usr/bin/pip3.4 :
+1d0
+< ft_nm: /usr/bin/pip3.4: The file was not recognized as a valid object file
+
+
+/usr/bin/pl2pm :
+1d0
+< ft_nm: /usr/bin/pl2pm: The file was not recognized as a valid object file
+
+
+/usr/bin/pl2pm5.16 :
+1d0
+< ft_nm: /usr/bin/pl2pm5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pl2pm5.18 :
+1d0
+< ft_nm: /usr/bin/pl2pm5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2html :
+1d0
+< ft_nm: /usr/bin/pod2html: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2html5.16 :
+1d0
+< ft_nm: /usr/bin/pod2html5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2html5.18 :
+1d0
+< ft_nm: /usr/bin/pod2html5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2latex :
+1d0
+< ft_nm: /usr/bin/pod2latex: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2latex5.16 :
+1d0
+< ft_nm: /usr/bin/pod2latex5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2latex5.18 :
+1d0
+< ft_nm: /usr/bin/pod2latex5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2man :
+1d0
+< ft_nm: /usr/bin/pod2man: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2man5.16 :
+1d0
+< ft_nm: /usr/bin/pod2man5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2man5.18 :
+1d0
+< ft_nm: /usr/bin/pod2man5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2readme :
+1d0
+< ft_nm: /usr/bin/pod2readme: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2readme5.16 :
+1d0
+< ft_nm: /usr/bin/pod2readme5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2readme5.18 :
+1d0
+< ft_nm: /usr/bin/pod2readme5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2text :
+1d0
+< ft_nm: /usr/bin/pod2text: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2text5.16 :
+1d0
+< ft_nm: /usr/bin/pod2text5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2text5.18 :
+1d0
+< ft_nm: /usr/bin/pod2text5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2usage :
+1d0
+< ft_nm: /usr/bin/pod2usage: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2usage5.16 :
+1d0
+< ft_nm: /usr/bin/pod2usage5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pod2usage5.18 :
+1d0
+< ft_nm: /usr/bin/pod2usage5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/podchecker :
+1d0
+< ft_nm: /usr/bin/podchecker: The file was not recognized as a valid object file
+
+
+/usr/bin/podchecker5.16 :
+1d0
+< ft_nm: /usr/bin/podchecker5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/podchecker5.18 :
+1d0
+< ft_nm: /usr/bin/podchecker5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/podselect :
+1d0
+< ft_nm: /usr/bin/podselect: The file was not recognized as a valid object file
+
+
+/usr/bin/podselect5.16 :
+1d0
+< ft_nm: /usr/bin/podselect5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/podselect5.18 :
+1d0
+< ft_nm: /usr/bin/podselect5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/power_report.sh :
+1d0
+< ft_nm: /usr/bin/power_report.sh: The file was not recognized as a valid object file
+
+
+/usr/bin/pp :
+1d0
+< ft_nm: /usr/bin/pp: The file was not recognized as a valid object file
+
+
+/usr/bin/pp5.16 :
+1d0
+< ft_nm: /usr/bin/pp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pp5.18 :
+1d0
+< ft_nm: /usr/bin/pp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/priclass.d :
+1d0
+< ft_nm: /usr/bin/priclass.d: The file was not recognized as a valid object file
+
+
+/usr/bin/pridist.d :
+1d0
+< ft_nm: /usr/bin/pridist.d: The file was not recognized as a valid object file
+
+
+/usr/bin/procsystime :
+1d0
+< ft_nm: /usr/bin/procsystime: The file was not recognized as a valid object file
+
+
+/usr/bin/prove :
+1d0
+< ft_nm: /usr/bin/prove: The file was not recognized as a valid object file
+
+
+/usr/bin/prove5.16 :
+1d0
+< ft_nm: /usr/bin/prove5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/prove5.18 :
+1d0
+< ft_nm: /usr/bin/prove5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/psed :
+1d0
+< ft_nm: /usr/bin/psed: The file was not recognized as a valid object file
+
+
+/usr/bin/psed5.16 :
+1d0
+< ft_nm: /usr/bin/psed5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/psed5.18 :
+1d0
+< ft_nm: /usr/bin/psed5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pstruct :
+1d0
+< ft_nm: /usr/bin/pstruct: The file was not recognized as a valid object file
+
+
+/usr/bin/pstruct5.16 :
+1d0
+< ft_nm: /usr/bin/pstruct5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pstruct5.18 :
+1d0
+< ft_nm: /usr/bin/pstruct5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/ptar :
+1d0
+< ft_nm: /usr/bin/ptar: The file was not recognized as a valid object file
+
+
+/usr/bin/ptar5.16 :
+1d0
+< ft_nm: /usr/bin/ptar5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/ptar5.18 :
+1d0
+< ft_nm: /usr/bin/ptar5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/ptardiff :
+1d0
+< ft_nm: /usr/bin/ptardiff: The file was not recognized as a valid object file
+
+
+/usr/bin/ptardiff5.16 :
+1d0
+< ft_nm: /usr/bin/ptardiff5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/ptardiff5.18 :
+1d0
+< ft_nm: /usr/bin/ptardiff5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/ptargrep :
+1d0
+< ft_nm: /usr/bin/ptargrep: The file was not recognized as a valid object file
+
+
+/usr/bin/ptargrep5.16 :
+1d0
+< ft_nm: /usr/bin/ptargrep5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/ptargrep5.18 :
+1d0
+< ft_nm: /usr/bin/ptargrep5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pwhich :
+1d0
+< ft_nm: /usr/bin/pwhich: The file was not recognized as a valid object file
+
+
+/usr/bin/pwhich5.16 :
+1d0
+< ft_nm: /usr/bin/pwhich5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/pwhich5.18 :
+1d0
+< ft_nm: /usr/bin/pwhich5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/pydoc :
+1d0
+< ft_nm: /usr/bin/pydoc: The file was not recognized as a valid object file
+
+
+/usr/bin/pydoc2.6 :
+1d0
+< ft_nm: /usr/bin/pydoc2.6: The file was not recognized as a valid object file
+
+
+/usr/bin/pydoc2.7 :
+1d0
+< ft_nm: /usr/bin/pydoc2.7: The file was not recognized as a valid object file
+
+
+/usr/bin/pydoc3 :
+1d0
+< ft_nm: /usr/bin/pydoc3: The file was not recognized as a valid object file
+
+
+/usr/bin/pydoc3.4 :
+1d0
+< ft_nm: /usr/bin/pydoc3.4: The file was not recognized as a valid object file
+
+
+/usr/bin/python-config :
+1d0
+< ft_nm: /usr/bin/python-config: The file was not recognized as a valid object file
+
+
+/usr/bin/python2.6-config :
+1d0
+< ft_nm: /usr/bin/python2.6-config: The file was not recognized as a valid object file
+
+
+/usr/bin/python2.7-config :
+1d0
+< ft_nm: /usr/bin/python2.7-config: The file was not recognized as a valid object file
+
+
+/usr/bin/python3-32 :
+0a1
+> /usr/bin/python3-32:
+
+
+/usr/bin/python3-config :
+1d0
+< ft_nm: /usr/bin/python3-config: The file was not recognized as a valid object file
+
+
+/usr/bin/python3.4-32 :
+0a1
+> /usr/bin/python3.4-32:
+
+
+/usr/bin/python3.4-config :
+1d0
+< ft_nm: /usr/bin/python3.4-config: The file was not recognized as a valid object file
+
+
+/usr/bin/python3.4m-config :
+1d0
+< ft_nm: /usr/bin/python3.4m-config: The file was not recognized as a valid object file
+
+
+/usr/bin/pyvenv :
+1d0
+< ft_nm: /usr/bin/pyvenv: The file was not recognized as a valid object file
+
+
+/usr/bin/pyvenv-3.4 :
+1d0
+< ft_nm: /usr/bin/pyvenv-3.4: The file was not recognized as a valid object file
+
+
+/usr/bin/rails :
+1d0
+< ft_nm: /usr/bin/rails: The file was not recognized as a valid object file
+
+
+/usr/bin/rake :
+1d0
+< ft_nm: /usr/bin/rake: The file was not recognized as a valid object file
+
+
+/usr/bin/rbx :
+1d0
+< ft_nm: /usr/bin/rbx: The file was not recognized as a valid object file
+
+
+/usr/bin/rdoc :
+1d0
+< ft_nm: /usr/bin/rdoc: The file was not recognized as a valid object file
+
+
+/usr/bin/read :
+1d0
+< ft_nm: /usr/bin/read: The file was not recognized as a valid object file
+
+
+/usr/bin/ri :
+1d0
+< ft_nm: /usr/bin/ri: The file was not recognized as a valid object file
+
+
+/usr/bin/runocc.d :
+1d0
+< ft_nm: /usr/bin/runocc.d: The file was not recognized as a valid object file
+
+
+/usr/bin/rwbypid.d :
+1d0
+< ft_nm: /usr/bin/rwbypid.d: The file was not recognized as a valid object file
+
+
+/usr/bin/rwbytype.d :
+1d0
+< ft_nm: /usr/bin/rwbytype.d: The file was not recognized as a valid object file
+
+
+/usr/bin/rwsnoop :
+1d0
+< ft_nm: /usr/bin/rwsnoop: The file was not recognized as a valid object file
+
+
+/usr/bin/s2p :
+1d0
+< ft_nm: /usr/bin/s2p: The file was not recognized as a valid object file
+
+
+/usr/bin/s2p5.16 :
+1d0
+< ft_nm: /usr/bin/s2p5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/s2p5.18 :
+1d0
+< ft_nm: /usr/bin/s2p5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/sampleproc :
+1d0
+< ft_nm: /usr/bin/sampleproc: The file was not recognized as a valid object file
+
+
+/usr/bin/scandeps.pl :
+1d0
+< ft_nm: /usr/bin/scandeps.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/scandeps5.16.pl :
+1d0
+< ft_nm: /usr/bin/scandeps5.16.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/scandeps5.18.pl :
+1d0
+< ft_nm: /usr/bin/scandeps5.18.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/sdx :
+1d0
+< ft_nm: /usr/bin/sdx: The file was not recognized as a valid object file
+
+
+/usr/bin/seeksize.d :
+1d0
+< ft_nm: /usr/bin/seeksize.d: The file was not recognized as a valid object file
+
+
+/usr/bin/setregproptool :
+1d0
+< ft_nm: /usr/bin/setregproptool: No such file or directory.
+
+
+/usr/bin/setuids.d :
+1d0
+< ft_nm: /usr/bin/setuids.d: The file was not recognized as a valid object file
+
+
+/usr/bin/shar :
+1d0
+< ft_nm: /usr/bin/shar: The file was not recognized as a valid object file
+
+
+/usr/bin/shasum :
+1d0
+< ft_nm: /usr/bin/shasum: The file was not recognized as a valid object file
+
+
+/usr/bin/shasum5.16 :
+1d0
+< ft_nm: /usr/bin/shasum5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/shasum5.18 :
+1d0
+< ft_nm: /usr/bin/shasum5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/sigdist.d :
+1d0
+< ft_nm: /usr/bin/sigdist.d: The file was not recognized as a valid object file
+
+
+/usr/bin/smc :
+1d0
+< ft_nm: /usr/bin/smc: No such file or directory.
+
+
+/usr/bin/smtpd.py :
+1d0
+< ft_nm: /usr/bin/smtpd.py: The file was not recognized as a valid object file
+
+
+/usr/bin/smtpd2.6.py :
+1d0
+< ft_nm: /usr/bin/smtpd2.6.py: The file was not recognized as a valid object file
+
+
+/usr/bin/smtpd2.7.py :
+1d0
+< ft_nm: /usr/bin/smtpd2.7.py: The file was not recognized as a valid object file
+
+
+/usr/bin/snmp-bridge-mib :
+1d0
+< ft_nm: /usr/bin/snmp-bridge-mib: The file was not recognized as a valid object file
+
+
+/usr/bin/snmpconf :
+1d0
+< ft_nm: /usr/bin/snmpconf: The file was not recognized as a valid object file
+
+
+/usr/bin/spfd :
+1d0
+< ft_nm: /usr/bin/spfd: The file was not recognized as a valid object file
+
+
+/usr/bin/spfd5.16 :
+1d0
+< ft_nm: /usr/bin/spfd5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/spfd5.18 :
+1d0
+< ft_nm: /usr/bin/spfd5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/spfquery :
+1d0
+< ft_nm: /usr/bin/spfquery: The file was not recognized as a valid object file
+
+
+/usr/bin/spfquery5.16 :
+1d0
+< ft_nm: /usr/bin/spfquery5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/spfquery5.18 :
+1d0
+< ft_nm: /usr/bin/spfquery5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/splain :
+1d0
+< ft_nm: /usr/bin/splain: The file was not recognized as a valid object file
+
+
+/usr/bin/splain5.16 :
+1d0
+< ft_nm: /usr/bin/splain5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/splain5.18 :
+1d0
+< ft_nm: /usr/bin/splain5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/ssh-copy-id :
+1d0
+< ft_nm: /usr/bin/ssh-copy-id: The file was not recognized as a valid object file
+
+
+/usr/bin/stty.pl :
+1d0
+< ft_nm: /usr/bin/stty.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/stty5.16.pl :
+1d0
+< ft_nm: /usr/bin/stty5.16.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/stty5.18.pl :
+1d0
+< ft_nm: /usr/bin/stty5.18.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/sudo :
+1d0
+< ft_nm: /usr/bin/sudo: No such file or directory.
+
+
+/usr/bin/syscallbypid.d :
+1d0
+< ft_nm: /usr/bin/syscallbypid.d: The file was not recognized as a valid object file
+
+
+/usr/bin/syscallbyproc.d :
+1d0
+< ft_nm: /usr/bin/syscallbyproc.d: The file was not recognized as a valid object file
+
+
+/usr/bin/syscallbysysc.d :
+1d0
+< ft_nm: /usr/bin/syscallbysysc.d: The file was not recognized as a valid object file
+
+
+/usr/bin/systriage :
+1d0
+< ft_nm: /usr/bin/systriage: The file was not recognized as a valid object file
+
+
+/usr/bin/testrb :
+1d0
+< ft_nm: /usr/bin/testrb: The file was not recognized as a valid object file
+
+
+/usr/bin/tethered-caching :
+1d0
+< ft_nm: /usr/bin/tethered-caching: The file was not recognized as a valid object file
+
+
+/usr/bin/texi2dvi :
+1d0
+< ft_nm: /usr/bin/texi2dvi: The file was not recognized as a valid object file
+
+
+/usr/bin/texi2pdf :
+1d0
+< ft_nm: /usr/bin/texi2pdf: The file was not recognized as a valid object file
+
+
+/usr/bin/timer_analyser.d :
+1d0
+< ft_nm: /usr/bin/timer_analyser.d: The file was not recognized as a valid object file
+
+
+/usr/bin/timerfires :
+1d0
+< ft_nm: /usr/bin/timerfires: The file was not recognized as a valid object file
+
+
+/usr/bin/tkcon :
+1d0
+< ft_nm: /usr/bin/tkcon: The file was not recognized as a valid object file
+
+
+/usr/bin/tkmib :
+1d0
+< ft_nm: /usr/bin/tkmib: The file was not recognized as a valid object file
+
+
+/usr/bin/tkpp :
+1d0
+< ft_nm: /usr/bin/tkpp: The file was not recognized as a valid object file
+
+
+/usr/bin/tkpp5.16 :
+1d0
+< ft_nm: /usr/bin/tkpp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/tkpp5.18 :
+1d0
+< ft_nm: /usr/bin/tkpp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/topsyscall :
+1d0
+< ft_nm: /usr/bin/topsyscall: The file was not recognized as a valid object file
+
+
+/usr/bin/topsysproc :
+1d0
+< ft_nm: /usr/bin/topsysproc: The file was not recognized as a valid object file
+
+
+/usr/bin/traptoemail :
+1d0
+< ft_nm: /usr/bin/traptoemail: The file was not recognized as a valid object file
+
+
+/usr/bin/treereg :
+1d0
+< ft_nm: /usr/bin/treereg: The file was not recognized as a valid object file
+
+
+/usr/bin/treereg5.16 :
+1d0
+< ft_nm: /usr/bin/treereg5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/treereg5.18 :
+1d0
+< ft_nm: /usr/bin/treereg5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/type :
+1d0
+< ft_nm: /usr/bin/type: The file was not recognized as a valid object file
+
+
+/usr/bin/ulimit :
+1d0
+< ft_nm: /usr/bin/ulimit: The file was not recognized as a valid object file
+
+
+/usr/bin/umask :
+1d0
+< ft_nm: /usr/bin/umask: The file was not recognized as a valid object file
+
+
+/usr/bin/unalias :
+1d0
+< ft_nm: /usr/bin/unalias: The file was not recognized as a valid object file
+
+
+/usr/bin/uuto :
+1d0
+< ft_nm: /usr/bin/uuto: The file was not recognized as a valid object file
+
+
+/usr/bin/vimtutor :
+1d0
+< ft_nm: /usr/bin/vimtutor: The file was not recognized as a valid object file
+
+
+/usr/bin/wait :
+1d0
+< ft_nm: /usr/bin/wait: The file was not recognized as a valid object file
+
+
+/usr/bin/weblatency.d :
+1d0
+< ft_nm: /usr/bin/weblatency.d: The file was not recognized as a valid object file
+
+
+/usr/bin/whatis :
+1d0
+< ft_nm: /usr/bin/whatis: The file was not recognized as a valid object file
+
+
+/usr/bin/wish :
+1d0
+< ft_nm: /usr/bin/wish: The file was not recognized as a valid object file
+
+
+/usr/bin/wish8.4 :
+1d0
+< ft_nm: /usr/bin/wish8.4: The file was not recognized as a valid object file
+
+
+/usr/bin/wish8.5 :
+1d0
+< ft_nm: /usr/bin/wish8.5: The file was not recognized as a valid object file
+
+
+/usr/bin/xattr :
+1d0
+< ft_nm: /usr/bin/xattr: The file was not recognized as a valid object file
+
+
+/usr/bin/xattr-2.6 :
+1d0
+< ft_nm: /usr/bin/xattr-2.6: The file was not recognized as a valid object file
+
+
+/usr/bin/xattr-2.7 :
+1d0
+< ft_nm: /usr/bin/xattr-2.7: The file was not recognized as a valid object file
+
+
+/usr/bin/xgettext.pl :
+1d0
+< ft_nm: /usr/bin/xgettext.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/xgettext5.16.pl :
+1d0
+< ft_nm: /usr/bin/xgettext5.16.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/xgettext5.18.pl :
+1d0
+< ft_nm: /usr/bin/xgettext5.18.pl: The file was not recognized as a valid object file
+
+
+/usr/bin/xml2-config :
+1d0
+< ft_nm: /usr/bin/xml2-config: The file was not recognized as a valid object file
+
+
+/usr/bin/xpath :
+1d0
+< ft_nm: /usr/bin/xpath: The file was not recognized as a valid object file
+
+
+/usr/bin/xpath5.16 :
+1d0
+< ft_nm: /usr/bin/xpath5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/xpath5.18 :
+1d0
+< ft_nm: /usr/bin/xpath5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/xslt-config :
+1d0
+< ft_nm: /usr/bin/xslt-config: The file was not recognized as a valid object file
+
+
+/usr/bin/xsubpp :
+1d0
+< ft_nm: /usr/bin/xsubpp: The file was not recognized as a valid object file
+
+
+/usr/bin/xsubpp5.16 :
+1d0
+< ft_nm: /usr/bin/xsubpp5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/xsubpp5.18 :
+1d0
+< ft_nm: /usr/bin/xsubpp5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/zcmp :
+1d0
+< ft_nm: /usr/bin/zcmp: The file was not recognized as a valid object file
+
+
+/usr/bin/zdiff :
+1d0
+< ft_nm: /usr/bin/zdiff: The file was not recognized as a valid object file
+
+
+/usr/bin/zforce :
+1d0
+< ft_nm: /usr/bin/zforce: The file was not recognized as a valid object file
+
+
+/usr/bin/zipdetails :
+1d0
+< ft_nm: /usr/bin/zipdetails: The file was not recognized as a valid object file
+
+
+/usr/bin/zipdetails5.16 :
+1d0
+< ft_nm: /usr/bin/zipdetails5.16: The file was not recognized as a valid object file
+
+
+/usr/bin/zipdetails5.18 :
+1d0
+< ft_nm: /usr/bin/zipdetails5.18: The file was not recognized as a valid object file
+
+
+/usr/bin/zipgrep :
+1d0
+< ft_nm: /usr/bin/zipgrep: The file was not recognized as a valid object file
+
+
+/usr/bin/zless :
+1d0
+< ft_nm: /usr/bin/zless: The file was not recognized as a valid object file
+
+
+/usr/bin/zmore :
+1d0
+< ft_nm: /usr/bin/zmore: The file was not recognized as a valid object file
+
+
+/usr/bin/znew :
+1d0
+< ft_nm: /usr/bin/znew: The file was not recognized as a valid object file
+
+
+/bin/syslog.py :
+1d0
+< ft_nm: /bin/syslog.py: The file was not recognized as a valid object file
+
+
+/sbin/yubikey_shell :
+1d0
+< ft_nm: /sbin/yubikey_shell: No such file or directory.
+
+
+/usr/lib/charset.alias :
+1d0
+< ft_nm: /usr/lib/charset.alias: The file was not recognized as a valid object file
+
+
+/usr/lib/cron :
+1d0
+< ft_nm: /usr/lib/cron: Is a directory.
+
+
+/usr/lib/dtrace :
+1d0
+< ft_nm: /usr/lib/dtrace: Is a directory.
+
+
+/usr/lib/groff :
+1d0
+< ft_nm: /usr/lib/groff: Is a directory.
+
+
+/usr/lib/libgutenprint.2.dylib :
+1d0
+< ft_nm: /usr/lib/libgutenprint.2.dylib: No such file or directory.
+
+
+/usr/lib/libkmodc++.a :
+0a1,4
+> 
+> /usr/lib/libkmodc++.a(cplus_start.o):
+> 
+> /usr/lib/libkmodc++.a(cplus_stop.o):
+
+
+/usr/lib/log :
+1d0
+< ft_nm: /usr/lib/log: Is a directory.
+
+
+/usr/lib/pam :
+1d0
+< ft_nm: /usr/lib/pam: Is a directory.
+
+
+/usr/lib/php :
+1d0
+< ft_nm: /usr/lib/php: Is a directory.
+
+
+/usr/lib/pkgconfig :
+1d0
+< ft_nm: /usr/lib/pkgconfig: Is a directory.
+
+
+/usr/lib/python2.6 :
+1d0
+< ft_nm: /usr/lib/python2.6: Is a directory.
+
+
+/usr/lib/python2.7 :
+1d0
+< ft_nm: /usr/lib/python2.7: Is a directory.
+
+
+/usr/lib/rpcsvc :
+1d0
+< ft_nm: /usr/lib/rpcsvc: Is a directory.
+
+
+/usr/lib/ruby :
+1d0
+< ft_nm: /usr/lib/ruby: Is a directory.
+
+
+/usr/lib/sasl2 :
+1d0
+< ft_nm: /usr/lib/sasl2: Is a directory.
+
+
+/usr/lib/sqlite3 :
+1d0
+< ft_nm: /usr/lib/sqlite3: Is a directory.
+
+
+/usr/lib/system :
+1d0
+< ft_nm: /usr/lib/system: Is a directory.
+
+
+/usr/lib/tclConfig.sh :
+1d0
+< ft_nm: /usr/lib/tclConfig.sh: The file was not recognized as a valid object file
+
+
+/usr/lib/tkConfig.sh :
+1d0
+< ft_nm: /usr/lib/tkConfig.sh: The file was not recognized as a valid object file
+
+
+/usr/lib/xpc :
+1d0
+< ft_nm: /usr/lib/xpc: Is a directory.
+
+
+/usr/lib/zsh :
+1d0
+< ft_nm: /usr/lib/zsh: Is a directory.
+
+
+/usr/sbin/apachectl :
+1d0
+< ft_nm: /usr/sbin/apachectl: The file was not recognized as a valid object file
+
+
+/usr/sbin/apxs :
+1d0
+< ft_nm: /usr/sbin/apxs: The file was not recognized as a valid object file
+
+
+/usr/sbin/authserver :
+1d0
+< ft_nm: /usr/sbin/authserver: No such file or directory.
+
+
+/usr/sbin/cupsd :
+1d0
+< ft_nm: /usr/sbin/cupsd: No such file or directory.
+
+
+/usr/sbin/cvgather :
+1d0
+< ft_nm: /usr/sbin/cvgather: The file was not recognized as a valid object file
+
+
+/usr/sbin/dbmmanage :
+1d0
+< ft_nm: /usr/sbin/dbmmanage: The file was not recognized as a valid object file
+
+
+/usr/sbin/envvars :
+1d0
+< ft_nm: /usr/sbin/envvars: The file was not recognized as a valid object file
+
+
+/usr/sbin/envvars-std :
+1d0
+< ft_nm: /usr/sbin/envvars-std: The file was not recognized as a valid object file
+
+
+/usr/sbin/httpd-wrapper :
+1d0
+< ft_nm: /usr/sbin/httpd-wrapper: The file was not recognized as a valid object file
+
+
+/usr/sbin/kadmin.local :
+1d0
+< ft_nm: /usr/sbin/kadmin.local: The file was not recognized as a valid object file
+
+
+/usr/sbin/ntptrace :
+1d0
+< ft_nm: /usr/sbin/ntptrace: The file was not recognized as a valid object file
+
+
+/usr/sbin/periodic :
+1d0
+< ft_nm: /usr/sbin/periodic: The file was not recognized as a valid object file
+
+
+/usr/sbin/sc_auth :
+1d0
+< ft_nm: /usr/sbin/sc_auth: The file was not recognized as a valid object file
+
+
+/usr/sbin/smbdiagnose :
+1d0
+< ft_nm: /usr/sbin/smbdiagnose: The file was not recognized as a valid object file
+
+
+/usr/sbin/snmpd :
+1d0
+< ft_nm: /usr/sbin/snmpd: The file was not recognized as a valid object file
+
+
+/usr/sbin/uusched :
+1d0
+< ft_nm: /usr/sbin/uusched: The file was not recognized as a valid object file
+
+
+/usr/sbin/visudo :
+1d0
+< ft_nm: /usr/sbin/visudo: No such file or directory.
+
+
+/usr/sbin/weakpass_edit :
+1d0
+< ft_nm: /usr/sbin/weakpass_edit: No such file or directory.
+
+
+objs/* :
+1d0
+< ft_nm: objs/*: No such file or directory.
+
+
+libft/Makefile :
+1d0
+< ft_nm: libft/Makefile: The file was not recognized as a valid object file
+
+
+libft/auteur :
+1d0
+< ft_nm: libft/auteur: The file was not recognized as a valid object file
+
+
+libft/includes :
+1d0
+< ft_nm: libft/includes: Is a directory.
+
+
+libft/srcobj :
+1d0
+< ft_nm: libft/srcobj: Is a directory.
+
+
+/usr/libexec/AppSandbox :
+1d0
+< ft_nm: /usr/libexec/AppSandbox: Is a directory.
+
+
+/usr/libexec/ApplicationFirewall :
+1d0
+< ft_nm: /usr/libexec/ApplicationFirewall: Is a directory.
+
+
+/usr/libexec/AssetCache :
+1d0
+< ft_nm: /usr/libexec/AssetCache: Is a directory.
+
+
+/usr/libexec/DeveloperTools :
+1d0
+< ft_nm: /usr/libexec/DeveloperTools: Is a directory.
+
+
+/usr/libexec/MiniTerm.app :
+1d0
+< ft_nm: /usr/libexec/MiniTerm.app: Is a directory.
+
+
+/usr/libexec/SmartCardServices :
+1d0
+< ft_nm: /usr/libexec/SmartCardServices: Is a directory.
+
+
+/usr/libexec/apache2 :
+1d0
+< ft_nm: /usr/libexec/apache2: Is a directory.
+
+
+/usr/libexec/checkLocalKDC :
+1d0
+< ft_nm: /usr/libexec/checkLocalKDC: The file was not recognized as a valid object file
+
+
+/usr/libexec/configureLocalKDC :
+1d0
+< ft_nm: /usr/libexec/configureLocalKDC: The file was not recognized as a valid object file
+
+
+/usr/libexec/cups :
+1d0
+< ft_nm: /usr/libexec/cups: Is a directory.
+
+
+/usr/libexec/dtrace :
+1d0
+< ft_nm: /usr/libexec/dtrace: Is a directory.
+
+
+/usr/libexec/emacs :
+1d0
+< ft_nm: /usr/libexec/emacs: Is a directory.
+
+
+/usr/libexec/emlog.pl :
+1d0
+< ft_nm: /usr/libexec/emlog.pl: The file was not recognized as a valid object file
+
+
+/usr/libexec/fax :
+1d0
+< ft_nm: /usr/libexec/fax: Is a directory.
+
+
+/usr/libexec/feedback :
+1d0
+< ft_nm: /usr/libexec/feedback: Is a directory.
+
+
+/usr/libexec/firmwarecheckers :
+1d0
+< ft_nm: /usr/libexec/firmwarecheckers: Is a directory.
+
+
+/usr/libexec/gkreport :
+1d0
+< ft_nm: /usr/libexec/gkreport: The file was not recognized as a valid object file
+
+
+/usr/libexec/locate.concatdb :
+1d0
+< ft_nm: /usr/libexec/locate.concatdb: The file was not recognized as a valid object file
+
+
+/usr/libexec/locate.mklocatedb :
+1d0
+< ft_nm: /usr/libexec/locate.mklocatedb: The file was not recognized as a valid object file
+
+
+/usr/libexec/locate.updatedb :
+1d0
+< ft_nm: /usr/libexec/locate.updatedb: The file was not recognized as a valid object file
+
+
+/usr/libexec/makewhatis.local :
+1d0
+< ft_nm: /usr/libexec/makewhatis.local: The file was not recognized as a valid object file
+
+
+/usr/libexec/migrateLocalKDC :
+1d0
+< ft_nm: /usr/libexec/migrateLocalKDC: The file was not recognized as a valid object file
+
+
+/usr/libexec/ntpd-wrapper :
+1d0
+< ft_nm: /usr/libexec/ntpd-wrapper: The file was not recognized as a valid object file
+
+
+/usr/libexec/postfix :
+1d0
+< ft_nm: /usr/libexec/postfix: Is a directory.
+
+
+/usr/libexec/security-checksystem :
+1d0
+< ft_nm: /usr/libexec/security-checksystem: The file was not recognized as a valid object file
+
+
+/usr/libexec/security_authtrampoline :
+1d0
+< ft_nm: /usr/libexec/security_authtrampoline: No such file or directory.
+
+
+/usr/libexec/ssh-keysign :
+1d0
+< ft_nm: /usr/libexec/ssh-keysign: No such file or directory.
+
+
+/usr/libexec/sshd-keygen-wrapper :
+1d0
+< ft_nm: /usr/libexec/sshd-keygen-wrapper: The file was not recognized as a valid object file
+
+
+/usr/libexec/upsshutdown :
+1d0
+< ft_nm: /usr/libexec/upsshutdown: The file was not recognized as a valid object file
+
+
+/usr/libexec/apache2/httpd.exp :
+1d0
+< ft_nm: /usr/libexec/apache2/httpd.exp: The file was not recognized as a valid object file

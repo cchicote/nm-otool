@@ -74,12 +74,11 @@ int							generate_file_from_archive_nm(char *command,
 	file.name = hdr_ptr + sizeof(struct ar_hdr);
 	file.len = size;
 	file.command = ft_strdup(command);
-	file.options = ft_strdup(options);
+	file.options = options;
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
 		return (unmap_file_failure(&file, EXIT_FAILURE));
 	sort_arch_symbols(&file);
 	print_arch_sym(&file, TRUE, ar_name);
-	free(file.options);
 	unmap_file(&file);
 	return (EXIT_SUCCESS);
 }
@@ -109,7 +108,7 @@ int							generate_file_from_archive_otool(char *command,
 	if (dispatch_by_magic(&file) == EXIT_FAILURE)
 		return (unmap_file_failure(&file, EXIT_FAILURE));
 	print_t_sect(&file, ar_name);
-	free(file.options);
 	unmap_file(&file);
+	free(file.options);
 	return (EXIT_SUCCESS);
 }

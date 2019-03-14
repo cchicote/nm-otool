@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <nm_otool.h>
+#include "nm_otool.h"
 
 uint32_t					get_name_size_from_ar_hdr(void *hdr_ptr)
 {

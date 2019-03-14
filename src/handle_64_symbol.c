@@ -35,8 +35,8 @@ void						get_symbol_type_char_64(t_symbol *symbol,
 	}
 	else if (n_type_value == N_INDR)
 		symbol->type_char = 'i';
-	else if ((n_type_value == N_UNDF && !array.n_value) ||
-		n_type_value == N_PBUD)
+	else if ((n_type_value == N_UNDF && !array.n_value)
+		|| n_type_value == N_PBUD)
 		symbol->type_char = 'u';
 	else if (n_type_value == N_SECT && !symbol->type_char)
 		symbol->type_char = '?';

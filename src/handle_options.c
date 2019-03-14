@@ -21,9 +21,7 @@ char						*init_options(void)
 	options = (char*)ft_memalloc(sizeof(char) * 7);
 	if (!options)
 		return (NULL);
-	while (++i < 6)
-		options[i] = 0;
-	options[i] = '\0';
+	ft_bzero(options, 7);
 	return (options);
 }
 

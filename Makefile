@@ -6,14 +6,14 @@
 #    By: cchicote <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/11 16:29:33 by cchicote          #+#    #+#              #
-#    Updated: 2018/12/20 18:35:01 by cchicote         ###   ########.fr        #
+#    Updated: 2019/03/14 21:31:33 by cchicote         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NM_NAME 		=	ft_nm
 OTOOL_NAME		=	ft_otool
 CC				=	gcc
-CFLAGS			=	-Wall -Wextra #-Werror
+CFLAGS			=	-Wall -Wextra -Werror
 LFLAGS			=	-lft
 INC				=	-I$(INCLUDE_PATH)
 
@@ -60,7 +60,6 @@ LIBFT 			=	$(LIBFT_PATH)/libft.a
 NM_OBJ 			=	$(addprefix $(OBJ_PATH), $(NM_SRCS:.c=.o))
 OTOOL_OBJ 		=	$(addprefix $(OBJ_PATH), $(OTOOL_SRCS:.c=.o))
 
-
 all: $(NM_NAME) $(OTOOL_NAME)
 
 $(LIBFT):
@@ -93,7 +92,6 @@ fclean: clean
 	@ /bin/rm -f $(OTOOL_NAME)
 	@ echo "Fcleaning libft"
 	@ make fclean -sC $(LIBFT_PATH)
-
 
 re: fclean all
 
